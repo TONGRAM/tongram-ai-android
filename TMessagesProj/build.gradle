@@ -66,6 +66,11 @@ dependencies {
     implementation 'com.google.android.recaptcha:recaptcha:18.4.0'
 
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.5'
+
+    //Ton Core
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.3.0'
+
 }
 
 def isWindows = String.valueOf(DefaultNativePlatform.currentOperatingSystem.toFamilyName() == OperatingSystemFamily.WINDOWS)
@@ -127,6 +132,7 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "true"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "0"
+            buildConfigField "String", "TON_API_URL", "\"https://your-correct-api-url.com/\""
         }
 
         HA_private {
@@ -142,6 +148,7 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "true"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "1"
+            buildConfigField "String", "TON_API_URL", "\"https://your-correct-api-url.com/\""
         }
 
         HA_public {
@@ -157,6 +164,7 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "false"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "4"
+            buildConfigField "String", "TON_API_URL", "\"https://your-correct-api-url.com/\""
         }
 
         HA_hardcore {
@@ -172,6 +180,7 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "true"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "5"
+            buildConfigField "String", "TON_API_URL", "\"https://your-correct-api-url.com/\""
         }
 
         standalone {
@@ -187,6 +196,7 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "false"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "6"
+            buildConfigField "String", "TON_API_URL", "\"https://your-correct-api-url.com/\""
         }
 
         release {
@@ -203,6 +213,7 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "false"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "7"
+            buildConfigField "String", "TON_API_URL", "\"https://your-correct-api-url.com/\""
         }
     }
 
