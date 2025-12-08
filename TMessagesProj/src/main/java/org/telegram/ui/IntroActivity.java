@@ -225,6 +225,7 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
             pos[1] += themeIconView.getMeasuredHeight() / 2;
             NotificationCenter.getGlobalInstance().postNotificationName(NotificationCenter.needSetDayNightTheme, themeInfo, false, pos, -1, toDark, themeIconView);
             themeIconView.setContentDescription(LocaleController.getString(toDark ? R.string.AccDescrSwitchToDayTheme : R.string.AccDescrSwitchToNightTheme));
+            eglThread.updateThemesTexture();
         });
 
         frameLayout2 = new FrameLayout(context);
@@ -652,6 +653,26 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
             surfaceTexture = surface;
         }
 
+        private void updateAppIconTexture() {
+            loadTexture(v -> {
+                Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+                paint.setColor(0xFF2CA5E0); // It's logo color, it should not be colored by the theme
+                paint.setStyle(Paint.Style.STROKE);
+                paint.setStrokeWidth(AndroidUtilities.dp(4f));
+                int size = AndroidUtilities.dp(ICON_HEIGHT_DP);
+                Bitmap bm = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888);
+                Canvas c = new Canvas(bm);
+
+                c.drawColor(Theme.getColor(Theme.key_windowBackgroundWhite));
+                c.drawCircle(size / 2f, size / 2f, (size / 2f) - AndroidUtilities.dp(2f), paint);
+                return bm;
+            }, 22);
+        }
+
+        public void updateThemesTexture() {
+            postRunnable(this::updateAppIconTexture);
+        }
+
         private boolean initGL() {
             egl10 = (EGL10) EGLContext.getEGL();
 
@@ -769,16 +790,8 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
             loadTexture(R.drawable.intro_powerful_star, 18);
             loadTexture(R.drawable.intro_private_door, 19);
             loadTexture(R.drawable.intro_private_screw, 20);
-            loadTexture(R.drawable.intro_tg_plane, 21);
-            loadTexture(v -> {
-                Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-                paint.setColor(0xFF2CA5E0); // It's logo color, it should not be colored by the theme
-                int size = AndroidUtilities.dp(ICON_HEIGHT_DP);
-                Bitmap bm = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888);
-                Canvas c = new Canvas(bm);
-                c.drawCircle(size / 2f, size / 2f, size / 2f, paint);
-                return bm;
-            }, 22);
+            loadTexture(R.drawable.ic_tongram_foreground, 21);
+            updateAppIconTexture();
             loadTexture(telegramMaskProvider, 23);
 
             updateTelegramTextures();
