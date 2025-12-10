@@ -3915,8 +3915,8 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
                         )
                 );
 
-                container.addView(telegramButton, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, 50, Gravity.CENTER_HORIZONTAL));
                 container.addView(problemText, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, Gravity.CENTER));
+                container.addView(telegramButton, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, 50, Gravity.CENTER_HORIZONTAL));
 
                 problemFrame.addView(container);
 
