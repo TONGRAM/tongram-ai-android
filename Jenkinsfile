@@ -1,10 +1,9 @@
 pipeline {
     agent {
         docker { 
-            image 'android-builder:1.0.0' 
+            image 'toncorp/android-builder:1.0.0' 
             // registryCredentialsId 'docker-registry-creds'
             // registryUrl 'https://hub.playgroundvina.com'
-            alwaysPull false
             args '-v $HOME/.gradle:/root/.gradle' 
         }
     }
