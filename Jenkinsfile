@@ -42,9 +42,9 @@ pipeline {
             steps {
                 withCredentials([
                     file(credentialsId: 'android-keystore-file', variable: 'KEYSTORE_FILE'),
-                    string(credentialsId: 'store-password', variable: 'STORE_PASS'),
-                    string(credentialsId: 'key-alias', variable: 'KEY_ALIAS'),
-                    string(credentialsId: 'key-password', variable: 'KEY_PASS')
+                    string(credentialsId: 'STORE_PASSWORD', variable: 'STORE_PASS'),
+                    string(credentialsId: 'KEY_ALIAS', variable: 'KEY_ALIAS'),
+                    string(credentialsId: 'KEY_PASSWORD', variable: 'KEY_PASS')
                 ]) {
                     sh """
                         ./gradlew assembleRelease \
