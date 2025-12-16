@@ -1,9 +1,9 @@
 package ton_core.models;
 
-public class SampleResponse {
+public class TranslateResponse {
     public final String translation;
 
-    public SampleResponse(String translation) {
+    public TranslateResponse(String translation) {
         this.translation = translation;
     }
 }

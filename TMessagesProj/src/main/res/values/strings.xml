@@ -10038,4 +10038,5 @@
     <string name="OpenTelegramApp">Open Telegram</string>
     <string name="TonTVFeatureURL">https://t.me/tontv_official_bot/app</string>
     <string name="TonGramAppStoreFeatureUrl">https://t.me/Tongram_center_bot/Tongram_Apps_Center</string>
+    <string name="Translating">Translating...</string>
 </resources>

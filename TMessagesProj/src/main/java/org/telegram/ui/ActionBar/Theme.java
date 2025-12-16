@@ -3767,6 +3767,7 @@ public class Theme {
 
     public static final int key_chat_inBubbleSelected = colorsCount++;
     public static final int key_chat_messageTextIn = colorsCount++;
+    public static final int key_chat_translate = colorsCount++;
     public static final int key_chat_messageTextOut = colorsCount++;
     public static final int key_chat_messageLinkIn = colorsCount++;
     public static final int key_chat_messageLinkOut = colorsCount++;

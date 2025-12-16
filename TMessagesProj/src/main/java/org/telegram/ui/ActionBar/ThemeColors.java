@@ -532,6 +532,7 @@ public class ThemeColors {
         defaultColors[key_chat_serviceBackgroundSelector] = 0x20ffffff;
         defaultColors[key_chat_inQuote] = 0xff459BD8;
         defaultColors[key_chat_outQuote] = 0xff6AB860;
+        defaultColors[key_chat_translate] = 0xff868686;
 
         defaultColors[key_profile_creatorIcon] = 0xff3a95d5;
         defaultColors[key_profile_actionIcon] = 0xff81868a;
@@ -1124,6 +1125,7 @@ public class ThemeColors {
         colorKeysMap.put(key_chat_serviceBackgroundSelector, "chat_serviceBackgroundSelector");
         colorKeysMap.put(key_chat_inQuote, "chat_inQuote");
         colorKeysMap.put(key_chat_outQuote, "chat_outQuote");
+        colorKeysMap.put(key_chat_translate, "chat_translate");
         colorKeysMap.put(key_chat_muteIcon, "chat_muteIcon");
         colorKeysMap.put(key_chat_lockIcon, "chat_lockIcon");
         colorKeysMap.put(key_chat_outSentCheck, "chat_outSentCheck");

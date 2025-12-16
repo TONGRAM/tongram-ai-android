@@ -112,7 +112,6 @@ import org.telegram.messenger.Emoji;
 import org.telegram.messenger.FileLoader;
 import org.telegram.messenger.FileLog;
 import org.telegram.messenger.FlagSecureReason;
-import org.telegram.messenger.GiftAuctionController;
 import org.telegram.messenger.ImageLoader;
 import org.telegram.messenger.ImageLocation;
 import org.telegram.messenger.ImageReceiver;
@@ -788,6 +787,8 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
         default void forceUpdate(ChatMessageCell cell, boolean anchorScroll) {
 
         }
+
+        default void didTranslate(ChatMessageCell cell, boolean anchorScroll) { }
     }
 
     private final static int DOCUMENT_ATTACH_TYPE_NONE = 0;
@@ -1525,7 +1526,6 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
     private LinkPath translationLoadingPath;
     private LoadingDrawable translationLoadingDrawable;
     private ArrayList<MessageObject.TextLayoutBlock> translationLoadingDrawableText;
-    private StaticLayout translationLoadingDrawableLayout;
 
 
 
@@ -2181,7 +2181,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
 
                     final float left = block.textLayout.getLineLeft(line);
                     if (left <= x && left + block.textLayout.getLineWidth(line) >= x) {
-                        Spannable buffer = (Spannable) currentMessageObject.messageText;
+                        Spannable buffer = (Spannable) block.textLayout.getText();
                         CharacterStyle[] link = buffer.getSpans(off, off, ClickableSpan.class);
                         boolean isMono = false;
                         if (link == null || link.length == 0) {
@@ -2281,6 +2281,10 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
                                     }
                                     resetPressedLink(1);
                                     pressedEmoji = null;
+                                } else if (link[0] instanceof URLSpanNoUnderline && link[0] == pressedLink.getSpan() && pressedLink != null) {
+                                    delegate.didTranslate(this, false);
+                                    resetPressedLink(1);
+                                    return true;
                                 } else if (pressedLink != null && link[0] == pressedLink.getSpan()) {
                                     delegate.didPressUrl(this, pressedLink.getSpan(), false);
                                     resetPressedLink(1);
