@@ -17,6 +17,11 @@ pipeline {
     }
 
     stages {
+        stage('Notification') {
+            steps {
+                sh "make notify_start JOB_NAME=${env.JOB_NAME} BUILD_NUMBER=${env.BUILD_NUMBER} CHAT_ID=${env.CHAT_ID} TOKEN=${env.TOKEN}"
+            }
+        }
         stage('Build Android') {
             steps {
                 // 1. Checkout Code
