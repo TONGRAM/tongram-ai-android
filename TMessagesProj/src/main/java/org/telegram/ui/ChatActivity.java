@@ -20200,7 +20200,7 @@ public class ChatActivity extends BaseFragment implements
 
             detectLanguageExecutor.execute(() -> {
                 for (MessageObject ms : latestMessages) {
-                    LanguageDetector.detectLanguage(ms.messageOwner.message, lng -> AndroidUtilities.runOnUIThread(() -> {
+                    LanguageDetector.detectLanguage(ms.removeEntities(), lng -> AndroidUtilities.runOnUIThread(() -> {
                         if (!lng.equals(shortLanguageName) && !lng.equals("und")) {
                             ms.isActiveTranslation = true;
                             ms.resetLayout();
@@ -21184,6 +21184,20 @@ public class ChatActivity extends BaseFragment implements
             FileLog.d("ChatActivity didReceiveNewMessages start");
             long did = (Long) args[0];
             ArrayList<MessageObject> arr = (ArrayList<MessageObject>) args[1];
+            final MessageObject newMessage = arr.get(0);
+            if (!newMessage.isOutOwner() && newMessage.type == MessageObject.TYPE_TEXT) {
+                detectLanguageExecutor.execute(() -> {
+                LanguageDetector.detectLanguage(newMessage.removeEntities(), lng -> AndroidUtilities.runOnUIThread(() -> {
+                        if (!lng.equals(shortLanguageName) && !lng.equals("und")) {
+                            newMessage.isActiveTranslation = true;
+                            newMessage.resetLayout();
+                            updateMessageAnimatedInternal(newMessage, false);
+                        }
+                    }), err -> AndroidUtilities.runOnUIThread(() -> {
+
+                    }));
+            });
+            }
             if (isInsideContainer) return;
             if (did == dialog_id) {
                 boolean scheduled = (Boolean) args[2];

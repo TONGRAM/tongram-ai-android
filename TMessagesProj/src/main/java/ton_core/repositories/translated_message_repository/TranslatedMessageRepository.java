@@ -6,7 +6,10 @@ import java.util.List;
 import ton_core.daos.TranslatedMessageDao;
 import ton_core.database.TongramDatabase;
 import ton_core.entities.TranslatedMessageEntity;
-import ton_core.models.TranslateResponse;
+import ton_core.models.TranslateMessageResponse;
+import ton_core.models.TranslatedChoice;
+import ton_core.models.TranslatedMessage;
+import ton_core.models.TranslatedMessageResult;
 import ton_core.services.IOnApiCallback;
 import ton_core.services.sample_service.ITranslateService;
 import ton_core.services.sample_service.TranslateService;
@@ -51,11 +54,16 @@ public class TranslatedMessageRepository implements ITranslatedMessageRepository
 
     @Override
     public void translate(String text, String lang, int messageId, long chatId, int accountId) {
-        translateService.translate(text, lang, new IOnApiCallback<TranslateResponse>() {
+        translateService.translate(text, lang, new IOnApiCallback<TranslateMessageResponse>() {
             @Override
-            public void onSuccess(TranslateResponse data) {
-                final TranslatedMessageEntity entity = new TranslatedMessageEntity(messageId, accountId, chatId, data.translation, lang, true);
-                insert(entity);
+            public void onSuccess(TranslateMessageResponse data) {
+                final TranslatedMessageResult result = data.getResult();
+                final List<TranslatedChoice> choices = result.getChoices();
+                if (!choices.isEmpty()) {
+                    final TranslatedMessage translatedMessage = choices.get(0).getMessage();
+                    final TranslatedMessageEntity entity = new TranslatedMessageEntity(messageId, accountId, chatId, translatedMessage.getContent(), lang, true);
+                    insert(entity);
+                }
             }
 
             @Override

@@ -24,21 +24,25 @@ public class BaseService {
 
             @Override
             public void onResponse(@NonNull Call<BaseResponse<T>> call, @NonNull Response<BaseResponse<T>> response) {
-                if (!response.isSuccessful()) {
-                    callback.onError("HTTP " + response.code());
-                    return;
-                }
+                try {
+                    if (!response.isSuccessful()) {
+                        callback.onError("HTTP " + response.code());
+                        return;
+                    }
 
-                BaseResponse<T> body = response.body();
-                if (body == null) {
-                    callback.onError("Empty response body");
-                    return;
-                }
+                    BaseResponse<T> body = response.body();
+                    if (body == null) {
+                        callback.onError("Empty response body");
+                        return;
+                    }
 
-                if (body.success) {
-                    callback.onSuccess(body.data);
-                } else {
-                    callback.onError(body.message != null ? body.message : "Unknown error");
+                    if (body.success) {
+                        callback.onSuccess(body.data);
+                    } else {
+                        callback.onError(body.message != null ? body.message : "Unknown error");
+                    }
+                } catch (Exception e) {
+                    callback.onError(e.getMessage());
                 }
             }
 
@@ -53,17 +57,21 @@ public class BaseService {
         call.enqueue(new Callback<T>() {
             @Override
             public void onResponse(@NonNull Call<T> call, @NonNull Response<T> response) {
-                if (!response.isSuccessful()) {
-                    callback.onError("HTTP " + response.code());
-                    return;
-                }
+                try {
+                    if (!response.isSuccessful()) {
+                        callback.onError("HTTP " + response.code());
+                        return;
+                    }
 
-                T body = response.body();
-                if (body == null) {
-                    callback.onError("Empty response body");
-                    return;
+                    T body = response.body();
+                    if (body == null) {
+                        callback.onError("Empty response body");
+                        return;
+                    }
+                    callback.onSuccess(body);
+                } catch (Exception e) {
+                    callback.onError(e.getMessage());
                 }
-                callback.onSuccess(body);
             }
 
             @Override

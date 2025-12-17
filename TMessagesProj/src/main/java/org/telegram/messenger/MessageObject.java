@@ -7756,6 +7756,30 @@ public class MessageObject {
         }
     }
 
+    public String removeEntities() {
+        final List<TLRPC.MessageEntity> entities = messageOwner.entities;
+        final String text = messageOwner.message;
+        if (entities == null || entities.isEmpty()) {
+            return text;
+        }
+
+        StringBuilder sb = new StringBuilder(text);
+
+        entities.sort((a, b) -> Integer.compare(b.offset, a.offset));
+
+        for (TLRPC.MessageEntity e : entities) {
+            if (e instanceof TLRPC.TL_messageEntityUrl
+                    || e instanceof TLRPC.TL_messageEntityMention
+                    || e instanceof TLRPC.TL_messageEntityHashtag
+                    || e instanceof TLRPC.TL_messageEntityCashtag) {
+
+                sb.delete(e.offset, e.offset + e.length);
+            }
+        }
+
+        return sb.toString().trim();
+    }
+    
     public void generateLayout(TLRPC.User fromUser) {
         if (type != TYPE_TEXT && type != TYPE_EMOJIS && type != TYPE_STORY_MENTION || messageOwner.peer_id == null || TextUtils.isEmpty(messageText)) {
             return;

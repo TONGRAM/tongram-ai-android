@@ -135,7 +135,8 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "true"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "0"
-            buildConfigField "String", "TON_API_URL", "\"https://9c8ea9df4ed6.ngrok-free.app/\""
+            buildConfigField "String", "TON_API_URL", "\"https://bbbc462f4bfd.ngrok-free.app/api/v1/\""
+            buildConfigField "String", "TON_API_KEY", "\"bd22e4002e104ae28ccc3797dbafc817\""
         }
 
         HA_private {
@@ -151,7 +152,8 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "true"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "1"
-            buildConfigField "String", "TON_API_URL", "\"https://9c8ea9df4ed6.ngrok-free.app/\""
+            buildConfigField "String", "TON_API_URL", "\"https://bbbc462f4bfd.ngrok-free.app/api/v1/\""
+            buildConfigField "String", "TON_API_KEY", "\"bd22e4002e104ae28ccc3797dbafc817\""
         }
 
         HA_public {
@@ -167,7 +169,8 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "false"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "4"
-            buildConfigField "String", "TON_API_URL", "\"https://nhut-30090.motcaigido.xyz/\""
+            buildConfigField "String", "TON_API_URL", "\"https://bbbc462f4bfd.ngrok-free.app/api/v1/\""
+            buildConfigField "String", "TON_API_KEY", "\"bd22e4002e104ae28ccc3797dbafc817\""
         }
 
         HA_hardcore {
@@ -183,7 +186,8 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "true"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "5"
-            buildConfigField "String", "TON_API_URL", "\"https://nhut-30090.motcaigido.xyz/\""
+            buildConfigField "String", "TON_API_URL", "\"https://bbbc462f4bfd.ngrok-free.app/api/v1/\""
+            buildConfigField "String", "TON_API_KEY", "\"bd22e4002e104ae28ccc3797dbafc817\""
         }
 
         standalone {
@@ -199,7 +203,8 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "false"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "6"
-            buildConfigField "String", "TON_API_URL", "\"https://nhut-30090.motcaigido.xyz/\""
+            buildConfigField "String", "TON_API_URL", "\"https://bbbc462f4bfd.ngrok-free.app/api/v1/\""
+            buildConfigField "String", "TON_API_KEY", "\"bd22e4002e104ae28ccc3797dbafc817\""
         }
 
         release {
@@ -216,7 +221,8 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "false"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "7"
-            buildConfigField "String", "TON_API_URL", "\"https://nhut-30090.motcaigido.xyz/\""
+            buildConfigField "String", "TON_API_URL", "\"https://bbbc462f4bfd.ngrok-free.app/api/v1/\""
+            buildConfigField "String", "TON_API_KEY", "\"bd22e4002e104ae28ccc3797dbafc817\""
         }
     }
 
