@@ -54,7 +54,7 @@ pipeline {
                     s3Upload acl: 'PublicRead', bucket: 'tongram', file: "/${apkPath}", path: "AppBuild/${timeStamp}/"
                     s3Upload acl: 'PublicRead', bucket: 'tongram', file: "/${aabPath}", path: "AppBuild/${timeStamp}/"
                 }
-            }`
+            }
         }
     }
     post {
