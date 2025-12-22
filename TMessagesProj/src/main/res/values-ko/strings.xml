@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="TelegramFeatures">톤 메신저 기능 소개</string>
+    <string name="TelegramFeatures">톤그램 기능 소개</string>
     <string name="GroupCreateMembersTwo">%1$s 및 %2$s</string>
     <string name="VoipGroupPersonalAccount">개인 계정</string>
     <string name="ChannelAntiSpamFalsePositiveReported">Tongram 중재자가 신고를 검토합니다. 감사합니다!</string>
@@ -82,7 +82,7 @@
     <string name="PrepaidGiveawayMonths_other">%1$d개월</string>
     <string name="TopicClosed2">%s님이 주제를 닫았습니다</string>
     <string name="AuthAnotherClientTokenError">토큰이 올바르지 않거나 만료되었습니다.</string>
-    <string name="InviteUser">지인분이 아직 톤 메신저을 설치하지 않았습니다. 초대장을 보낼까요?</string>
+    <string name="InviteUser">지인분이 아직 톤그램을 설치하지 않았습니다. 초대장을 보낼까요?</string>
     <string name="NewMessages_other">새 메시지 %1$d개</string>
     <string name="ArchiveHiddenInfo">아래로 스와이프하여 보관함을 확인하세요.</string>
     <string name="EnableAutoDelete">자동 삭제 활성화</string>
@@ -139,7 +139,7 @@
     <string name="VoipGroupUserCantNowSpeakForYou">**%1$s**님이 이제 이 채팅에서 음소거되었습니다.</string>
     <string name="SendSelectedLocation">선택한 위치 보내기</string>
     <string name="RepliesChatInfo">이 채팅은 채널의 댓글에 대한 답글을 추적하는 데 도움이 됩니다.</string>
-    <string name="PermissionBackgroundLocation">이 대화에서 실시간 위치를 공유 하려면, 톤 메신저이 항상 위치에 대해 접근 권한이, 백그라운드 실행시도 포함, 부여되어야 합니다.\n\n회원님이 설정한 시간에만 위치에 접근을 하게 되며, 언제든지 중지를 할 수 있습니다. 톤 메신저은 대화에 위치를 공유하는 것 이외에 해당 정보를 일절 사용 하지 않습니다.</string>
+    <string name="PermissionBackgroundLocation">이 대화에서 실시간 위치를 공유 하려면, 톤그램이 항상 위치에 대해 접근 권한이, 백그라운드 실행시도 포함, 부여되어야 합니다.\n\n회원님이 설정한 시간에만 위치에 접근을 하게 되며, 언제든지 중지를 할 수 있습니다. 톤그램은 대화에 위치를 공유하는 것 이외에 해당 정보를 일절 사용 하지 않습니다.</string>
     <string name="AccountFrozen3Title">비활성화 전 이의 제기</string>
     <string name="UseLessDataAlways">항상</string>
     <string name="SortedByLastSeen">마지막 접속 순</string>
@@ -154,10 +154,10 @@
     <string name="GiftPremiumOptionDiscount">-%1$d%%</string>
     <string name="MasksInfo">사진을 보내기 전에 사진 편집기를 열어 마스크를 추가할 수 있습니다.</string>
     <string name="BoostingChooseChannelsNeedToJoin">경품에 참가하기 위해 사용자가 참가해야 할 채널을 선택해주세요.</string>
-    <string name="CallText">%1$d:%2$02d 뒤에 톤 메신저에서 전화합니다.</string>
+    <string name="CallText">%1$d:%2$02d 뒤에 톤그램에서 전화합니다.</string>
     <string name="FilterReorder">순서 변경</string>
     <string name="ChatThemeChangedYou">채팅 테마를 %1$s(으)로 변경했습니다</string>
-    <string name="PermissionNoLocationNavigation">**톤 메신저**이 길을 찾으려면 위치 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **위치**를 활성화 해주세요.</string>
+    <string name="PermissionNoLocationNavigation">**톤그램**이 길을 찾으려면 위치 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **위치**를 활성화 해주세요.</string>
     <string name="PollTapToSelect">정답을 선택하려면 탭하세요</string>
     <string name="ThemeNameInvalid">죄송합니다, 테마 이름이 유효하지 않습니다.</string>
     <string name="SetAdditionalPassword">추가 비밀번호 설정</string>
@@ -276,7 +276,7 @@
     <string name="BoostingCreateGiveaway">경품 행사 만들기</string>
     <string name="ChannelAddMembers">참가자 추가</string>
     <string name="UsernameActivateLink">링크 활성화</string>
-    <string name="YourEmailSkipWarningText">비밀번호 분실시\n\n톤 메신저에 대한 모든 접속 권한을 상실하시게 됩니다.\n비밀번호 분실시 복구는 불가능 합니다.</string>
+    <string name="YourEmailSkipWarningText">비밀번호 분실시\n\n톤그램에 대한 모든 접속 권한을 상실하시게 됩니다.\n비밀번호 분실시 복구는 불가능 합니다.</string>
     <string name="NearbyCreateGroupInfo">이 근처에 있는 사람들(이웃이나 직장 동료, 친구, 학생, 행사 참석자)이 회원님의 그룹을 \'주변 사람\' 탭에서 볼 수 있습니다.</string>
     <string name="AutoDeleteNever">안 함</string>
     <string name="DeleteAccountIfAwayFor">자동 회원 탈퇴</string>
@@ -326,11 +326,11 @@
     <string name="TextSelectionHint">**단어**를 길게 누른 뒤 커서를 움직여 인용하거나 복사할 텍스트를 더 선택하세요.</string>
     <string name="FiltersSetup">설정</string>
     <string name="NoAudioFoundInfo">음악 라이브러리에 **%1$\ns∗∗와일치하는항목이없습니다.</string>
-    <string name="TurnPasswordOffPassport">톤 메신저 패스포트에 저장된 데이터가 모두 사라지게됩니다.</string>
+    <string name="TurnPasswordOffPassport">톤그램 패스포트에 저장된 데이터가 모두 사라지게됩니다.</string>
     <string name="VoipOfflineTitle">오프라인</string>
     <string name="LinkMediaSmaller">사진 축소</string>
     <string name="AboutPremiumDescription">Tongram의 무료 버전은 이미 다른 어떤 메시징 애플리케이션보다 더 많은 기능을 사용자에게 제공하지만, Tongram Premium은 그 기능을 훨씬 더 끌어올립니다.</string>
-    <string name="TelegramVersion">Android용 톤 메신저 %1$s</string>
+    <string name="TelegramVersion">Android용 톤그램 %1$s</string>
     <string name="SavedMessagesTab2">저장됨</string>
     <string name="SetColor">색상 설정</string>
     <string name="AreTypingGroup">%1$s 입력 중...</string>
@@ -368,9 +368,9 @@
     <string name="RepostedToProfile">메시지가 프로필에 리포스트되었습니다.</string>
     <string name="DeleteSelectedCallsText">선택한 통화를 최근 통화에서 삭제하시겠습니까?</string>
     <string name="SaveToGalleryVideos">동영상</string>
-    <string name="EnableAllStreamingInfo">가능한 경우 톤 메신저은 파일이 완전히 다운로드될 때까지 기다리지 않고 즉시 영상과 음악 재생을 시작합니다.\n</string>
+    <string name="EnableAllStreamingInfo">가능한 경우 톤그램은 파일이 완전히 다운로드될 때까지 기다리지 않고 즉시 영상과 음악 재생을 시작합니다.\n</string>
     <string name="YourPasswordReset">비밀번호가 성공적으로 비활성화되었습니다</string>
-    <string name="PermissionNoAudioVideoWithHint">**톤 메신저**이 음성 메시지를 보내려면 마이크 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **마이크**를 활성화 해주세요.</string>
+    <string name="PermissionNoAudioVideoWithHint">**톤그램**이 음성 메시지를 보내려면 마이크 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **마이크**를 활성화 해주세요.</string>
     <string name="ResetAccountCancelledAlert">이 계정을 사용 중인 사용자가 계정 초기화 시도를 취소했습니다. 7일 뒤에 다시 시도해 주세요.</string>
     <string name="Vignette">비네팅</string>
     <string name="LogOutTitle">로그아웃</string>
@@ -581,7 +581,7 @@ un2에게 사용자를 공유함</string>
     <string name="GiftPremiumActivateForFree">무료로 활성화</string>
     <string name="StarsTransactionDate">날짜</string>
     <string name="ClearRecentReactionsAlertMessage">추천에서 최근 반응 이모지를 삭제하시겠습니까?</string>
-    <string name="CheckPhoneNumberInfo">언제든지 톤 메신저에 로그인할 수 있도록 전화번호를 최신으로 유지하세요. **더 알아보기**</string>
+    <string name="CheckPhoneNumberInfo">언제든지 톤그램에 로그인할 수 있도록 전화번호를 최신으로 유지하세요. **더 알아보기**</string>
     <string name="NoPlacesFoundInfo">근처에 **%1$s**과(와) 일치하는 항목이 없습니다.</string>
     <string name="PassportResidence">거주지</string>
     <string name="CallAgain">다시 전화</string>
@@ -700,7 +700,7 @@ un2에게 사용자를 공유함</string>
     <string name="AllVideo">모든 동영상</string>
     <string name="BusinessHoursProfileNowOpen">열기</string>
     <string name="ChannelVideoEditNotification">%1$s 채널이 동영상을 업데이트했습니다</string>
-    <string name="SecretWebPageInfo">링크 미리보기는 톤 메신저 서버에 생성됩니다. 회원님이 보내시는 그 어떠한 링크에 관한 데이터도 보관하지 않습니다.</string>
+    <string name="SecretWebPageInfo">링크 미리보기는 톤그램 서버에 생성됩니다. 회원님이 보내시는 그 어떠한 링크에 관한 데이터도 보관하지 않습니다.</string>
     <string name="StoryCameraSavedDualBackHint">보조 카메라를 비활성화하려면 여기를 탭하세요</string>
     <string name="Connected">연결됨</string>
     <string name="PriorityInfo">우선순위가 높은 알림은 방해 금지 상태이더라도 작동합니다.</string>
@@ -759,7 +759,7 @@ un2에게 사용자를 공유함</string>
     <string name="DeleteProxyConfirm">정말 이 프록시를 삭제하겠습니까?</string>
     <string name="CantBoostTooOften">너무 자주 부스트할 수 없습니다!</string>
     <string name="GroupsAndChannels">그룹 및 채널</string>
-    <string name="PermissionStorageWithHint">**톤 메신저**이 사진, 동영상, 음악과 그 밖의 문서를 보내고 저장하려면 저장 공간 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **파일과 미디어**를 활성화 해주세요.</string>
+    <string name="PermissionStorageWithHint">**톤그램**이 사진, 동영상, 음악과 그 밖의 문서를 보내고 저장하려면 저장 공간 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **파일과 미디어**를 활성화 해주세요.</string>
     <string name="UserColorTitle">내 이름 색상</string>
     <string name="EventLogDeletedMultipleMessagesShow">모두 표시</string>
     <string name="ChannelTooMuch">죄송합니다, 너무 많은 그룹과 채널에 가입해 있습니다. 새로 만들기 전에 일부를 나가세요.</string>
@@ -1023,9 +1023,9 @@ https://telegram.org/blog/coronavirus</string>
     <string name="ClearHistorySavedMessagesTitle">저장한 메시지 모두 삭제</string>
     <string name="BytesSent">전송된 바이트</string>
     <string name="StoryReactionsHint">비공개 메시지로 반응 보내기</string>
-    <string name="ClearingCacheDescription">톤 메신저이 캐시를 초기화하는 동안 이 창을 계속 열어두세요.</string>
+    <string name="ClearingCacheDescription">톤그램이 캐시를 초기화하는 동안 이 창을 계속 열어두세요.</string>
     <string name="ShareFile">공유</string>
-    <string name="PermissionXiaomiLockscreen">통화가 제대로 실행되도록 톤 메신저이 잠금 화면에 나타나는 것을 허용해 주세요.</string>
+    <string name="PermissionXiaomiLockscreen">통화가 제대로 실행되도록 톤그램이 잠금 화면에 나타나는 것을 허용해 주세요.</string>
     <string name="PollResults">투표 결과</string>
     <string name="SaveToGalleryOff">끄기</string>
     <string name="PinnedMessages">메시지 고정</string>
@@ -1579,7 +1579,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="StoryPhoto">사진</string>
     <string name="VoipEndCall2">통화 종료</string>
     <string name="NextMediaTapInfo">미디어 보기 중 화면 가장자리 근처를 탭하여 사진 간 이동</string>
-    <string name="SentAppCodeTitle">톤 메신저 메시지를 확인하세요</string>
+    <string name="SentAppCodeTitle">톤그램 메시지를 확인하세요</string>
     <string name="BoostingToBeDistributed">배포 예정</string>
     <string name="PassportAddressHeader">주소</string>
     <string name="MonetizationBalanceInfoNotAvailable">몇 주 내에 광고주가 광고 비용을 지불하는 데 사용하는 타사 플랫폼인 Fragment를 사용하여 보상을 수령할 수 있게 됩니다. **자세히 알아보기 &gt;**</string>
@@ -1624,7 +1624,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="ChooseStickerSetMy">\@stickers 봇을 이용해 직접 커스텀 스티커 세트를 만들 수 있습니다.</string>
     <string name="StopLiveLocationAlertToUser">%1$s 님과 실시간 위치 공유를 중단하시겠습니까?</string>
     <string name="AppUpdateDownloadNow">지금 다운로드 하세요</string>
-    <string name="PermissionNoLocation">회원님의 위치를 친구들과 공유하려면 톤 메신저에게 위치 접근 권한이 필요합니다.</string>
+    <string name="PermissionNoLocation">회원님의 위치를 친구들과 공유하려면 톤그램에게 위치 접근 권한이 필요합니다.</string>
     <string name="StoryNotFound">이 스토리는 더 이상 사용할 수 없습니다</string>
     <string name="ActionSkip">건너뛰기</string>
     <string name="PremiumNeededForBoosting">**Tongram 프리미엄** 구독자만 채널을 부스트할 수 있습니다. **Tongram 프리미엄**에 가입하시겠습니까?</string>
@@ -1676,7 +1676,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="StealthModeConfirmMessage">답장이나 반응을 보내면 스토리 작성자가 조회자 목록에서 회원님을 볼 수 있습니다.</string>
     <string name="GiftPremiumProceedBtn">진행</string>
     <string name="FilterExistingChats">기존 채팅</string>
-    <string name="PleaseLoginPassport">톤 메신저 패스포트를 사용하려면 톤 메신저 계정에 로그인해 주세요.</string>
+    <string name="PleaseLoginPassport">톤그램 패스포트를 사용하려면 톤그램 계정에 로그인해 주세요.</string>
     <string name="BoostingDurationOfPremium">프리미엄 구독 기간</string>
     <string name="GlobalAttachPlainRestricted">이 그룹에서는 일반 텍스트 전송이 허용되지 않습니다.</string>
     <string name="ClearSelectedCache">선택내역 비우기</string>
@@ -1887,7 +1887,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="YouTubeVideoErrorNotFound">동영상을 찾을 수 없습니다.</string>
     <string name="ActionGiftStarsTitle_other">%d 스타</string>
     <string name="StoryDeleteDraft">초안 삭제</string>
-    <string name="AddAnotherAccountInfo">다른 톤 메신저 계정을 연결하여 두 계정 간 손쉽게 전환하세요.</string>
+    <string name="AddAnotherAccountInfo">다른 톤그램 계정을 연결하여 두 계정 간 손쉽게 전환하세요.</string>
     <string name="StoryChannelEnableKeep">스토리를 볼 수 있는 사용자는 만료 후에도 채널에서 볼 수 있습니다.</string>
     <string name="SaveToDownloads">다운로드에 저장</string>
     <string name="SimilarChannelsTab">유사한 채널</string>
@@ -2207,7 +2207,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="RecentStickersShort">최근</string>
     <string name="Brown">갈색</string>
     <string name="UsernameInvalidShortPurchase">"사용자명은 최소 5자 이상이어야 합니다.  하지만 현재 구매 가능한 상태입니다. **자세히 알아보기…**"</string>
-    <string name="ResetMyAccountWarningText">이 작업은 되돌릴 수 없습니다. 계정 초기화를 진행하시면 톤 메신저 대화, 메시지, 미디어와 파일을 모두 잃게 됩니다.</string>
+    <string name="ResetMyAccountWarningText">이 작업은 되돌릴 수 없습니다. 계정 초기화를 진행하시면 톤그램 대화, 메시지, 미디어와 파일을 모두 잃게 됩니다.</string>
     <string name="ChooseYourLanguageOther">나머지</string>
     <string name="ActionCreateChannel">채널이 생성되었습니다</string>
     <string name="OutgoingCalls">발신 통화</string>
@@ -2238,7 +2238,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="ReportSend">신고 보내기</string>
     <string name="DebugMenuEnableLogs">로그 활성화</string>
     <string name="LargeEmoji">큰 이모지</string>
-    <string name="TosDeclineDeleteAccount">주의요망, 톤 메신저 클라우드에 저장하신 모든 데이터와 회원님의 톤 메신저 계정이 삭제되며, 되돌릴 수 없습니다.\n\n중요: 지금 취소하여 데이터를 잃어버리기 전에 먼저 내보내실 수 있습니다. (최신 톤 메신저 데스크톱을 열고 설정 &gt; 고급 설정 &gt; 톤 메신저 데이터 내보내기에서 진행하실 수 있습니다.)</string>
+    <string name="TosDeclineDeleteAccount">주의요망, 톤그램 클라우드에 저장하신 모든 데이터와 회원님의 톤그램 계정이 삭제되며, 되돌릴 수 없습니다.\n\n중요: 지금 취소하여 데이터를 잃어버리기 전에 먼저 내보내실 수 있습니다. (최신 톤그램 데스크톱을 열고 설정 &gt; 고급 설정 &gt; 톤그램 데이터 내보내기에서 진행하실 수 있습니다.)</string>
     <string name="RestorePremiumHintTitle">최대 **%1$d%%** 할인으로 프리미엄 다시 이용하기</string>
     <string name="NotificationActionPinnedFile">%1$s님이 그룹 %2$s에 파일을 고정했습니다.</string>
     <string name="ProxyBottomSheetChecking">확인 중</string>
@@ -2362,7 +2362,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="CacheEmpty">비어 있음</string>
     <string name="PassportFrontSide">앞면</string>
     <string name="ReportUnrelatedGroup">무관한 그룹 신고</string>
-    <string name="PermissionNoCameraMicVideo">**톤 메신저**이 영상 메시지를 보내려면 카메라와 마이크 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **마이크**와 **카메라**를 활성화 해주세요.</string>
+    <string name="PermissionNoCameraMicVideo">**톤그램**이 영상 메시지를 보내려면 카메라와 마이크 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **마이크**와 **카메라**를 활성화 해주세요.</string>
     <string name="GroupNotRestrictBoosters">부스터 제한 안 함</string>
     <string name="MicrophoneForVoiceMessagesSco">헤드셋</string>
     <string name="EventLogFilterAll">모든 활동</string>
@@ -2602,7 +2602,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="NewContactTitle">새 연락처</string>
     <string name="AccDescrHideAccounts">계정 숨기기</string>
     <string name="VoipAnswerCall">답변</string>
-    <string name="AllowReadCallAndLog">톤 메신저이 전화를 수신하고 통화 기록을 살필 수 있도록 허용해 주세요. 코드를 자동으로 입력해 드릴 수 있습니다.</string>
+    <string name="AllowReadCallAndLog">톤그램이 전화를 수신하고 통화 기록을 살필 수 있도록 허용해 주세요. 코드를 자동으로 입력해 드릴 수 있습니다.</string>
     <string name="Later">나중에</string>
     <string name="QuizWellDone">잘했습니다!</string>
     <string name="PaymentShippingCityPlaceholder">시/군/구</string>
@@ -2650,7 +2650,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="StorySave">프로필에 저장</string>
     <string name="RepeatSong">노래 반복</string>
     <string name="SubscribeToPremiumNoPrice">구독</string>
-    <string name="ChangePhoneNumberOccupied">%1$s 번호는 이미 톤 메신저 계정에 연결되어 있습니다. 지금 번호를 사용하기 전에 이전 계정을 탈퇴해 주세요.</string>
+    <string name="ChangePhoneNumberOccupied">%1$s 번호는 이미 톤그램 계정에 연결되어 있습니다. 지금 번호를 사용하기 전에 이전 계정을 탈퇴해 주세요.</string>
     <string name="LiteOptionsCalls">통화의 애니메이션</string>
     <string name="BoostingShowMoreBoosts_other">부스트 %1$d개 더 보기</string>
     <string name="NobodyViewsArchived">조회수 없음</string>
@@ -2764,7 +2764,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="PaymentCheckoutEmail">연락처 주소</string>
     <string name="PhotoShownOnce">이 사진은 한 번만 볼 수 있습니다.</string>
     <string name="PremiumNeededForBoostingGroup">**Tongram 프리미엄** 구독자만 그룹을 부스트할 수 있습니다. **Tongram 프리미엄**에 가입하시겠습니까?</string>
-    <string name="EnabledPasswordText">2단계 인증이 활성화되었습니다.\n회원님의 톤 메신저 계정에 로그인하려면 여기서 설정하신 비밀번호가 필요합니다.</string>
+    <string name="EnabledPasswordText">2단계 인증이 활성화되었습니다.\n회원님의 톤그램 계정에 로그인하려면 여기서 설정하신 비밀번호가 필요합니다.</string>
     <string name="FavoriteStickersShort">즐겨찾기</string>
     <string name="VoipGroupStopRecordingText">이 음성 채팅 녹음을 중지하시겠습니까?</string>
     <string name="AccDescrMusicInfo">%1$s의 %2$s</string>
@@ -2825,7 +2825,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="NoAudioFilesInfo">음악 라이브러리가 비어 있습니다.</string>
     <string name="PassportDeleteScan">스캔을 삭제하시겠습니까?</string>
     <string name="TypeScheduleMessage">메시지 예약</string>
-    <string name="ChangePasscodeInfoShort">암호를 설정하시면, 대화 목록 상단에 잠금 아이콘이 나타납니다. 이를 탭하여 톤 메신저 앱을 잠그실 수 있습니다.</string>
+    <string name="ChangePasscodeInfoShort">암호를 설정하시면, 대화 목록 상단에 잠금 아이콘이 나타납니다. 이를 탭하여 톤그램 앱을 잠그실 수 있습니다.</string>
     <string name="SmartNotificationsAlert">소리 알림 간격</string>
     <string name="BoostingBoostsChannelByUserServiceMsg">%s님이 채널을 부스트했습니다</string>
     <string name="ViewsPerPost">게시물당 조회수</string>
@@ -2929,7 +2929,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="AccDescrRepeatOff">반복, 끄기</string>
     <string name="BotRestrictionsCanDo">이 봇은 무엇을 할 수 있나요?</string>
     <string name="PremiumMembers">프리미엄 멤버</string>
-    <string name="AskAQuestionInfo">톤 메신저 지원은 자원봉사자들이 처리합니다. 신속하게 응답해 드리고자 노력하지만, 다소 시간이 걸릴 수 있습니다.\n\n<![CDATA[<a href=\"https://telegram.org/faq/ko#325188137\"> 자주 묻는 질문</a>]]>을 확인해 보세요. 잦은 질문에 대한 답과 <![CDATA[<a href=\"https://telegram.org/faq/ko#1478791328\">문제 해결</a>]]>을 위한 중요한 조언이 있습니다.</string>
+    <string name="AskAQuestionInfo">톤그램 지원은 자원봉사자들이 처리합니다. 신속하게 응답해 드리고자 노력하지만, 다소 시간이 걸릴 수 있습니다.\n\n<![CDATA[<a href=\"https://telegram.org/faq/ko#325188137\"> 자주 묻는 질문</a>]]>을 확인해 보세요. 잦은 질문에 대한 답과 <![CDATA[<a href=\"https://telegram.org/faq/ko#1478791328\">문제 해결</a>]]>을 위한 중요한 조언이 있습니다.</string>
     <string name="EditCaption">캡션 편집</string>
     <string name="SaveToGalleryPrivate">비공개 채팅</string>
     <string name="AccDescrGIFs">GIF</string>
@@ -3050,7 +3050,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="ThemeResetToDefaultsTitle">설정 재설정</string>
     <string name="DisablePasscodeConfirmMessage">정말 암호를 비활성화 하겠습니까?</string>
     <string name="TopicWasRenamedToAction2">%1$s님이 주제 제목과 아이콘을 %2$s(으)로 변경했습니다</string>
-    <string name="LanguageUnknownCustomAlert">안타깝게도 이 맞춤 언어 묶음(**%1$s**)에는 Android 톤 메신저용 데이터가 들어 있지 않습니다.</string>
+    <string name="LanguageUnknownCustomAlert">안타깝게도 이 맞춤 언어 묶음(**%1$s**)에는 Android 톤그램용 데이터가 들어 있지 않습니다.</string>
     <string name="ImportNotAdmin">메시지를 가져오려면 그룹의 관리자여야 합니다.</string>
     <string name="BusinessLocationClear">위치 제거</string>
     <string name="EditAdminTransferChangeOwner">소유자 변경</string>
@@ -3070,7 +3070,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="SharesPerStory">스토리당 공유</string>
     <string name="NotificationActionPinnedSticker">%1$s님이 그룹 %2$s에 스티커를 고정했습니다.</string>
     <string name="ChannelMessageRound">%1$s님이 영상 메시지를 게시했습니다</string>
-    <string name="EnterYourPasscodeInfo">이 설정을 관리하려면 현재 톤 메신저 암호를 입력해주세요.</string>
+    <string name="EnterYourPasscodeInfo">이 설정을 관리하려면 현재 톤그램 암호를 입력해주세요.</string>
     <string name="AutodownloadSizeLimitUpTo">최대 %1$s</string>
     <string name="AutoplayMedia">미디어 자동 재생</string>
     <string name="NeverShareWithPlaceholder">항상 공유 안 할 사용자...</string>
@@ -3109,7 +3109,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="ForwardingFromNames">%s님으로부터</string>
     <string name="MuteForButton">%s 동안 음소거</string>
     <string name="SponsoredMessageRecommended">추천됨</string>
-    <string name="ProfilePopupNotificationInfo">톤 메신저이 꺼져 있을 때 이 연락처에서 보낸 새로운 메시지가 화면에 나타납니다.</string>
+    <string name="ProfilePopupNotificationInfo">톤그램이 꺼져 있을 때 이 연락처에서 보낸 새로운 메시지가 화면에 나타납니다.</string>
     <string name="TimerPeriodOnce">한 번만 보기</string>
     <string name="AddToContacts">연락처에 추가</string>
     <string name="PmReadUnknown">읽은 시간 알 수 없음</string>
@@ -3177,7 +3177,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="ScheduledMessages">"예약된 메시지  보내기"</string>
     <string name="GroupsAndChannelsLimitTitle">그룹 및 채널</string>
     <string name="LocalDatabaseClearTextTitle">로컬 데이터베이스 삭제</string>
-    <string name="PermissionNoAudioWithHint">**톤 메신저**이 음성 메시지를 보내려면 마이크 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **마이크**를 활성화 해주세요.</string>
+    <string name="PermissionNoAudioWithHint">**톤그램**이 음성 메시지를 보내려면 마이크 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **마이크**를 활성화 해주세요.</string>
     <string name="ChannelUsernamePlaceholder">링크</string>
     <string name="ActionGiftInbound">un1님이 **un2**를 위한 선물을 보냈습니다</string>
     <string name="PaymentCheckoutPay">%1$s 결제</string>
@@ -3390,7 +3390,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="CardNumberCopied">카드 번호가 클립보드에 복사되었습니다.</string>
     <string name="TranslateLanguageRU">러시아어</string>
     <string name="Streaming">스트리밍</string>
-    <string name="ChangePasscodeInfo">암호를 설정하시면, 대화 목록 상단에 잠금 아이콘이 나타납니다. 이를 탭하여 톤 메신저 앱을 잠그실 수 있습니다.\n\n주의: 암호를 잊어버릴 경우, 앱을 로그아웃하거나 재설치하셔야 합니다. 비밀 대화는 모두 사라집니다.</string>
+    <string name="ChangePasscodeInfo">암호를 설정하시면, 대화 목록 상단에 잠금 아이콘이 나타납니다. 이를 탭하여 톤그램 앱을 잠그실 수 있습니다.\n\n주의: 암호를 잊어버릴 경우, 앱을 로그아웃하거나 재설치하셔야 합니다. 비밀 대화는 모두 사라집니다.</string>
     <string name="UserRestrictionsCantModifyDisabled">이 작업은 모든 멤버에게 비활성화되어 있습니다. 그룹 권한에서 변경하세요.</string>
     <string name="MegaAddedBy">un1님이 이 그룹에 회원님을 추가했습니다</string>
     <string name="SecretWebPage">링크 미리보기</string>
@@ -3529,7 +3529,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="TelegramFaqUrl">https://telegram.org/faq/ko</string>
     <string name="RestorePremiumHintMessage">Tongram 프리미엄이 최근 만료되었습니다. 연장하려면 여기를 탭하세요.</string>
     <string name="AdditionalReactions">추가 반응</string>
-    <string name="UpdateTelegram">톤 메신저을 업데이트하세요</string>
+    <string name="UpdateTelegram">톤그램을 업데이트하세요</string>
     <string name="SendEmojiPreview">이모지 보내기</string>
     <string name="GiftPremiumUsersPurchasedManyZero">%1$s님에게 구매한 선물에 대해 알림이 전송되었습니다.</string>
     <string name="GroupNeedBoostsForProfileIconDescription">그룹 프로필 아이콘을 변경하려면 그룹이 **레벨 %d**에 도달해야 합니다.\n\n**프리미엄** 멤버에게 이 링크로 그룹 부스트를 요청하세요:</string>
@@ -3558,7 +3558,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="UnknownError">알 수 없는 오류</string>
     <string name="PassportLanguage_AR">아랍어</string>
     <string name="ActionBotDocumentBankStatement">은행 명세서</string>
-    <string name="ScreenCaptureAlert">앱 전환 화면에서 대화 내용이나 목록이 숨겨지지만, 톤 메신저에서 스크린샷을 찍으실 수 없습니다.\n\n이 기능을 사용하려면 앱을 다시 시작하셔야 할 수도 있습니다.</string>
+    <string name="ScreenCaptureAlert">앱 전환 화면에서 대화 내용이나 목록이 숨겨지지만, 톤그램에서 스크린샷을 찍으실 수 없습니다.\n\n이 기능을 사용하려면 앱을 다시 시작하셔야 할 수도 있습니다.</string>
     <string name="ViaBot">via</string>
     <string name="ApplyChanges">변경 사항 적용</string>
     <string name="ForwardedPoll_other">전달된 투표 %1$d개</string>
@@ -3686,7 +3686,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="UpdatedQuoteTitle">인용이 업데이트되었습니다</string>
     <string name="ChannelJoinRequestSent">참여 요청 전송됨</string>
     <string name="RaiseToSpeak">기기를 들어서 말하기</string>
-    <string name="PermissionNoCameraWithHint">**톤 메신저**이 사진 및 동영상을 찍으려면 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **카메라**를 활성화 해주세요.</string>
+    <string name="PermissionNoCameraWithHint">**톤그램**이 사진 및 동영상을 찍으려면 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **카메라**를 활성화 해주세요.</string>
     <string name="SaveToPosts">게시물에 저장</string>
     <string name="TwoStepVerificationPasswordSet">비밀번호가 설정되었습니다!</string>
     <string name="NoMessagesGreetingsDescription">메시지를 보내거나 아래 인사말을 누르세요.</string>
@@ -3694,7 +3694,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="PassportLanguage_HY">아르메니아어</string>
     <string name="SmsSubscribeFeature2Message">매달 **프리미엄 구독권** 1개월 건을 받게 됩니다.</string>
     <string name="PassportLanguage_HU">헝가리어</string>
-    <string name="PhoneNumberHelp">여기서 톤 메신저 전화번호를 변경하실 수 있습니다. 회원님의 계정과 함께 메시지와 미디어, 연락처 따위의 모든 클라우드 데이터가 새 번호로 옮겨집니다.</string>
+    <string name="PhoneNumberHelp">여기서 톤그램 전화번호를 변경하실 수 있습니다. 회원님의 계정과 함께 메시지와 미디어, 연락처 따위의 모든 클라우드 데이터가 새 번호로 옮겨집니다.</string>
     <string name="PassportLanguage_IS">아이슬란드어</string>
     <string name="SelectColorTitle">색상 선택</string>
     <string name="YouSenderNameHidden">나 (발신자 이름 숨김)</string>
@@ -3903,7 +3903,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="ActionCreateGroup">un1님이 그룹을 만들었습니다</string>
     <string name="NotifyAboutReactionsFrom">반응 알림 받기</string>
     <string name="StoryPrivacyOptionContactsDetail">사람 제외</string>
-    <string name="EnterYourTelegramPasscode">톤 메신저 암호 입력</string>
+    <string name="EnterYourTelegramPasscode">톤그램 암호 입력</string>
     <string name="Available">사용 가능</string>
     <string name="DeleteThisChat">이 대화 삭제</string>
     <string name="BusinessHoursDayClosed">닫힘</string>
@@ -3961,7 +3961,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="CallMessageOutgoingMissed">취소된 통화</string>
     <string name="SponsoredMessageSponsorReportable">후원자 정보</string>
     <string name="ActionGroupCallStarted">un1님이 음성 채팅을 시작했습니다</string>
-    <string name="AppNameBeta">톤 메신저</string>
+    <string name="AppNameBeta">톤그램</string>
     <string name="AccDescrVoipCamSwitchedToBack">후면 카메라로 전환됨</string>
     <string name="MessageLifetimeChanged">%1$s님이 자동 삭제 타이머를 %2$s로 설정했습니다.</string>
     <string name="UpgradePremiumPerYear">연 %s에 업그레이드</string>
@@ -4042,7 +4042,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="StoryNotificationSingle">스토리를 게시했습니다</string>
     <string name="BusinessRecipients">수신자</string>
     <string name="MyChannels">내 채널</string>
-    <string name="SentAppCodeWithPhone">회원님의 다른 기기에 %1$s에 대한 코드를 **톤 메신저 앱**으로 전송했습니다.</string>
+    <string name="SentAppCodeWithPhone">회원님의 다른 기기에 %1$s에 대한 코드를 **톤그램 앱**으로 전송했습니다.</string>
     <string name="ChannelInviteViaLinkRestricted3">이 사용자들은 초대할 수 없습니다</string>
     <string name="ChannelInviteViaLinkRestricted2">이 사용자는 초대할 수 없습니다</string>
     <string name="CreateNewContact">새 연락처 만들기</string>
@@ -4261,7 +4261,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="BotWebViewCloseAnyway">그래도 닫기</string>
     <string name="GlobalAttachVideoRestricted">이 그룹에서는 영상 전송이 허용되지 않습니다.</string>
     <string name="DeleteContactsSubtitle">이 연락처들을 삭제하시겠습니까?</string>
-    <string name="AuthAnotherClientUrl">이 코드는 누군가가 회원님의 톤 메신저 계정에 로그인할 수 있도록 하는 데 사용될 수 있습니다.\n\n톤 메신저 로그인을 인증하려면, 설정 &gt; 기기 &gt; QR 코드 스캔으로 이동하여 코드를 스캔해 주세요.</string>
+    <string name="AuthAnotherClientUrl">이 코드는 누군가가 회원님의 톤그램 계정에 로그인할 수 있도록 하는 데 사용될 수 있습니다.\n\n톤그램 로그인을 인증하려면, 설정 &gt; 기기 &gt; QR 코드 스캔으로 이동하여 코드를 스캔해 주세요.</string>
     <string name="ActionYouRemovedPhoto">그룹 사진을 삭제했습니다</string>
     <string name="NotificationGroupEndedCall">%1$s님이 그룹 %2$s 음성 채팅을 종료했습니다.</string>
     <string name="RemoveGroupStickerSet">그룹 스티커 세트 제거</string>
@@ -4673,7 +4673,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="StickerSets_other">스티커 세트 %1$s개</string>
     <string name="ShortToday">오늘</string>
     <string name="ChannelNeedBoostsDescriptionLevel1">스토리를 활성화하려면 이 채널에 %s가 필요합니다. 가능하게 도와주세요!</string>
-    <string name="UpdateAppAlert">죄송합니다. 톤 메신저 앱이 최신 버전이 아니기에 이 요청을 받을 수 없습니다. 톤 메신저을 업데이트해 주세요.</string>
+    <string name="UpdateAppAlert">죄송합니다. 톤그램 앱이 최신 버전이 아니기에 이 요청을 받을 수 없습니다. 톤그램을 업데이트해 주세요.</string>
     <string name="StoryUploadError">스토리 업로드 오류</string>
     <string name="LimitReachedReorderFolder">\"%1$s\" 폴더를 이동하려면 **Tongram Premium**을 구독하세요.</string>
     <string name="TerminateWebSessionInfo">Tongram 계정에서 연결을 해제하려면 탭하세요.</string>
@@ -4725,7 +4725,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="TimezoneHeader">시간대 선택</string>
     <string name="GigagroupAlertText">그룹 회원이 **20만 명**에 도달했습니다.  \n\n관리자만 글을 쓸 수 있는 **방송 그룹**으로 전환하면 한도를 늘릴 수 있습니다.  \n전환하시겠습니까?</string>
     <string name="EditMessageReplaceGif">미디어 교체</string>
-    <string name="AllowReadCallLog">톤 메신저이 통화 기록을 살필 수 있도록 허용해 주세요. 코드를 자동으로 입력해 드릴 수 있습니다.</string>
+    <string name="AllowReadCallLog">톤그램이 통화 기록을 살필 수 있도록 허용해 주세요. 코드를 자동으로 입력해 드릴 수 있습니다.</string>
     <string name="PinToTopLimitReached">죄송합니다. 메인 목록에는 %1$s개만 고정하실 수 있습니다. 보관한 폴더와 다른 폴더에서는 대화방을 개수 제한 없이 고정하실 수 있습니다.</string>
     <string name="June">6월</string>
     <string name="TypePrivateGroupRestrictedForwards">비공개 제한됨</string>
@@ -4934,7 +4934,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="FwdMessagesToSavedMessages">메시지들이 **저장된 메시지**로 전달되었습니다.</string>
     <string name="BoostingReduceQuantity">수량 줄이기</string>
     <string name="BusinessBotPermissions">봇 권한</string>
-    <string name="CancelAccountResetInfo2">**%1$s**에 접근이 가능한 누군가가 회원님의 톤 메신저 계정삭제 및 2단계 인증 초기화를 요청했습니다.\n\n만약 이것을 요청 하신게 아니라면, 저희가 방금 보낸 SMS 코드를 입력해주세요. 또한 *전화번호를 변경을 하여* 취소를 할 수 있습니다.</string>
+    <string name="CancelAccountResetInfo2">**%1$s**에 접근이 가능한 누군가가 회원님의 톤그램 계정삭제 및 2단계 인증 초기화를 요청했습니다.\n\n만약 이것을 요청 하신게 아니라면, 저희가 방금 보낸 SMS 코드를 입력해주세요. 또한 *전화번호를 변경을 하여* 취소를 할 수 있습니다.</string>
     <string name="MicrophoneForVoiceMessagesScoHint">헤드셋 마이크를 사용하면 배경 소음이 줄어들지만 오디오 품질이 약간 저하될 수 있습니다</string>
     <string name="PrivacySettings">개인정보 및 보안</string>
     <string name="SortedByName">이름순</string>
@@ -5108,7 +5108,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="SavedTagLabelPlaceholder">이름</string>
     <string name="AttachVoiceRestricted">이 그룹의 관리자가 %1$s까지 이곳에 음성 메시지를 보내지 못하도록 제한했습니다.</string>
     <string name="PassportAddTemporaryRegistrationInfo">임시 등록증 스캔을 업로드하세요.</string>
-    <string name="ContactJoined">친구의 톤 메신저 가입</string>
+    <string name="ContactJoined">친구의 톤그램 가입</string>
     <string name="VoiceSetOnceHint">이 메시지를 **한 번만 재생**으로 설정하려면 탭하세요.</string>
     <string name="PassportPolicy">*%1$s 개인정보 보호정책*에 동의하고 @%2$s의 메시지 수신을 허용합니다.</string>
     <string name="NotificationActionPinnedStickerUser">%1$s님이 스티커를 고정했습니다</string>
@@ -5135,7 +5135,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="AccDescrMirror">미러</string>
     <string name="PremiumPreviewLastSeen">마지막 접속 시간</string>
     <string name="EventLogPromotedManageCall">라이브 스트림 관리</string>
-    <string name="NotificationsServiceConnectionInfo">안정적인 알림을 위해 톤 메신저의 백그라운드 연결을 최소로 유지합니다.</string>
+    <string name="NotificationsServiceConnectionInfo">안정적인 알림을 위해 톤그램의 백그라운드 연결을 최소로 유지합니다.</string>
     <string name="PassportReverseSideInfo">문서 뒷면 사진을 업로드하세요</string>
     <string name="AutoDownloadLow">낮음</string>
     <string name="BoostingGiveawayTakePartMulti">이 경품 이벤트에 참여하려면 **%3$s** 전까지 **%1$s** 채널(및 나열된 다른 **%2$d** 채널)에 가입해주세요.</string>
@@ -5278,13 +5278,13 @@ https://telegram.org/blog/coronavirus</string>
     <string name="ImportCount">%2$s 중 %1$s</string>
     <string name="BusinessGreetingEnter">환영 인사 추가</string>
     <string name="BoostFeatureNameColorGroup_other">그룹 이름 색상 %d개</string>
-    <string name="AllowReadCall">톤 메신저이 전화를 수신 할 수 있도록 설정해주셔야 자동으로 코드 입력이 가능합니다.</string>
+    <string name="AllowReadCall">톤그램이 전화를 수신 할 수 있도록 설정해주셔야 자동으로 코드 입력이 가능합니다.</string>
     <string name="PassportSurnameCountry">성 (%1$s)</string>
     <string name="BotRestart">봇 다시 시작</string>
     <string name="TodayAtFormattedWithToday">오늘 %1$s에</string>
     <string name="FilterAllChatsShort">모두</string>
     <string name="LinkBelow">아래로 이동</string>
-    <string name="OtherLoginCode">로그인 코드는 **%1$s**입니다. 로그인하고자 하는 톤 메신저 앱에 입력하세요.\n\n아무에게도 이 코드를 주지 마세요.</string>
+    <string name="OtherLoginCode">로그인 코드는 **%1$s**입니다. 로그인하고자 하는 톤그램 앱에 입력하세요.\n\n아무에게도 이 코드를 주지 마세요.</string>
     <string name="Application">애플리케이션</string>
     <string name="Map">지도</string>
     <string name="PlayFile">파일 재생</string>
@@ -5440,7 +5440,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="ClearSearchAlertPartialTitle">검색 기록에서 제거</string>
     <string name="SelectChat">채팅 선택</string>
     <string name="HashtagStoriesFoundSubtitle">%s가 포함된 스토리 보기</string>
-    <string name="SecretLinkPreviewAlert">비밀 대화에서 링크 미리보기를 활성화하시겠습니까? 링크 미리보기는 톤 메신저 서버에서 만들어지는 점을 유의하시기 바랍니다.</string>
+    <string name="SecretLinkPreviewAlert">비밀 대화에서 링크 미리보기를 활성화하시겠습니까? 링크 미리보기는 톤그램 서버에서 만들어지는 점을 유의하시기 바랍니다.</string>
     <string name="PassportEmail">이메일</string>
     <string name="PrivacyBirthdayTooOftenTitle">앗</string>
     <string name="Terminate">종료</string>
@@ -5502,7 +5502,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="BoostingTelegramPremiumFor">%s 기간 Tongram 프리미엄</string>
     <string name="ContactsPermissionAlertContinue">계속</string>
     <string name="TimeToEdit">%1$s</string>
-    <string name="UseProxyTelegramInfo2">이 프록시를 사용하시면 후원 채널이 대화방 목록에 표시될 수 있습니다. 회원님의 톤 메신저 트래픽은 전혀 공개되지 않습니다.</string>
+    <string name="UseProxyTelegramInfo2">이 프록시를 사용하시면 후원 채널이 대화방 목록에 표시될 수 있습니다. 회원님의 톤그램 트래픽은 전혀 공개되지 않습니다.</string>
     <string name="VoipGroupStartAsInfoGroup">개인 계정, 이 그룹 또는 채널로 표시할지 선택하세요</string>
     <string name="NotificationsImportance">우선순위</string>
     <string name="ChatArchivedInfo">보관함을 왼쪽으로 스와이프하여 숨기세요.</string>
@@ -5525,7 +5525,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="BoostFeatureCustomReaction_other">맞춤 반응 %d개</string>
     <string name="BusinessChatsOnlySelected">선택한 채팅만</string>
     <string name="FilterAllChats">전체 채팅</string>
-    <string name="AllowFillNumber">톤 메신저이 전화를 받을 수 있도록 허용해 주셔야 회원님의 전화번호를 자동으로 확인할 수 있습니다.</string>
+    <string name="AllowFillNumber">톤그램이 전화를 받을 수 있도록 허용해 주셔야 회원님의 전화번호를 자동으로 확인할 수 있습니다.</string>
     <string name="PaymentBillingAddress">청구 주소</string>
     <string name="PremiumStoriesStealthDescription">다른 사람의 스토리를 본 사실을 숨기세요.</string>
     <string name="FilterChatTypes">채팅 유형</string>
@@ -5534,11 +5534,11 @@ https://telegram.org/blog/coronavirus</string>
     <string name="StoryHintSwipeToZoom">스와이프하여 확대/축소</string>
     <string name="ChannelNeedBoostsForCustomWallpaperDescription">채널 배경화면을 맞춤 사진으로 변경하려면 채널이 **레벨 %d**에 도달해야 합니다.\n\n**프리미엄** 구독자에게 이 링크로 채널 부스트를 요청하세요:</string>
     <string name="ChatThemeSaveDialogDiscard">삭제</string>
-    <string name="LowDiskSpaceMessage">기기에 남은 공간이 거의 없습니다. 톤 메신저이 최근 미디어의 캐시만 저장하도록 설정해 여유 공간을 확보하실 수 있습니다.</string>
+    <string name="LowDiskSpaceMessage">기기에 남은 공간이 거의 없습니다. 톤그램이 최근 미디어의 캐시만 저장하도록 설정해 여유 공간을 확보하실 수 있습니다.</string>
     <string name="StartShortTodayAt">\'오늘,\' HH:mm</string>
     <string name="StorageCleared">저장소 정리됨</string>
     <string name="GroupBoostsJustReachedLevel1">이 그룹이 **레벨 1**에 도달하여 이제 스토리를 게시할 수 있습니다.</string>
-    <string name="NoPhoneFound">이 번호로 되어 있는 톤 메신저 계정이 없습니다.</string>
+    <string name="NoPhoneFound">이 번호로 되어 있는 톤그램 계정이 없습니다.</string>
     <string name="SendingVideo">동영상 보내는 중...</string>
     <string name="ClearRecentStickersAlertTitle">최근 사용 스티커 지우기</string>
     <string name="ShortHoursAgo_other">%d시간</string>
@@ -5652,7 +5652,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="UserRemovedBy">%1$s에 의해 삭제됨</string>
     <string name="ArticleDateByAuthor">%2$s 작성 %1$s</string>
     <string name="EventLogRestrictedChangeInfo">정보 변경</string>
-    <string name="PermissionNoStorageAvatar">**톤 메신저**이 프로필 사진 및 영상을 업로드하기 위하여 저장 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **파일 및 미디어**를 활성화 해주세요.</string>
+    <string name="PermissionNoStorageAvatar">**톤그램**이 프로필 사진 및 영상을 업로드하기 위하여 저장 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **파일 및 미디어**를 활성화 해주세요.</string>
     <string name="MicrophoneForVoiceMessagesBuiltIn">내장</string>
     <string name="ResetStatistics">통계 재설정</string>
     <string name="StoryOriginalSoundNotMuted">원본 오디오가 유지됩니다.</string>
@@ -5826,7 +5826,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="BoostingEnableGroupEmojiPack">그룹 이모지 팩 잠금 해제</string>
     <string name="HoldToAudio">음성을 녹음하려면 길게 누르세요. 영상으로 전환하려면 탭하세요.</string>
     <string name="WhoCanAddMembersAdmins">관리자만</string>
-    <string name="PermissionDrawAboveOtherApps">화면속화면 모드로 동영상을 재생하려면 톤 메신저에게 다른 앱 위에 그릴 수 있는 권한을 부여하셔야 합니다.</string>
+    <string name="PermissionDrawAboveOtherApps">화면속화면 모드로 동영상을 재생하려면 톤그램에게 다른 앱 위에 그릴 수 있는 권한을 부여하셔야 합니다.</string>
     <string name="StartsTodayAt">\'오늘\' HH:mm\'에 시작\'</string>
     <string name="AttachOnceRound">일회성 동영상 메시지</string>
     <string name="NoCallLog">아직 전화 내역이 없습니다...</string>
@@ -5843,7 +5843,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="LiteOptionsAutoplayChat">채팅에서 자동 재생</string>
     <string name="LoadingStats">통계 로딩 중...</string>
     <string name="StoryPrivacyAlertTitle">스토리 공유</string>
-    <string name="SentCallCode">**%1$s** 번호로 인증 전화를 걸었습니다. \n\n전화를 받지 마세요. 톤 메신저이 모든 것을 자동으로 처리합니다.</string>
+    <string name="SentCallCode">**%1$s** 번호로 인증 전화를 걸었습니다. \n\n전화를 받지 마세요. 톤그램이 모든 것을 자동으로 처리합니다.</string>
     <string name="AddAsAdmin">관리자로 추가</string>
     <string name="ClearHistoryMyNotesTitle">모든 노트 삭제</string>
     <string name="ResetAccountStatus">아래 시간이 지나야 계정을 초기화하실 수 있습니다:</string>
@@ -6235,7 +6235,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="BusinessLinksDeleteMessage">이 채팅 링크를 삭제하시겠습니까?</string>
     <string name="RemoveFromListText">사용자를 삭제하려면 길게 누르세요.</string>
     <string name="StoryPrivacyHint">스토리를 볼 수 있는 사람 설정</string>
-    <string name="AreYouSureLogout">정말 로그아웃하시겠습니까?\n\n로그아웃시, 모든 비밀 대화가 사라지게 됩니다.\n\n회원님의 모든 기기에서 동시에, 하나의 앱에서 여러개의 톤 메신저 계정을 사용할 수 있습니다.</string>
+    <string name="AreYouSureLogout">정말 로그아웃하시겠습니까?\n\n로그아웃시, 모든 비밀 대화가 사라지게 됩니다.\n\n회원님의 모든 기기에서 동시에, 하나의 앱에서 여러개의 톤그램 계정을 사용할 수 있습니다.</string>
     <string name="SearchEmptyViewDownloads">최근 다운로드 없음</string>
     <string name="PinToTop">상단에 고정</string>
     <string name="AccDescrSearchNext">다음 검색 결과</string>
@@ -6295,7 +6295,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="AccDescrMentionReaction">새 반응 있음</string>
     <string name="FilterInviteGroup">여기에 다른 사람을 초대할 수 없습니다</string>
     <string name="FolderLinkRemovedChats_other">폴더에서 채팅 %d개 제거됨</string>
-    <string name="PermissionNoAudioStorageStory">**톤 메신저**이 스토리에 음악 파일을 추가하려면 음악 파일에 접근해야 합니다. 설정 &gt; 권한을 탭하고 **음악 및 오디오**를 켜세요.</string>
+    <string name="PermissionNoAudioStorageStory">**톤그램**이 스토리에 음악 파일을 추가하려면 음악 파일에 접근해야 합니다. 설정 &gt; 권한을 탭하고 **음악 및 오디오**를 켜세요.</string>
     <string name="ReportTitleSpam">가짜 신고</string>
     <string name="SubscribeToPremiumOfficialAppNeededDescription">**Tongram 프리미엄**을 구독하려면 공식 Tongram 앱이 필요합니다.\n\n구독하면</string>
     <string name="PhotoEditorTypefaceRoboto">로보토</string>
@@ -6315,15 +6315,15 @@ https://telegram.org/blog/coronavirus</string>
     <string name="PrivacyPaymentsClearAlertTitle">결제 정보 삭제</string>
     <string name="BusinessHoursDayAdd">시간대 추가</string>
     <string name="ViewsBySourceChartTitle">소스별 조회수</string>
-    <string name="AuthAnotherClientInfo2">QR 코드를 받으려면 톤 메신저 데스크탑을 실행하세요.</string>
+    <string name="AuthAnotherClientInfo2">QR 코드를 받으려면 톤그램 데스크탑을 실행하세요.</string>
     <string name="AuthAnotherClientInfo3">회원님의 계정을 연결하려면 QR 코드를 스캔하세요.</string>
-    <string name="AuthAnotherClientInfo1">컴퓨터에 톤 메신저을 다운로드하세요\n*desktop.telegram.org*.</string>
+    <string name="AuthAnotherClientInfo1">컴퓨터에 톤그램을 다운로드하세요\n*desktop.telegram.org*.</string>
     <string name="NotificationsPriority">우선순위</string>
     <string name="VideoSavedHint">동영상이 갤러리에 저장됨</string>
     <string name="AreYouSureDeleteVideoEveryone">이 동영상을 모든 사람에게서 삭제하시겠습니까?</string>
     <string name="ActionInviteUser">un1님이 초대 링크를 통해 그룹에 참여했습니다</string>
     <string name="ChoosePhotoOrVideo">사진 또는 동영상 선택</string>
-    <string name="AddEmailSubtitle">문자가 아닌 이메일을 통해 톤 메신저 로그인 코드를 받게 됩니다. 접근 권한이 있는 이메일 주소를 입력하세요.</string>
+    <string name="AddEmailSubtitle">문자가 아닌 이메일을 통해 톤그램 로그인 코드를 받게 됩니다. 접근 권한이 있는 이메일 주소를 입력하세요.</string>
     <string name="Create">만들기</string>
     <string name="YouBoostedChannel">채널을 부스트했습니다</string>
     <string name="PaymentPasswordReEnter">비밀번호 다시 입력</string>
@@ -6450,7 +6450,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="AllWebSessionsTerminated">모든 웹사이트 연결이 해제되었습니다.</string>
     <string name="NotificationActionPinnedRoundChannel">%1$s 님이 동영상 메시지를 고정했습니다</string>
     <string name="ColorYellow">노란색</string>
-    <string name="PermissionNoLocationFriends">**톤 메신저**이 친구들과 위치를 공유하려면 위치 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **위치**를 활성화 해주세요.</string>
+    <string name="PermissionNoLocationFriends">**톤그램**이 친구들과 위치를 공유하려면 위치 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **위치**를 활성화 해주세요.</string>
     <string name="StealthModeOnHint">지난 5분 동안 또는 앞으로 25분 동안 시청할 스토리의 제작자는 시청자 목록에서 당신을 볼 수 없습니다.</string>
     <string name="StoryReplyDisabled">이 스토리에 답장할 수 없습니다</string>
     <string name="ProximityAlertCancelled">근접 알림 취소됨</string>
@@ -6771,7 +6771,7 @@ un2에게 대화를 공유함</string>
     <string name="VoipChatActiveChats">활성 음성 채팅</string>
     <string name="JoinRequests_other">%1$d명이 가입 요청함</string>
     <string name="VoipGroupDisplayAs">다음으로 표시...</string>
-    <string name="TosDecline">유감스럽게도, 톤 메신저에 가입하실 수 없습니다.\n\n다른 서비스와 달리 저희는 광고 타겟팅이나 다른 상업적 목적으로 귀하의 데이터를 사용하지 않습니다. 톤 메신저이 안전하고 기능이 풍부한 클라우드 서비스로서 작동하는 데 필요한 정보만을 저장합니다. 개인 정보 및 보안 설정에서 데이터 사용 방식(동기화된 연락처 삭제 따위)을 설정하실 수 있습니다.\n\n하지만 톤 메신저의 간소한 요구 사항에 두루 동의하실 수 없다면 저희로서 이 서비스를 제공해 드리기가 어렵습니다.</string>
+    <string name="TosDecline">유감스럽게도, 톤그램에 가입하실 수 없습니다.\n\n다른 서비스와 달리 저희는 광고 타겟팅이나 다른 상업적 목적으로 귀하의 데이터를 사용하지 않습니다. 톤그램이 안전하고 기능이 풍부한 클라우드 서비스로서 작동하는 데 필요한 정보만을 저장합니다. 개인 정보 및 보안 설정에서 데이터 사용 방식(동기화된 연락처 삭제 따위)을 설정하실 수 있습니다.\n\n하지만 톤그램의 간소한 요구 사항에 두루 동의하실 수 없다면 저희로서 이 서비스를 제공해 드리기가 어렵습니다.</string>
     <string name="WidgetPasscodeEnable2">비밀번호가 홈화면에 추가된 위젯에는 **영향을 미치지 않습니다**.</string>
     <string name="AccDescrMoreOptions">더 많은 옵션</string>
     <string name="CreateNewThemeHelp">팔레트 아이콘을 누르면 각 화면의 요소 목록을 보고 편집할 수 있습니다.</string>
@@ -6909,7 +6909,7 @@ un2에게 대화를 공유함</string>
     <string name="ImportHeader">메시지와 미디어 가져올 곳...</string>
     <string name="FolderLinkHeaderChatsQuit_other">나갈 채팅 %d개</string>
     <string name="NotificationActionPinnedInvoice">%1$s 님이 %2$s 그룹에 인보이스를 공지했습니다</string>
-    <string name="SentAppCode">회원님의 다른 기기에 설치된 **톤 메신저** 앱으로 코드를 보냈습니다.</string>
+    <string name="SentAppCode">회원님의 다른 기기에 설치된 **톤그램** 앱으로 코드를 보냈습니다.</string>
     <string name="FilterRemoveInclusionUserText">항상 포함되는 채팅에서 \"%1$s\"을(를) 제거하시겠습니까?</string>
     <string name="PeerRequirementGroupPublicTrue">그룹은 공개여야 합니다.</string>
     <string name="SendingGif">GIF 보내는 중...</string>
@@ -7024,10 +7024,10 @@ un2에게 대화를 공유함</string>
     <string name="EventLogRestrictedPinMessages">메시지 고정</string>
     <string name="NotificationActionPinnedPoll2">%1$s님이 그룹 %2$s에 %3$s 투표를 고정했습니다.</string>
     <string name="PremiumStoriesSaveToGalleryDescription">다른 사람의 보호되지 않은 스토리를 갤러리에 저장하세요.</string>
-    <string name="UseProxySponsorInfo">이 채널은 회원님의 프록시 서버로 인해 나타났습니다. 채널을 대화방 목록에서 제거하려면, 톤 메신저 설정 &gt; 데이터 및 저장소에서 프록시 사용을 해제하세요.</string>
+    <string name="UseProxySponsorInfo">이 채널은 회원님의 프록시 서버로 인해 나타났습니다. 채널을 대화방 목록에서 제거하려면, 톤그램 설정 &gt; 데이터 및 저장소에서 프록시 사용을 해제하세요.</string>
     <string name="NoClicks">클릭 없음</string>
     <string name="RevenueSharingAdsInfo1Subtitle">Tongram 광고는 개인정보를 전혀 사용하지 않으며, 광고가 표시된 채널 기반으로만 노출됩니다.</string>
-    <string name="AppName">톤 메신저</string>
+    <string name="AppName">톤그램</string>
     <string name="ColorPickerBackground">배경</string>
     <string name="SponsoredMessageSponsor">광고주 정보</string>
     <string name="CropImage">이미지 자르기</string>
@@ -7119,7 +7119,7 @@ un2에게 채널을 공유함</string>
     <string name="DeleteStoriesSubtitle_other">스토리 %d개를 삭제하시겠습니까?</string>
     <string name="SendGameToGroupText">**%1$s** 님에게 이 게임을 공유하시겠습니까?</string>
     <string name="ClearCacheInfo">기기의 저장 공간을 확보합니다. 미디어는 클라우드에 보관됩니다.</string>
-    <string name="TosUpdateDecline">유감스럽지만, 다른 방법이 없습니다. 다른 앱과 달리, 톤 메신저은 광고 타겟팅이나 다른 상업적 목적으로 사용자 데이터를 사용하지 않습니다. 톤 메신저은 기능이 풍부한 클라우드 서비스로서 작동하는 데 필요한 정보만을 저장합니다. 개인 정보 및 보안 설정에서 내 데이터에 대한 제어를 할 수 있습니다.\n\n만약 톤 메신저의 간소한 요구 사항에 두루 동의하실 수 없다면 저희로서 이 서비스를 제공해 드리기가 어렵습니다.</string>
+    <string name="TosUpdateDecline">유감스럽지만, 다른 방법이 없습니다. 다른 앱과 달리, 톤그램은 광고 타겟팅이나 다른 상업적 목적으로 사용자 데이터를 사용하지 않습니다. 톤그램은 기능이 풍부한 클라우드 서비스로서 작동하는 데 필요한 정보만을 저장합니다. 개인 정보 및 보안 설정에서 내 데이터에 대한 제어를 할 수 있습니다.\n\n만약 톤그램의 간소한 요구 사항에 두루 동의하실 수 없다면 저희로서 이 서비스를 제공해 드리기가 어렵습니다.</string>
     <string name="BoostingGiveawayMsgInfo">%1$d 텔레그램 프리미엄 구독권 **%2$s**개.</string>
     <string name="BackgroundIntensity">세기</string>
     <string name="ChannelDescriptionChanged">채널 설명 업데이트됨.</string>
@@ -7315,7 +7315,7 @@ un2에게 채널을 공유함</string>
     <string name="ChatThemeDayNightSwitchTooltip">탭하여 야간 모드에서 이 테마를 확인해보세요.</string>
     <string name="FolderLinkTitleAdd">폴더 추가</string>
     <string name="ForwardedLocation_other">전달된 위치 %1$d개</string>
-    <string name="PermissionNoContactsSharing">**톤 메신저**에서 연락처를 친구들에게 공유 하려면 연락처 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **연락처**를 활성화 해주세요.</string>
+    <string name="PermissionNoContactsSharing">**톤그램**에서 연락처를 친구들에게 공유 하려면 연락처 접근 권한이 필요합니다. 설정 &gt; 권한을 탭하고 **연락처**를 활성화 해주세요.</string>
     <string name="EventLogRemovedWallpaperGroup">un1님이 그룹 배경화면을 제거했습니다</string>
     <string name="UserColorPreviewLinkDescription">선택한 색상이 링크 미리보기에도 적용됩니다.</string>
     <string name="UpgradePremiumTitle">**%1$d%%** 할인으로 프리미엄으로 업그레이드</string>
@@ -7337,7 +7337,7 @@ un2에게 채널을 공유함</string>
     <string name="InvalidFormatError">유효하지 않은 형식</string>
     <string name="PublicLink">공개 링크</string>
     <string name="ShowTranslateChatButtonLocked">**텔레그램 프리미엄**을 구독하여 모든 메시지를 단숨에 번역하세요.</string>
-    <string name="PermissionDrawAboveOtherAppsGroupCall">오버레이 모드는 푸시-투-토크시, 톤 메신저을 나가더라도 누가 대화를 하는지 알 수 있게 됩니다.</string>
+    <string name="PermissionDrawAboveOtherAppsGroupCall">오버레이 모드는 푸시-투-토크시, 톤그램을 나가더라도 누가 대화를 하는지 알 수 있게 됩니다.</string>
     <string name="ReportTitleChild">폭력 신고</string>
     <string name="VoipChannelScheduleVoiceChat">라이브 스트림 예약</string>
     <string name="AccDescrYouReactedWith">%1$s(으)로 반응함</string>
@@ -7418,7 +7418,7 @@ un2에게 채널을 공유함</string>
     <string name="EventLogEditedGroupTitle">un1님이 그룹 이름을 \"%1\ns\"(으)로변경했습니다</string>
     <string name="PublicPhoto">공개 사진</string>
     <string name="GameCantSendSecretChat">죄송합니다. 게임은 비밀 채팅으로 보낼 수 없습니다.</string>
-    <string name="RecoveryEmailSubtitle">비밀번호를 재설정하고 회원님의 톤 메신저 계정에 다시 접속하는 데 필요한 복구 이메일을 설정하실 수 있습니다.</string>
+    <string name="RecoveryEmailSubtitle">비밀번호를 재설정하고 회원님의 톤그램 계정에 다시 접속하는 데 필요한 복구 이메일을 설정하실 수 있습니다.</string>
     <string name="DiscardVoiceMessageAction">취소</string>
     <string name="PremiumStoriesPriorityDescription">스토리가 항상 먼저 표시되어 더 많은 조회수를 얻으세요.</string>
     <string name="EventLogPreviousGroupTheme">이전 테마</string>
@@ -7441,7 +7441,7 @@ un2에게 채널을 공유함</string>
     <string name="ReportChatFakeAccount">가짜 계정</string>
     <string name="AccSwipeForArchive">아래로 스와이프하여 보관함으로</string>
     <string name="StoryPrivacyAlertExcludedContactsSubtitle">연락처 제외</string>
-    <string name="EmailLoginChangeMessage">이 이메일 주소는 새 기기에서 톤 메신저 계정에 로그인할 때마다 사용됩니다.</string>
+    <string name="EmailLoginChangeMessage">이 이메일 주소는 새 기기에서 톤그램 계정에 로그인할 때마다 사용됩니다.</string>
     <string name="CancelLinkSuccess">%1$s 계정 탈퇴 작업이 취소되었습니다. 이제 이 창을 닫으셔도 좋습니다.</string>
     <string name="PremiumPreviewLastSeenDescription">내 마지막 접속을 숨겨도 다른 사람의 마지막 접속 및 읽은 시간을 볼 수 있습니다.</string>
     <string name="EncryptionProcessing">암호화 키 교환 중...</string>
@@ -7449,7 +7449,7 @@ un2에게 채널을 공유함</string>
     <string name="VoipGroupOffline">현재 오프라인입니다. 음성 채팅에 참여하려면 인터넷에 연결하세요.</string>
     <string name="HideReadTimeInfo">마지막 접속을 볼 수 없는 사람에게 메시지를 읽은 시간을 숨깁니다. 이 옵션을 켜면 상대방의 읽은 시간도 숨겨집니다.\n이 설정은 그룹 채팅에 영향을 미치지 않습니다.</string>
     <string name="ServerErrorViewersTitle">앗!</string>
-    <string name="DidNotGetTheCodeInfo">코드를 SMS 혹은 전화로 받지 못하였을 경우, **셀룰러 데이터 설정**과 전화번호를 확인해주세요:\n\n**%1$s**\n\n현재 남은 방법은 다른 번호로 시도하시거나 톤 메신저 지원에 연락하는 것입니다. **도움말**을 탭하여 저희가 문제를 확인할 수 있도록 자세하게 기술적인 내용을 전달해주세요.</string>
+    <string name="DidNotGetTheCodeInfo">코드를 SMS 혹은 전화로 받지 못하였을 경우, **셀룰러 데이터 설정**과 전화번호를 확인해주세요:\n\n**%1$s**\n\n현재 남은 방법은 다른 번호로 시도하시거나 톤그램 지원에 연락하는 것입니다. **도움말**을 탭하여 저희가 문제를 확인할 수 있도록 자세하게 기술적인 내용을 전달해주세요.</string>
     <string name="FirstNameSmall">이름</string>
     <string name="FolderTagColor">채팅 목록의 폴더 색상</string>
     <string name="NotificationActionPinnedGameScore">%1$s님이 그룹 %2$s에 게임 점수를 고정했습니다.</string>
