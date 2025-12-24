@@ -3516,6 +3516,9 @@ public class Theme {
     public static final int key_contextProgressOuter4 = colorsCount++;
 
     public static final int key_avatar_text = colorsCount++;
+    public static final int key_coming_soon = colorsCount++;
+    public static final int key_button_disable = colorsCount++;
+    public static final int key_button_enable = colorsCount++;
     public static final int key_avatar_backgroundSaved = colorsCount++;
     public static final int key_avatar_background2Saved = colorsCount++;
     public static final int key_avatar_backgroundArchived = colorsCount++;

@@ -331,6 +331,8 @@ import ton_core.shared.CustomLifecycleOwner;
 import ton_core.entities.TranslatedMessageEntity;
 import ton_core.repositories.translated_message_repository.ITranslatedMessageRepository;
 import ton_core.repositories.translated_message_repository.TranslatedMessageRepository;
+import ton_core.ui.dialogs.AiEnhanceDialog;
+import ton_core.ui.models.TongramLanguageModel;
 
 @SuppressWarnings("unchecked")
 public class ChatActivity extends BaseFragment implements
@@ -341,7 +343,8 @@ public class ChatActivity extends BaseFragment implements
         ChatActivityInterface,
         FloatingDebugProvider,
         InstantCameraView.Delegate,
-        FactorAnimator.Target
+        FactorAnimator.Target,
+        AiEnhanceDialog.Delegate
 {
     private final static boolean PULL_DOWN_BACK_FRAGMENT = false;
     private final static boolean DISABLE_PROGRESS_VIEW = true;
@@ -373,6 +376,7 @@ public class ChatActivity extends BaseFragment implements
     private CustomLifecycleOwner lifecycleOwner;
     private static final ExecutorService detectLanguageExecutor =
             Executors.newFixedThreadPool(3);
+    private List<TongramLanguageModel> tongramLanguages;
 
     private HashMap<MessageObject, Boolean> alreadyPlayedStickers = new HashMap<>();
 
@@ -1432,6 +1436,12 @@ public class ChatActivity extends BaseFragment implements
         return webBotTitle;
     }
 
+    @Override
+    public void onTranslatedApply(String text) {
+        chatActivityEnterView.setFieldText(text);
+        chatActivityEnterView.setAiEnhanceButtonDrawable(true);
+    }
+
     private interface ChatActivityDelegate {
         default void openReplyMessage(int mid) {
 
@@ -1954,6 +1964,15 @@ public class ChatActivity extends BaseFragment implements
                         TranscribeButton.showOffTranscribe(msg);
                     }
                 }
+            }
+        }
+
+        @Override
+        public void openOrApplyAiEnhanceDialog(CharSequence text) {
+            if (getParentActivity() instanceof androidx.fragment.app.FragmentActivity) {
+                androidx.fragment.app.FragmentManager fragmentManager =
+                        ((androidx.fragment.app.FragmentActivity) getParentActivity()).getSupportFragmentManager();
+                AiEnhanceDialog.newInstance(ChatActivity.this, resourceProvider, tongramLanguages, shortLanguageName, translatedMessageRepository, text).show(fragmentManager, null);
             }
         }
 
@@ -2536,6 +2555,12 @@ public class ChatActivity extends BaseFragment implements
             }
         });
         shortLanguageName = LocaleController.getInstance().getCurrentLocale().getLanguage();
+        ArrayList<LocaleController.LocaleInfo> arrayList = LocaleController.getInstance().languages;
+        tongramLanguages = new ArrayList<>();
+        tongramLanguages.addAll(arrayList.stream()
+                .filter(e -> e.shortName != shortLanguageName)
+                .map(e -> new TongramLanguageModel(e.name, e.shortName, false))
+                .collect(Collectors.toList()));
 
         final long chatId = arguments.getLong("chat_id", 0);
         final long userId = arguments.getLong("user_id", 0);
@@ -7683,7 +7708,11 @@ public class ChatActivity extends BaseFragment implements
 
                 @Override
                 public void onTextChanged(CharSequence text, boolean bigChange, boolean fromDraft) {}
-                 @Override
+
+                @Override
+                public void openOrApplyAiEnhanceDialog(CharSequence text) {}
+
+                @Override
                 public void onTextSelectionChanged(int start, int end) {}
 
                 @Override

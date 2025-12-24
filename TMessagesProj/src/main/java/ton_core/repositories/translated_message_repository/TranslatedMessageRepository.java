@@ -72,4 +72,9 @@ public class TranslatedMessageRepository implements ITranslatedMessageRepository
             }
         });
     }
+
+    @Override
+    public void draftTranslate(String text, String lang, IOnApiCallback<TranslateMessageResponse> result) {
+        translateService.translate(text, lang, result);
+    }
 }

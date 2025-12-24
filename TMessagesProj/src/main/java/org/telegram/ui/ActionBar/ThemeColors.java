@@ -79,7 +79,7 @@ public class ThemeColors {
         defaultColors[key_windowBackgroundCheckText] = 0xffffffff;
         defaultColors[key_progressCircle] = 0xff1c93e3;
         defaultColors[key_windowBackgroundWhiteGrayIcon] = 0xff81868b;
-        defaultColors[key_windowBackgroundWhiteBlueText] = 0xff4092cd;
+        defaultColors[key_windowBackgroundWhiteBlueText] = 0xff0A84FF;
         defaultColors[key_windowBackgroundWhiteBlueText2] = 0xff3a95d5;
         defaultColors[key_windowBackgroundWhiteBlueText3] = 0xff2678b6;
         defaultColors[key_windowBackgroundWhiteBlueText4] = 0xff1c93e3;
@@ -145,6 +145,9 @@ public class ThemeColors {
         defaultColors[key_fastScrollText] = 0xffffffff;
 
         defaultColors[key_avatar_text] = 0xffffffff;
+        defaultColors[key_coming_soon] = 0xffDB3030;
+        defaultColors[key_button_disable] = 0xff5D9DFD;
+        defaultColors[key_button_enable] = 0xff106FFF;
 
         defaultColors[key_avatar_backgroundSaved] = 0xff69BDF9;
         defaultColors[key_avatar_background2Saved] = 0xff409FE1;

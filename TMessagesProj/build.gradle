@@ -28,6 +28,10 @@ dependencies {
     implementation 'com.google.android.gms:play-services-cast-framework:21.4.0'
     implementation "androidx.mediarouter:mediarouter:1.7.0"
     implementation 'org.nanohttpd:nanohttpd:2.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'com.google.android.material:material:1.12.0'
 
     compileOnly 'org.checkerframework:checker-qual:2.5.2'
     compileOnly 'org.checkerframework:checker-compat-qual:2.5.0'
@@ -135,7 +139,7 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "true"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "0"
-            buildConfigField "String", "TON_API_URL", "\"https://bbbc462f4bfd.ngrok-free.app/api/v1/\""
+            buildConfigField "String", "TON_API_URL", "\"https://1608f7632a68.ngrok-free.app/api/v1/\""
             buildConfigField "String", "TON_API_KEY", "\"bd22e4002e104ae28ccc3797dbafc817\""
         }
 
@@ -152,7 +156,7 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "true"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "1"
-            buildConfigField "String", "TON_API_URL", "\"https://bbbc462f4bfd.ngrok-free.app/api/v1/\""
+            buildConfigField "String", "TON_API_URL", "\"https://1608f7632a68.ngrok-free.app/api/v1/\""
             buildConfigField "String", "TON_API_KEY", "\"bd22e4002e104ae28ccc3797dbafc817\""
         }
 
@@ -169,7 +173,7 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "false"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "4"
-            buildConfigField "String", "TON_API_URL", "\"https://bbbc462f4bfd.ngrok-free.app/api/v1/\""
+            buildConfigField "String", "TON_API_URL", "\"https://1608f7632a68.ngrok-free.app/api/v1/\""
             buildConfigField "String", "TON_API_KEY", "\"bd22e4002e104ae28ccc3797dbafc817\""
         }
 
@@ -186,7 +190,7 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "true"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "5"
-            buildConfigField "String", "TON_API_URL", "\"https://bbbc462f4bfd.ngrok-free.app/api/v1/\""
+            buildConfigField "String", "TON_API_URL", "\"https://1608f7632a68.ngrok-free.app/api/v1/\""
             buildConfigField "String", "TON_API_KEY", "\"bd22e4002e104ae28ccc3797dbafc817\""
         }
 
@@ -203,7 +207,7 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "false"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "6"
-            buildConfigField "String", "TON_API_URL", "\"https://bbbc462f4bfd.ngrok-free.app/api/v1/\""
+            buildConfigField "String", "TON_API_URL", "\"https://1608f7632a68.ngrok-free.app/api/v1/\""
             buildConfigField "String", "TON_API_KEY", "\"bd22e4002e104ae28ccc3797dbafc817\""
         }
 
@@ -221,7 +225,7 @@ android {
             buildConfigField "boolean", "DEBUG_PRIVATE_VERSION", "false"
             buildConfigField "boolean", "BUILD_HOST_IS_WINDOWS", isWindows
             buildConfigField "int", "VERSION_NUM", "7"
-            buildConfigField "String", "TON_API_URL", "\"https://bbbc462f4bfd.ngrok-free.app/api/v1/\""
+            buildConfigField "String", "TON_API_URL", "\"https://1608f7632a68.ngrok-free.app/api/v1/\""
             buildConfigField "String", "TON_API_KEY", "\"bd22e4002e104ae28ccc3797dbafc817\""
         }
     }
