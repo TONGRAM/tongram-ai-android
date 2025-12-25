@@ -22,12 +22,17 @@ import ton_core.ui.models.TongramLanguageModel;
 
 public class TongramLanguageAdapter extends RecyclerView.Adapter<TongramLanguageAdapter.TongramLanguageViewHolder> {
 
-    private final List<TongramLanguageModel> languages;
+    private List<TongramLanguageModel> languages;
     private final ITongramLanguageListener listener;
 
     public TongramLanguageAdapter(List<TongramLanguageModel> languages, ITongramLanguageListener listener) {
         this.languages = languages;
         this.listener = listener;
+    }
+
+    public void setLanguages(List<TongramLanguageModel> languages) {
+        this.languages = languages;
+        notifyDataSetChanged();
     }
 
     public interface ITongramLanguageListener {

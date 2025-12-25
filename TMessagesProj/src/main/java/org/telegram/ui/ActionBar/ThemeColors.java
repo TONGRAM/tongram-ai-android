@@ -145,9 +145,11 @@ public class ThemeColors {
         defaultColors[key_fastScrollText] = 0xffffffff;
 
         defaultColors[key_avatar_text] = 0xffffffff;
-        defaultColors[key_coming_soon] = 0xffDB3030;
+        defaultColors[key_coming_soon] = 0xffFF0000;
         defaultColors[key_button_disable] = 0xff5D9DFD;
         defaultColors[key_button_enable] = 0xff106FFF;
+        defaultColors[key_input_background] = 0x0DFFFFFF;
+        defaultColors[key_text_disable] = 0xFF899299;
 
         defaultColors[key_avatar_backgroundSaved] = 0xff69BDF9;
         defaultColors[key_avatar_background2Saved] = 0xff409FE1;
@@ -499,7 +501,7 @@ public class ThemeColors {
         defaultColors[key_chat_recordedVoiceProgress] = 0xffB1DEFF;
         defaultColors[key_chat_recordedVoiceProgressInner] = 0xffffffff;
         defaultColors[key_chat_recordVoiceCancel] = 0xff3A95D4;
-        defaultColors[key_chat_messagePanelSend] = 0xFF229AF0;
+        defaultColors[key_chat_messagePanelSend] = 0xFF3A64FF;
         defaultColors[key_chat_messagePanelVoiceLock] = 0xffa4a4a4;
         defaultColors[key_chat_messagePanelVoiceLockBackground] = 0xffffffff;
         defaultColors[key_chat_messagePanelVoiceLockShadow] = 0xff000000;

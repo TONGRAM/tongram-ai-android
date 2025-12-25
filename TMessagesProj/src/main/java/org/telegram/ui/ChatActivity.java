@@ -327,7 +327,6 @@ import java.util.stream.Collectors;
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
 import me.vkryl.core.reference.ReferenceList;
-import ton_core.models.TranslateMessageResponse;
 import ton_core.services.IOnApiCallback;
 import ton_core.shared.CustomLifecycleOwner;
 import ton_core.entities.TranslatedMessageEntity;
@@ -1974,7 +1973,7 @@ public class ChatActivity extends BaseFragment implements
             if (getParentActivity() instanceof androidx.fragment.app.FragmentActivity) {
                 androidx.fragment.app.FragmentManager fragmentManager =
                         ((androidx.fragment.app.FragmentActivity) getParentActivity()).getSupportFragmentManager();
-                AiEnhanceDialog.newInstance(ChatActivity.this, resourceProvider, tongramLanguages, shortLanguageName, translatedMessageRepository, text).show(fragmentManager, null);
+                AiEnhanceDialog.newInstance(ChatActivity.this, resourceProvider, tongramLanguages, translatedMessageRepository, text).show(fragmentManager, null);
             }
         }
 

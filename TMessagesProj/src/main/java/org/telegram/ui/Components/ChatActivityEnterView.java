@@ -567,7 +567,7 @@ public class ChatActivityEnterView extends FrameLayout implements
     private int slowModeTimer;
     private Runnable updateSlowModeRunnable;
     private SendButton sendButton;
-    private final SendButton aiEnhanceButton;
+    private final ImageView aiEnhanceButton;
     private boolean isAiEnhanceApplied;
     private CharSequence originalMessage;
     private int sendButtonBackgroundColor;
@@ -3055,7 +3055,7 @@ public class ChatActivityEnterView extends FrameLayout implements
             }
         });
 
-        sendButton = new SendButton(context, isInScheduleMode() ? R.drawable.input_schedule : R.drawable.send_plane_24, resourcesProvider, true) {
+        sendButton = new SendButton(context, isInScheduleMode() ? R.drawable.input_schedule : R.drawable.ic_send, resourcesProvider, true) {
             @Override
             public boolean isInScheduleMode() {
                 return ChatActivityEnterView.this.isInScheduleMode();
@@ -3077,7 +3077,6 @@ public class ChatActivityEnterView extends FrameLayout implements
             }
         };
         sendButton.setVisibility(INVISIBLE);
-        int color = getThemedColor(Theme.key_chat_messagePanelSend);
         sendButton.setContentDescription(getString(R.string.Send));
         sendButton.setSoundEffectsEnabled(false);
         sendButton.setScaleX(0.1f);
@@ -3093,29 +3092,17 @@ public class ChatActivityEnterView extends FrameLayout implements
         sendButton.setOnLongClickListener(this::onSendLongClick);
 //        ScaleStateListAnimator.apply(sendButton);
 
-        aiEnhanceButton = new SendButton(context, R.drawable.ic_ai_enhance, resourcesProvider, true) {
-            @Override
-            public boolean isInScheduleMode() {
-                return ChatActivityEnterView.this.isInScheduleMode();
-            }
-
-            @Override
-            public boolean isOpen() {
-                return messageSendPreview != null && messageSendPreview.isShowing() || super.isOpen();
-            }
-
-            @Override
-            public boolean isInactive() {
-                return !isInScheduleMode() && slowModeTimer == Integer.MAX_VALUE;
-            }
-        };
+        aiEnhanceButton = new ImageView(context);
+        aiEnhanceButton.setImageResource(R.drawable.ic_input_ai_enhance);
+        aiEnhanceButton.setScaleType(ImageView.ScaleType.CENTER);
+        aiEnhanceButton.setBackground(Theme.createSelectorDrawable(getThemedColor(Theme.key_listSelector)));
         aiEnhanceButton.setVisibility(INVISIBLE);
         aiEnhanceButton.setContentDescription(getString(R.string.AiEnhance));
         aiEnhanceButton.setSoundEffectsEnabled(false);
         aiEnhanceButton.setScaleX(0.1f);
         aiEnhanceButton.setScaleY(0.1f);
         aiEnhanceButton.setAlpha(0.0f);
-        sendButtonContainer.addView(aiEnhanceButton, LayoutHelper.createFrame(100, DEFAULT_HEIGHT, Gravity.RIGHT | Gravity.BOTTOM, 0, 0, 48, 0));
+        sendButtonContainer.addView(aiEnhanceButton, LayoutHelper.createFrame(DEFAULT_HEIGHT, DEFAULT_HEIGHT, Gravity.RIGHT | Gravity.BOTTOM, 0, 0, 40, 0));
         aiEnhanceButton.setOnClickListener(view -> {
             if ((messageSendPreview != null && messageSendPreview.isShowing()) || (runningAnimationAudio != null && runningAnimationAudio.isRunning()) || moveToSendStateRunnable != null) {
                 return;
@@ -3168,8 +3155,8 @@ public class ChatActivityEnterView extends FrameLayout implements
 
     public void setAiEnhanceButtonDrawable(boolean isApply) {
         isAiEnhanceApplied = isApply;
-        int resId = isApply ? R.drawable.bg_rotate_large : R.drawable.ic_ai_enhance;
-        aiEnhanceButton.setResourceId(resId);
+        int resId = isApply ? R.drawable.ic_undo_left_round_square : R.drawable.ic_input_ai_enhance;
+        aiEnhanceButton.setImageResource(resId);
         aiEnhanceButton.invalidate();
     }
 
@@ -13376,7 +13363,7 @@ public class ChatActivityEnterView extends FrameLayout implements
             updateColors();
             if (isNewDesignSendButton) {
                 checkBackgroundRect();
-                canvas.drawRoundRect(backgroundRect, dp(RADIUS), dp(RADIUS), backgroundPaint);
+//                canvas.drawRoundRect(backgroundRect, dp(RADIUS), dp(RADIUS), backgroundPaint);
             }
 
             final boolean inactive = isInactive();
@@ -13544,7 +13531,7 @@ public class ChatActivityEnterView extends FrameLayout implements
         private int drawableColor;
 
         public void updateColors() {
-            int color = isNewDesignSendButton ? Color.WHITE : Theme.getColor(Theme.key_chat_messagePanelSend, resourcesProvider);
+            int color = 0xFF3A64FF;
             if (color != drawableColor) {
                 drawableColor = color;
                 drawable.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.SRC_IN));

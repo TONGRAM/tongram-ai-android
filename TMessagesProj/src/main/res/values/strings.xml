@@ -10046,4 +10046,7 @@
     <string name="WritingAssistant">Writing Assistant</string>
     <string name="Translation">Writing Assistant</string>
     <string name="ThreeDot">...</string>
+    <string name="ChooseLanguage">Choose language</string>
+    <string name="UnableDetectLanguage">Unable to detect the language of the content you entered. Please try again.</string>
+    <string name="UnablePerformTranslation">Unable to perform the translation at the moment. Please try again later.</string>
 </resources>

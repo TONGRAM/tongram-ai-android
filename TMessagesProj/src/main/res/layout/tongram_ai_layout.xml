@@ -43,7 +43,6 @@
 
         <TextView
             android:id="@+id/tv_tongram_ai"
-            style="@style/TextAppearance.AppCompat.Medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -53,7 +52,6 @@
 
     <TextView
         android:id="@+id/tv_apply"
-        style="@style/TextAppearance.AppCompat.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
@@ -85,7 +83,6 @@
         android:id="@+id/ll_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#0DFFFFFF"
         android:gravity="center"
         android:orientation="horizontal"
         android:paddingVertical="8dp"

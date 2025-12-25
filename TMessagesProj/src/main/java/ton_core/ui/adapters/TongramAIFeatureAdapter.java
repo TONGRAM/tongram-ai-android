@@ -1,5 +1,7 @@
 package ton_core.ui.adapters;
 
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
@@ -40,6 +42,7 @@ public class TongramAIFeatureAdapter extends RecyclerView.Adapter<TongramAIFeatu
         final TongramAiFeatureModel feature = features.get(position);
         holder.title.setText(feature.title);
         holder.aiFeatureImage.setImageResource(feature.iconResource);
+
         if (feature.isComingSoon) {
             holder.comingSoon.setVisibility(View.VISIBLE);
             holder.comingSoon.setTextColor(Theme.getColor(Theme.key_coming_soon));
@@ -50,11 +53,16 @@ public class TongramAIFeatureAdapter extends RecyclerView.Adapter<TongramAIFeatu
         if (feature.isSelected) {
             holder.itemView.setBackgroundResource(R.drawable.rectangle_corner);
             holder.title.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText));
-            holder.title.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            holder.title.setTypeface(AndroidUtilities.bold());
+
+            holder.aiFeatureImage.setColorFilter(new PorterDuffColorFilter(Theme.getColor(Theme.key_button_enable), PorterDuff.Mode.SRC_IN));
+
         } else {
             holder.itemView.setBackgroundResource(R.drawable.rectangle_corner_default);
             holder.title.setTextColor(Theme.getColor(Theme.key_graySectionText));
             holder.title.setTypeface(Typeface.DEFAULT);
+
+            holder.aiFeatureImage.setColorFilter(new PorterDuffColorFilter(Theme.getColor(Theme.key_button_disable), PorterDuff.Mode.SRC_IN));
         }
 
         Drawable background = holder.itemView.getBackground();

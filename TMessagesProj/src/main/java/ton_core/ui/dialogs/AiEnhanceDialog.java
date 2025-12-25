@@ -28,7 +28,10 @@ import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.LanguageDetector;
 import org.telegram.messenger.LocaleController;
 import org.telegram.messenger.R;
+import org.telegram.ui.ActionBar.BaseFragment;
 import org.telegram.ui.ActionBar.Theme;
+import org.telegram.ui.Components.BulletinFactory;
+import org.telegram.ui.LaunchActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,7 +75,6 @@ public class AiEnhanceDialog extends BottomSheetDialogFragment implements Langua
     public CharSequence input;
     private final ITranslatedMessageRepository translatedMessageRepository;
     private final List<TongramLanguageModel> languageModels;
-    private final String shortLanguageName;
     private static final ExecutorService detectLanguageExecutor =
             Executors.newFixedThreadPool(1);
     private EditText edtInput;
@@ -93,17 +95,16 @@ public class AiEnhanceDialog extends BottomSheetDialogFragment implements Langua
         void onTranslatedApply(String text);
     }
 
-    public AiEnhanceDialog(Delegate delegate, Theme.ResourcesProvider resourcesProvider, List<TongramLanguageModel> languageModels, String shortLanguageName, ITranslatedMessageRepository translatedMessageRepository, CharSequence input) {
+    public AiEnhanceDialog(Delegate delegate, Theme.ResourcesProvider resourcesProvider, List<TongramLanguageModel> languageModels, ITranslatedMessageRepository translatedMessageRepository, CharSequence input) {
         this.delegate = delegate;
         this.resourcesProvider = resourcesProvider;
         this.languageModels = languageModels;
         this.translatedMessageRepository = translatedMessageRepository;
-        this.shortLanguageName = shortLanguageName;
         this.input = input;
     }
 
-    public synchronized static AiEnhanceDialog newInstance(Delegate delegate, Theme.ResourcesProvider resourcesProvider, List<TongramLanguageModel> languageModels, String shortLanguageName, ITranslatedMessageRepository translatedMessageRepository, CharSequence input) {
-        return new AiEnhanceDialog(delegate, resourcesProvider, languageModels, shortLanguageName, translatedMessageRepository, input);
+    public synchronized static AiEnhanceDialog newInstance(Delegate delegate, Theme.ResourcesProvider resourcesProvider, List<TongramLanguageModel> languageModels, ITranslatedMessageRepository translatedMessageRepository, CharSequence input) {
+        return new AiEnhanceDialog(delegate, resourcesProvider, languageModels, translatedMessageRepository, input);
     }
 
     @Override
@@ -148,11 +149,23 @@ public class AiEnhanceDialog extends BottomSheetDialogFragment implements Langua
             background.setColorFilter(new PorterDuffColorFilter(themeColor, PorterDuff.Mode.SRC_IN));
         }
 
+        LinearLayout llInput = view.findViewById(R.id.ll_input);
+        int backgroundInputColor = Theme.getColor(Theme.key_chat_messagePanelBackground);
+        if (Theme.isCurrentThemeDark()) {
+            backgroundInputColor = Theme.getColor(Theme.key_input_background);
+        }
+        llInput.setBackgroundColor(backgroundInputColor);
+
         TextView tvTitle = view.findViewById(R.id.tv_tongram_ai);
-        tvTitle.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        tvTitle.setTypeface(AndroidUtilities.bold());
         tvTitle.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText, resourcesProvider));
 
         ImageView ivBack = view.findViewById(R.id.iv_back);
+        Drawable ivBackDrawable = ivBack.getDrawable();
+        if (ivBackDrawable != null) {
+            int themeColor = Theme.getColor(Theme.key_windowBackgroundWhiteBlackText);
+            ivBack.setColorFilter(new PorterDuffColorFilter(themeColor, PorterDuff.Mode.SRC_IN));
+        }
         ivBack.setOnClickListener(v -> dismiss());
 
         tvResult = view.findViewById(R.id.tv_result);
@@ -160,7 +173,7 @@ public class AiEnhanceDialog extends BottomSheetDialogFragment implements Langua
         tvResult.setText(LocaleController.getString(R.string.ThreeDot));
 
         tvApply = view.findViewById(R.id.tv_apply);
-        tvApply.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        tvApply.setTypeface(AndroidUtilities.bold());
         setTextApply(false);
         tvApply.setOnClickListener(v -> {
             if (tvResult.getText() == null || tvResult.getText().toString().isEmpty() || tvResult.getText().equals(LocaleController.getString(R.string.ThreeDot)) || tvResult.getText().equals(LocaleController.getString(R.string.Translating))) {
@@ -171,7 +184,7 @@ public class AiEnhanceDialog extends BottomSheetDialogFragment implements Langua
         });
 
         tvLanguage = view.findViewById(R.id.tv_language);
-        tvLanguage.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        tvLanguage.setTypeface(AndroidUtilities.bold());
         tvLanguage.setTextColor(0xff3A64FF);
         setLanguage();
 
@@ -253,12 +266,19 @@ public class AiEnhanceDialog extends BottomSheetDialogFragment implements Langua
         if (canApply) {
             tvApply.setTextColor(0xff0A84FF);
         } else {
-            tvApply.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText, resourcesProvider));
+            tvApply.setTextColor(Theme.getColor(Theme.key_text_disable, resourcesProvider));
         }
     }
 
     public void clearResult() {
         tvResult.setText(LocaleController.getString(R.string.ThreeDot));
+    }
+
+    private void handleTranslateError(String message) {
+        BaseFragment lastFragment = LaunchActivity.getLastFragment();
+        BulletinFactory.of(lastFragment).createCopyBulletin(message).show();
+        clearResult();
+        stopResultJumpAnimation();
     }
 
     private void translateMessage() {
@@ -268,16 +288,15 @@ public class AiEnhanceDialog extends BottomSheetDialogFragment implements Langua
         setStyleForSendButton();
         startResultJumpAnimation();
         detectLanguageExecutor.execute(() -> LanguageDetector.detectLanguage(input.toString(), lng -> AndroidUtilities.runOnUIThread(() -> {
-            if (!lng.equals(shortLanguageName) && !lng.equals("und")) {
-                translate();
-            } else {
-                tvResult.setText(LocaleController.getString(R.string.default_error_msg));
+            if (lng.equals(selectedLanguage.languageCode)) {
+                tvResult.setText(input);
                 stopResultJumpAnimation();
+            } else if (lng.equals("und")) {
+                handleTranslateError(getString(R.string.UnableDetectLanguage));
+            } else {
+                translate();
             }
-        }), err -> AndroidUtilities.runOnUIThread(() -> {
-            tvResult.setText(LocaleController.getString(R.string.default_error_msg));
-            stopResultJumpAnimation();
-        })));
+        }), err -> AndroidUtilities.runOnUIThread(() -> handleTranslateError(err.getMessage()))));
     }
 
     private void startResultJumpAnimation() {
@@ -341,15 +360,14 @@ public class AiEnhanceDialog extends BottomSheetDialogFragment implements Langua
                                 return;
                             }
                         }
-                        tvResult.setText(LocaleController.getString(R.string.default_error_msg));
+                        handleTranslateError(getString(R.string.UnablePerformTranslation));
                         setTextApply(false);
                     }
 
                     @Override
                     public void onError(String errorMessage) {
-                        stopResultJumpAnimation();
                         setTextApply(false);
-                        tvResult.setText(LocaleController.getString(R.string.default_error_msg));
+                        handleTranslateError(errorMessage);
                     }
                 });
     }

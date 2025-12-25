@@ -5,15 +5,19 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.graphics.ColorUtils;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,6 +28,8 @@ import org.telegram.messenger.R;
 import org.telegram.ui.ActionBar.Theme;
 
 import java.util.List;
+import java.util.Locale;
+import java.util.stream.Collectors;
 
 import ton_core.ui.adapters.TongramLanguageAdapter;
 import ton_core.ui.models.TongramLanguageModel;
@@ -34,6 +40,7 @@ public class LanguagesDialog extends BottomSheetDialogFragment implements Tongra
     private final List<TongramLanguageModel> tongramLanguages;
 
     private final Delegate delegate;
+    private TongramLanguageAdapter tongramLanguageAdapter;
 
     public interface Delegate {
         void onLanguageSelected(TongramLanguageModel language);
@@ -60,7 +67,7 @@ public class LanguagesDialog extends BottomSheetDialogFragment implements Tongra
             background.setColorFilter(new PorterDuffColorFilter(themeColor, PorterDuff.Mode.SRC_IN));
         }
 
-        TongramLanguageAdapter tongramLanguageAdapter = new TongramLanguageAdapter(tongramLanguages, this);
+        tongramLanguageAdapter = new TongramLanguageAdapter(tongramLanguages, this);
 
         RecyclerView rvTongramLanguages = view.findViewById(R.id.rv_languages);
         rvTongramLanguages.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
@@ -69,11 +76,32 @@ public class LanguagesDialog extends BottomSheetDialogFragment implements Tongra
         view.findViewById(R.id.iv_close).setOnClickListener(v -> dismiss());
 
         TextView title = view.findViewById(R.id.tv_title);
-        title.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText));
+        final int textColor = Theme.getColor(Theme.key_windowBackgroundWhiteBlackText);
+        final int colorAlpha = ColorUtils.setAlphaComponent(textColor, 180);
+        title.setTextColor(textColor);
 
         edtSearch = view.findViewById(R.id.edt_search);
-        edtSearch.setHintTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText));
+        edtSearch.setHintTextColor(colorAlpha);
         edtSearch.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText));
+        edtSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                tongramLanguageAdapter.setLanguages(search(editable.toString()));
+            }
+        });
+
+        ImageView ivSearch = view.findViewById(R.id.iv_search);
+        ivSearch.setColorFilter(new PorterDuffColorFilter(colorAlpha, PorterDuff.Mode.SRC_IN));
 
         return view;
     }
@@ -102,5 +130,13 @@ public class LanguagesDialog extends BottomSheetDialogFragment implements Tongra
                 behavior.setHideable(false);
             }
         }
+    }
+
+    private List<TongramLanguageModel> search(String searchKey) {
+        if (searchKey == null || searchKey.isEmpty()) return tongramLanguages;
+        return tongramLanguages
+                .stream()
+                .filter(e -> e.languageName.toLowerCase(Locale.ROOT).contains(searchKey.toLowerCase(Locale.ROOT)))
+                .collect(Collectors.toList());
     }
 }
