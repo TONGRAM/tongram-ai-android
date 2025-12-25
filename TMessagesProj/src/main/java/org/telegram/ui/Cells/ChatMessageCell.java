@@ -138,6 +138,7 @@ import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.tgnet.tl.TL_stars;
 import org.telegram.tgnet.tl.TL_stories;
+import org.telegram.ui.ActionBar.BaseFragment;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.AvatarSpan;
 import org.telegram.ui.ChatActivity;
@@ -152,6 +153,7 @@ import org.telegram.ui.Components.AudioVisualizerDrawable;
 import org.telegram.ui.Components.AvatarDrawable;
 import org.telegram.ui.Components.AvatarsDrawable;
 import org.telegram.ui.Components.BackgroundGradientDrawable;
+import org.telegram.ui.Components.BulletinFactory;
 import org.telegram.ui.Components.ButtonBounce;
 import org.telegram.ui.Components.CheckBoxBase;
 import org.telegram.ui.Components.ClipRoundedDrawable;
@@ -204,6 +206,7 @@ import org.telegram.ui.Components.VideoForwardDrawable;
 import org.telegram.ui.Components.spoilers.SpoilerEffect;
 import org.telegram.ui.Components.spoilers.SpoilerEffect2;
 import org.telegram.ui.GradientClip;
+import org.telegram.ui.LaunchActivity;
 import org.telegram.ui.MultiLayoutTypingAnimator;
 import org.telegram.ui.PhotoViewer;
 import org.telegram.ui.PinchToZoomHelper;
@@ -2282,7 +2285,17 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
                                     resetPressedLink(1);
                                     pressedEmoji = null;
                                 } else if (link[0] instanceof URLSpanNoUnderline && link[0] == pressedLink.getSpan() && pressedLink != null) {
-                                    delegate.didTranslate(this, false);
+                                    if (((URLSpanNoUnderline) link[0]).getURL().equals("t9n:copy")) {
+                                        AndroidUtilities.addToClipboard(currentMessageObject.translatedText.toString());
+                                        BaseFragment lastFragment = LaunchActivity.getLastFragment();
+                                        BulletinFactory.of(lastFragment).createCopyBulletin(getString("MessageCopied", R.string.MessageCopied)).show();
+                                        resetPressedLink(1);
+                                        return true;
+                                    } else if (((URLSpanNoUnderline) link[0]).getURL().equals("t9n:translation")) {
+                                        delegate.didTranslate(this, false);
+                                        resetPressedLink(1);
+                                        return true;
+                                    }
                                     resetPressedLink(1);
                                     return true;
                                 } else if (pressedLink != null && link[0] == pressedLink.getSpan()) {

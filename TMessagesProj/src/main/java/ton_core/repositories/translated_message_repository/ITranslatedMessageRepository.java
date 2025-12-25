@@ -11,6 +11,6 @@ public interface ITranslatedMessageRepository {
     void insert(TranslatedMessageEntity translatedMessage);
     void updateTranslatedState(int messageId, boolean isShow);
     LiveData<List<TranslatedMessageEntity>> getTranslatedMessages(long accountId);
-    void translate(String text, String lang, int messageId, long chatId, int accountId);
+    void translate(String text, String lang, int messageId, long chatId, int accountId, IOnApiCallback<TranslatedMessageEntity> result);
     void draftTranslate(String text, String lang, IOnApiCallback<TranslateMessageResponse> result);
 }

@@ -7851,8 +7851,28 @@ public class MessageObject {
                 builder.append("\n");
                 builder.append(translatedText);
 
+                builder.append(" ");
+                int iconStart = builder.length();
+                builder.append(" ");
+
+                Drawable copyDrawable = ApplicationLoader.applicationContext.getResources().getDrawable(R.drawable.msg_copy).mutate();
+                copyDrawable.setBounds(0, 0, AndroidUtilities.dp(20), AndroidUtilities.dp(20));
+                int color = Theme.getColor(Theme.key_chat_translate);
+                copyDrawable.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.SRC_IN));
+
+                ColoredImageSpan imageSpan = new ColoredImageSpan(copyDrawable);
+                imageSpan.setSize(AndroidUtilities.dp(20));
+                builder.setSpan(imageSpan, iconStart, iconStart + 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+                builder.setSpan(new URLSpanNoUnderline("t9n:copy") {
+                    @Override
+                    public void updateDrawState(TextPaint ds) {
+                        ds.setUnderlineText(false);
+                    }
+                }, iconStart, iconStart + 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
                 subMessage = LocaleController.getString(R.string.HideTranslation);
-            } else {
+            } else if (subMessage == null) {
                 subMessage = LocaleController.getString(R.string.TranslateMessage);
             }
 
@@ -7860,7 +7880,7 @@ public class MessageObject {
             builder.append("\n");
             builder.append(subMessage);
 
-            ClickableSpan translateSpan = new URLSpanNoUnderline("t9n:1") {
+            ClickableSpan translateSpan = new URLSpanNoUnderline("t9n:translation") {
                 @Override
                 public void updateDrawState(TextPaint ds) {
                     super.updateDrawState(ds);

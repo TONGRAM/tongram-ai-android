@@ -53,22 +53,23 @@ public class TranslatedMessageRepository implements ITranslatedMessageRepository
     }
 
     @Override
-    public void translate(String text, String lang, int messageId, long chatId, int accountId) {
+    public void translate(String text, String lang, int messageId, long chatId, int accountId, IOnApiCallback<TranslatedMessageEntity> result) {
         translateService.translate(text, lang, new IOnApiCallback<TranslateMessageResponse>() {
             @Override
             public void onSuccess(TranslateMessageResponse data) {
-                final TranslatedMessageResult result = data.getResult();
-                final List<TranslatedChoice> choices = result.getChoices();
+                final TranslatedMessageResult dataResult = data.getResult();
+                final List<TranslatedChoice> choices = dataResult.getChoices();
                 if (!choices.isEmpty()) {
                     final TranslatedMessage translatedMessage = choices.get(0).getMessage();
                     final TranslatedMessageEntity entity = new TranslatedMessageEntity(messageId, accountId, chatId, translatedMessage.getContent(), lang, true);
                     insert(entity);
+                    result.onSuccess(entity);
                 }
             }
 
             @Override
             public void onError(String errorMessage) {
-
+                result.onError(errorMessage);
             }
         });
     }

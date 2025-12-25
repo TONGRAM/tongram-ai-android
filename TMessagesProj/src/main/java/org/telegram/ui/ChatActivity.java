@@ -327,6 +327,8 @@ import java.util.stream.Collectors;
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
 import me.vkryl.core.reference.ReferenceList;
+import ton_core.models.TranslateMessageResponse;
+import ton_core.services.IOnApiCallback;
 import ton_core.shared.CustomLifecycleOwner;
 import ton_core.entities.TranslatedMessageEntity;
 import ton_core.repositories.translated_message_repository.ITranslatedMessageRepository;
@@ -37615,34 +37617,46 @@ public class ChatActivity extends BaseFragment implements
             final TranslatedMessageEntity messageCache = chatTranslatedMessageCache.get(currentAccount).get(messageId);
 
             if (!messageObject.isTranslated) {
-                messageObject.isTranslated = true;
+                messageObject.subMessage = LocaleController.getString(R.string.Translating);
                 if (messageCache == null) {
-                    messageObject.translatedText = LocaleController.getString(R.string.Translating);
-
                     translatedMessageRepository.translate(
                             cell.getPrimaryMessageObject().messageText.toString(),
                             shortLanguageName,
                             messageId,
                             chatId,
-                            currentAccount);
+                            currentAccount, new IOnApiCallback<TranslatedMessageEntity>() {
+                                @Override
+                                public void onSuccess(TranslatedMessageEntity data) {
+                                    if (data != null) {
+                                        messageObject.isTranslated = true;
+                                        chatTranslatedMessageCache.get(currentAccount).put(data.messageId, data);
+                                        messageObject.translatedText = data.translatedMessage;
+                                        messageObject.resetLayout();
+                                        updateMessageAnimatedInternal(messageObject, false);
+                                    } else {
+                                        onError(LocaleController.getString(R.string.TranslateError));
+                                    }
+                                }
 
-                    translatedMessageRepository.getTranslatedMessage(messageId).observe(lifecycleOwner, data -> {
-                        if (data != null) {
-                            chatTranslatedMessageCache.get(currentAccount).put(data.messageId, data);
-                            messageObject.translatedText = data.translatedMessage;
-                            messageObject.resetLayout();
-                            updateMessageAnimatedInternal(messageObject, false);
-                        }
-                    });
+                                @Override
+                                public void onError(String errorMessage) {
+                                    messageObject.isTranslated = false;
+                                    messageObject.subMessage = LocaleController.getString(R.string.TranslateError);
+                                    messageObject.resetLayout();
+                                    updateMessageAnimatedInternal(messageObject, false);
+                                }
+                            });
                 } else {
                     messageObject.translatedText = messageCache.translatedMessage;
                     translatedMessageRepository.updateTranslatedState(messageId, true);
                     chatTranslatedMessageCache.get(currentAccount).remove(messageId);
                     messageCache.isShow = true;
+                    messageObject.isTranslated = true;
                     chatTranslatedMessageCache.get(currentAccount).put(messageId, messageCache);
                 }
             } else {
                 messageObject.isTranslated = false;
+                messageObject.subMessage = LocaleController.getString(R.string.TranslateMessage);
                 translatedMessageRepository.updateTranslatedState(messageId, false);
                 chatTranslatedMessageCache.get(currentAccount).remove(messageId);
                 messageCache.isShow = false;
