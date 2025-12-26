@@ -734,7 +734,7 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
                 @SuppressLint("NewApi")
                 @Override
                 public void getOutline(View view, Outline outline) {
-                    outline.setOval(0, 0, AndroidUtilities.dp(56), AndroidUtilities.dp(56));
+                    outline.setRoundRect(0, 0, AndroidUtilities.dp(56), AndroidUtilities.dp(56), dp(20));
                 }
             });
         }
@@ -2045,6 +2045,7 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
         private AnimatedPhoneNumberEditText codeField;
         private AnimatedPhoneNumberEditText phoneField;
         private TextView titleView;
+        private ImageView titleImage;
         private TextViewSwitcher countryButton;
         private OutlineTextContainerView countryOutlineView;
         private OutlineTextContainerView phoneOutlineView;
@@ -2104,6 +2105,10 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
 
             setOrientation(VERTICAL);
             setGravity(Gravity.CENTER);
+
+            titleImage = new ImageView(context);
+            titleImage.setImageResource(R.drawable.ic_telephone);
+            addView(titleImage, LayoutHelper.createFrame(dp(30), dp(30), Gravity.CENTER_HORIZONTAL, 0, 0, 0, 0));
 
             titleView = new TextView(context);
             titleView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 18);
@@ -3890,6 +3895,7 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
 
                 telegramButton = new ButtonWithCounterView(context, resourceProvider);
                 telegramButton.setText(openTelegramStringBuilder, false);
+                telegramButton.setColor(Theme.getColor(Theme.key_changephoneinfo_image2));
 
                 problemText = new LoadingTextView(context) {
                     @Override
@@ -8514,7 +8520,7 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
         fragmentView.setBackgroundColor(Theme.getColor(Theme.key_windowBackgroundWhite));
 
         Context context = getParentActivity();
-        Drawable drawable = Theme.createSimpleSelectorCircleDrawable(AndroidUtilities.dp(56), Theme.getColor(Theme.key_chats_actionBackground), Theme.getColor(Theme.key_chats_actionPressedBackground));
+        Drawable drawable = Theme.createSimpleSelectorRoundRectDrawable(AndroidUtilities.dp(20), Theme.getColor(Theme.key_chats_actionBackground), Theme.getColor(Theme.key_chats_actionPressedBackground));
         if (Build.VERSION.SDK_INT < 21) {
             Drawable shadowDrawable = context.getResources().getDrawable(R.drawable.floating_shadow).mutate();
             shadowDrawable.setColorFilter(new PorterDuffColorFilter(0xff000000, PorterDuff.Mode.MULTIPLY));

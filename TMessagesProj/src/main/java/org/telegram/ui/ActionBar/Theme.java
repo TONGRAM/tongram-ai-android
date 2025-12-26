@@ -3558,6 +3558,7 @@ public class Theme {
     public static int[] keys_avatar_nameInMessage = {key_avatar_nameInMessageRed, key_avatar_nameInMessageOrange, key_avatar_nameInMessageViolet, key_avatar_nameInMessageGreen, key_avatar_nameInMessageCyan, key_avatar_nameInMessageBlue, key_avatar_nameInMessagePink};
 
     public static final int key_actionBarDefault = colorsCount++;
+    public static final int key_windowBackgroundTransparent = colorsCount++;
     public static final int key_actionBarDefaultSelector = colorsCount++;
     public static final int key_actionBarWhiteSelector = colorsCount++;
     public static final int key_actionBarDefaultIcon = colorsCount++;

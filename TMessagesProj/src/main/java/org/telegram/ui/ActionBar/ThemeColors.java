@@ -103,7 +103,7 @@ public class ThemeColors {
         defaultColors[key_windowBackgroundWhiteGrayText8] = 0xff6d6d72;
         defaultColors[key_windowBackgroundWhiteBlackText] = 0xff222222;
         defaultColors[key_windowBackgroundWhiteHintText] = 0xffa8a8a8;
-        defaultColors[key_windowBackgroundWhiteValueText] = 0xff0A84FF;
+        defaultColors[key_windowBackgroundWhiteValueText] = 0xffAFC8FF;
         defaultColors[key_windowBackgroundWhiteLinkText] = 0xff2678b6;
         defaultColors[key_windowBackgroundWhiteLinkSelection] = 0x3362a9e3;
         defaultColors[key_windowBackgroundWhiteBlueHeader] = 0xff3a95d5;
@@ -265,8 +265,8 @@ public class ThemeColors {
         defaultColors[key_chats_menuName] = 0xffffffff;
         defaultColors[key_chats_menuPhone] = 0xffffffff;
         defaultColors[key_chats_menuPhoneCats] = 0xffc2e5ff;
-        defaultColors[key_chats_actionIcon] = 0xffffffff;
-        defaultColors[key_chats_actionBackground] = 0xff0A84FF;
+        defaultColors[key_chats_actionIcon] = 0xff000000;
+        defaultColors[key_chats_actionBackground] = 0xffAFC8FF;
         defaultColors[key_chats_actionPressedBackground] = 0xff569dd6;
         defaultColors[key_chats_menuTopBackgroundCats] = 0xff598fba;
         defaultColors[key_chats_archivePullDownBackground] = 0xffc6c9cc;
@@ -603,7 +603,7 @@ public class ThemeColors {
         defaultColors[key_featuredStickers_addButton] = 0xff0A84FF;
         defaultColors[key_featuredStickers_addButtonPressed] = 0xff0A84FF;
         defaultColors[key_featuredStickers_removeButtonText] = 0xff5093d3;
-        defaultColors[key_featuredStickers_buttonText] = 0xffffffff;
+        defaultColors[key_featuredStickers_buttonText] = 0xff000000;
         defaultColors[key_featuredStickers_unread] = 0xff4da6ea;
 
         defaultColors[key_inappPlayerPerformer] = 0xff2f3438;
@@ -628,7 +628,7 @@ public class ThemeColors {
         defaultColors[key_stickers_menu] = 0xffb6bdc5;
         defaultColors[key_stickers_menuSelector] = 0x0f000000;
 
-        defaultColors[key_changephoneinfo_image2] = 0xff0A84FF;
+        defaultColors[key_changephoneinfo_image2] = 0xffAFC8FF;
 
         defaultColors[key_groupcreate_hintText] = 0xffa1aab3;
         defaultColors[key_groupcreate_cursor] = 0xff52a3db;
@@ -747,6 +747,7 @@ public class ThemeColors {
         defaultColors[key_voipgroup_topPanelGreen1] = 0xff52CE5D;
         defaultColors[key_voipgroup_topPanelGreen2] = 0xff00B1C0;
         defaultColors[key_voipgroup_topPanelGray] = 0xff8599aa;
+        defaultColors[key_windowBackgroundTransparent] = 0x00000000;
 
         defaultColors[key_voipgroup_overlayAlertGradientMuted] = 0xff236D92;
         defaultColors[key_voipgroup_overlayAlertGradientMuted2] = 0xff2C4D6B;
@@ -1609,6 +1610,7 @@ public class ThemeColors {
         colorKeysMap.put(key_glass_defaultText, "glass_defaultText");
         colorKeysMap.put(key_glass_defaultText, "glass_defaultText");
         colorKeysMap.put(key_glass_defaultText, "glass_defaultText");
+        colorKeysMap.put(key_windowBackgroundTransparent, "windowBackgroundTransparent");
 
         return colorKeysMap;
     }
