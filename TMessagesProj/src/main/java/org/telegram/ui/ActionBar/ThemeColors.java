@@ -150,6 +150,7 @@ public class ThemeColors {
         defaultColors[key_button_enable] = 0xff106FFF;
         defaultColors[key_input_background] = 0xFFF1F3F5;
         defaultColors[key_text_disable] = 0xFF899299;
+        defaultColors[key_text_enable] = 0xff3A64FF;
         defaultColors[key_stroke_default] = 0xFFd9d9d9;
 
         defaultColors[key_avatar_backgroundSaved] = 0xff69BDF9;
@@ -1600,6 +1601,7 @@ public class ThemeColors {
         colorKeysMap.put(key_button_enable, "button_enable");
         colorKeysMap.put(key_input_background, "input_background");
         colorKeysMap.put(key_text_disable, "text_disable");
+        colorKeysMap.put(key_text_enable, "text_enable");
         colorKeysMap.put(key_stroke_default, "stroke_default");
         colorKeysMap.put(key_glass_defaultText, "glass_defaultText");
         colorKeysMap.put(key_glass_defaultText, "glass_defaultText");

@@ -184,7 +184,7 @@ public class AiEnhanceDialog extends BottomSheetDialogFragment implements Langua
 
         tvLanguage = view.findViewById(R.id.tv_language);
         tvLanguage.setTypeface(AndroidUtilities.bold());
-        tvLanguage.setTextColor(0xff3A64FF);
+        tvLanguage.setTextColor(Theme.getColor(Theme.key_text_enable, resourcesProvider));
         setLanguage();
 
         LinearLayout llChooseLanguage = view.findViewById(R.id.ll_choose_language);
@@ -263,7 +263,7 @@ public class AiEnhanceDialog extends BottomSheetDialogFragment implements Langua
 
     private void setTextApply(boolean canApply) {
         if (canApply) {
-            tvApply.setTextColor(0xff0A84FF);
+            tvApply.setTextColor(Theme.getColor(Theme.key_text_enable, resourcesProvider));
         } else {
             tvApply.setTextColor(Theme.getColor(Theme.key_text_disable, resourcesProvider));
         }
@@ -290,6 +290,7 @@ public class AiEnhanceDialog extends BottomSheetDialogFragment implements Langua
             if (lng.equals(selectedLanguage.languageCode)) {
                 tvResult.setText(input);
                 stopResultJumpAnimation();
+                setTextApply(true);
             } else if (lng.equals("und")) {
                 handleTranslateError(getString(R.string.UnableDetectLanguage));
             } else {
