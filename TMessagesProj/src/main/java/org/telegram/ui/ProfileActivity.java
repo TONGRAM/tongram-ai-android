@@ -4088,6 +4088,15 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                 updateBottomButtonY();
             }
         };
+        listView.setBackgroundColor(Theme.getColor(Theme.key_windowBackgroundWhite));
+        listView.addItemDecoration(new RecyclerView.ItemDecoration() {
+            @Override
+            public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
+                int horizontalMargin = AndroidUtilities.dp(16);
+                outRect.left = horizontalMargin;
+                outRect.right = horizontalMargin;
+            }
+        });
         listView.setVerticalScrollBarEnabled(false);
         DefaultItemAnimator defaultItemAnimator = new DefaultItemAnimator() {
 
@@ -12987,7 +12996,10 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
             switch (viewType) {
                 case VIEW_TYPE_HEADER: {
                     view = new HeaderCell(mContext, 23, resourcesProvider);
-                    view.setBackgroundColor(getThemedColor(Theme.key_windowBackgroundWhite));
+                    GradientDrawable gb = new GradientDrawable();
+                    gb.setCornerRadii(new float[]{dp(10), dp(10), dp(10), dp(10), 0, 0, 0, 0});
+                    gb.setColor(Theme.getColor(Theme.key_chats_menuTopBackground));
+                    view.setBackground(gb);
                     break;
                 }
                 case VIEW_TYPE_TEXT_DETAIL_MULTILINE:
@@ -13001,7 +13013,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                     };
                     textDetailCell.setContentDescriptionValueFirst(true);
                     view = textDetailCell;
-                    view.setBackgroundColor(getThemedColor(Theme.key_windowBackgroundWhite));
+                    view.setBackgroundColor(getThemedColor(Theme.key_chats_menuTopBackground));
                     break;
                 case VIEW_TYPE_ABOUT_LINK: {
                     view = aboutLinkCell = new AboutLinkCell(mContext, ProfileActivity.this, resourcesProvider) {
@@ -13025,7 +13037,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                             return dontApplyPeerColor(color, false);
                         }
                     };
-                    view.setBackgroundColor(getThemedColor(Theme.key_windowBackgroundWhite));
+                    view.setBackgroundColor(getThemedColor(Theme.key_chats_menuTopBackground));
                     break;
                 }
                 case VIEW_TYPE_TEXT: {
@@ -13035,7 +13047,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                             return dontApplyPeerColor(color, false);
                         }
                     };
-                    view.setBackgroundColor(getThemedColor(Theme.key_windowBackgroundWhite));
+                    view.setBackgroundColor(getThemedColor(Theme.key_chats_menuTopBackground));
                     break;
                 }
                 case VIEW_TYPE_DIVIDER: {
@@ -13202,7 +13214,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                 case VIEW_TYPE_PREMIUM_TEXT_CELL:
                 case VIEW_TYPE_STARS_TEXT_CELL:
                     view = new ProfilePremiumCell(mContext, viewType == VIEW_TYPE_PREMIUM_TEXT_CELL ? 0 : 1, resourcesProvider);
-                    view.setBackgroundColor(getThemedColor(Theme.key_windowBackgroundWhite));
+                    view.setBackgroundColor(getThemedColor(Theme.key_chats_menuTopBackground));
                     break;
                 case VIEW_TYPE_CHANNEL:
                     view = new ProfileChannelCell(ProfileActivity.this) {
@@ -13508,6 +13520,10 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                             currentBio = null;
                         }
                         aboutLinkCell.setMoreButtonDisabled(true);
+                        GradientDrawable gb = new GradientDrawable();
+                        gb.setCornerRadii(new float[]{ 0, 0, 0, 0, dp(10), dp(10), dp(10), dp(10)});
+                        gb.setColor(Theme.getColor(Theme.key_chats_menuTopBackground));
+                        aboutLinkCell.setBackground(gb);
                     }
                     break;
                 case VIEW_TYPE_PREMIUM_TEXT_CELL:
@@ -13644,6 +13660,10 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                     } else if (position == languageRow) {
                         textCell.setTextAndValueAndIcon(LocaleController.getString(R.string.Language), LocaleController.getCurrentLanguageName(), false, R.drawable.msg2_language, false);
                         textCell.setImageLeft(23);
+                        GradientDrawable gb = new GradientDrawable();
+                        gb.setCornerRadii(new float[]{ 0, 0, 0, 0, dp(10), dp(10), dp(10), dp(10)});
+                        gb.setColor(Theme.getColor(Theme.key_chats_menuTopBackground));
+                        textCell.setBackground(gb);
                     } else if (position == notificationRow) {
                         textCell.setTextAndIcon(LocaleController.getString(R.string.NotificationsAndSounds), R.drawable.msg2_notifications, true);
                     } else if (position == privacyRow) {
@@ -13664,6 +13684,10 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                         textCell.setTextAndIcon(LocaleController.getString(R.string.TelegramFAQ), R.drawable.msg2_help, true);
                     } else if (position == policyRow) {
                         textCell.setTextAndIcon(LocaleController.getString(R.string.PrivacyPolicy), R.drawable.msg2_policy, false);
+                        GradientDrawable gb = new GradientDrawable();
+                        gb.setCornerRadii(new float[]{ 0, 0, 0, 0, dp(10), dp(10), dp(10), dp(10)});
+                        gb.setColor(Theme.getColor(Theme.key_chats_menuTopBackground));
+                        textCell.setBackground(gb);
                     } else if (position == sendLogsRow) {
                         textCell.setText(LocaleController.getString(R.string.DebugSendLogs), true);
                     } else if (position == sendLastLogsRow) {
@@ -13672,6 +13696,10 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                         textCell.setText(LocaleController.getString(R.string.DebugClearLogs), switchBackendRow != -1);
                     } else if (position == switchBackendRow) {
                         textCell.setText("Switch Backend", false);
+                        GradientDrawable gb = new GradientDrawable();
+                        gb.setCornerRadii(new float[]{ 0, 0, 0, 0, dp(10), dp(10), dp(10), dp(10)});
+                        gb.setColor(Theme.getColor(Theme.key_chats_menuTopBackground));
+                        textCell.setBackground(gb);
                     } else if (position == devicesRow) {
                         textCell.setTextAndIcon(LocaleController.getString(R.string.Devices), R.drawable.msg2_devices, true);
                     } else if (position == setAvatarRow) {
@@ -13687,6 +13715,10 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                     } else if (position == premiumRow) {
                         textCell.setTextAndIcon(LocaleController.getString(R.string.TelegramPremium), new AnimatedEmojiDrawable.WrapSizeDrawable(PremiumGradient.getInstance().premiumStarMenuDrawable, dp(24), dp(24)), true);
                         textCell.setImageLeft(23);
+                        GradientDrawable gb = new GradientDrawable();
+                        gb.setCornerRadii(new float[]{dp(10), dp(10), dp(10), dp(10), 0, 0, 0, 0});
+                        gb.setColor(Theme.getColor(Theme.key_chats_menuTopBackground));
+                        textCell.setBackground(gb);
                     } else if (position == starsRow) {
                         StarsController c = StarsController.getInstance(currentAccount);
                         long balance = c.getBalance().amount;
@@ -13703,6 +13735,10 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                     } else if (position == premiumGiftingRow) {
                         textCell.setTextAndIcon(LocaleController.getString(R.string.SendAGift), R.drawable.menu_gift, false);
                         textCell.setImageLeft(23);
+                        GradientDrawable gb = new GradientDrawable();
+                        gb.setCornerRadii(new float[]{ 0, 0, 0, 0, dp(10), dp(10), dp(10), dp(10)});
+                        gb.setColor(Theme.getColor(Theme.key_chats_menuTopBackground));
+                        textCell.setBackground(gb);
                     } else if (position == botPermissionLocation) {
                         textCell.setTextAndCheckAndColorfulIcon(LocaleController.getString(R.string.BotProfilePermissionLocation), botLocation != null && botLocation.granted(), R.drawable.filled_access_location, getThemedColor(Theme.key_color_green), botPermissionBiometry != -1);
                     } else if (position == botPermissionBiometry) {
