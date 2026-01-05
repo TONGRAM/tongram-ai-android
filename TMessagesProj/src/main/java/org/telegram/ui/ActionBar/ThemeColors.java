@@ -154,6 +154,7 @@ public class ThemeColors {
         defaultColors[key_stroke_default] = 0xFFd9d9d9;
         defaultColors[key_input_text] = 0xff222222;
         defaultColors[key_input_stroke] = 0xff262630;
+        defaultColors[key_text_title_color] = 0xffffffff;
 
         defaultColors[key_avatar_backgroundSaved] = 0xff69BDF9;
         defaultColors[key_avatar_background2Saved] = 0xff409FE1;
@@ -1616,6 +1617,7 @@ public class ThemeColors {
         colorKeysMap.put(key_glass_defaultText, "glass_defaultText");
         colorKeysMap.put(key_glass_defaultText, "glass_defaultText");
         colorKeysMap.put(key_windowBackgroundTransparent, "windowBackgroundTransparent");
+        colorKeysMap.put(key_text_title_color, "text_title_color");
 
         return colorKeysMap;
     }

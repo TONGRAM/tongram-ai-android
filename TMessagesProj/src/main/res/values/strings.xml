@@ -10049,4 +10049,9 @@
     <string name="ChooseLanguage">Choose language</string>
     <string name="UnableDetectLanguage">Unable to detect the language of the content you entered. Please try again.</string>
     <string name="UnablePerformTranslation">Unable to perform the translation at the moment. Please try again later.</string>
+    <string name="AiTranslationSettings">AI Translation Settings</string>
+    <string name="EnableAITranslation">Enable AI Translation</string>
+    <string name="AiTranslationContent">Automatically translates out going messages to the selected target language.</string>
+    <string name="Preferences">Preferences</string>
+    <string name="TargetLanguage">Target Language</string>
 </resources>
