@@ -3468,6 +3468,10 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
 
                 @Override
                 public void onPageSelected(FilterTabsView.Tab tab, boolean forward) {
+                    if (tab.id == Integer.MAX_VALUE) {
+                        presentFragment(new FilterCreateActivity());
+                        return;
+                    }
                     if (viewPages[0].selectedType == tab.id) {
                         return;
                     }
@@ -6868,6 +6872,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                         filterTabsView.addTab(a, filter.localId, filter.name, filter.entities, filter.title_noanimate, false, filters.get(a).locked);
                     }
                 }
+                filterTabsView.addTab(Integer.MAX_VALUE, Integer.MAX_VALUE, R.drawable.menu_folder_add);
                 if (stableId >= 0) {
                     if (selectWithStableId) {
                         if (!filterTabsView.selectTabWithStableId(stableId)) {

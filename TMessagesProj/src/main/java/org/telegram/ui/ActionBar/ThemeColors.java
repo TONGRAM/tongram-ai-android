@@ -217,6 +217,7 @@ public class ThemeColors {
 
         defaultColors[key_table_background] = 0xfff7f7f7;
         defaultColors[key_table_border] = 0xffE0E0E0;
+        defaultColors[key_folder_background_unselected] = 0xff1B202A;
 
         defaultColors[key_actionBarDefaultArchived] = 0xff6f7a87;
         defaultColors[key_actionBarDefaultArchivedSelector] = 0xff5e6772;

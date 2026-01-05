@@ -3642,6 +3642,7 @@ public class Theme {
     public static final int key_chats_archivePullDownBackgroundActive = colorsCount++;
     public static final int key_chats_tabUnreadActiveBackground = colorsCount++;
     public static final int key_chats_tabUnreadUnactiveBackground = colorsCount++;
+    public static final int key_folder_background_unselected = colorsCount++;
 
     public static final int key_chat_attachCheckBoxCheck = colorsCount++;
     public static final int key_chat_attachCheckBoxBackground = colorsCount++;
