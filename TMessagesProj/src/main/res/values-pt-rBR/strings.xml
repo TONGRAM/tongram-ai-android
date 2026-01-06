@@ -103,8 +103,8 @@
     <string name="MessageLifetimeRemoved">%1$s desativou o timer de autodestruição</string>
     <string name="MessageLifetimeYouRemoved">Você desativou o timer de autodestruição</string>
     <string name="YouHaveNewMessage">Você tem uma nova mensagem</string>
-    <string name="NotificationMessageScheduled">&#128467; Você: %1$s</string>
-    <string name="NotificationMessageScheduledName">&#128467; Você</string>
+    <string name="NotificationMessageScheduled">🗓 Você: %1$s</string>
+    <string name="NotificationMessageScheduledName">🗓 Você</string>
     <string name="NotificationMessageText">%1$s: %2$s</string>
     <string name="NotificationMessageFew">%1$s te enviou %2$s</string>
     <string name="NotificationMessageAlbum">%1$s te enviou um álbum</string>
@@ -149,8 +149,8 @@
     <string name="NotificationMessageGroupSticker">%1$s enviou um sticker ao grupo %2$s</string>
     <string name="NotificationMessageGroupStickerEmoji">%1$s enviou um %3$s sticker ao grupo %2$s</string>
     <string name="NotificationMessageRecurringPay">%1$s foi cobrado %2$s</string>
-    <string name="NotificationPaidMedia_one">%1$d &#11088;&#65039; mídia</string>
-    <string name="NotificationPaidMedia_other">%1$d &#11088;&#65039; mídias</string>
+    <string name="NotificationPaidMedia_one">%1$d ⭐️ mídia</string>
+    <string name="NotificationPaidMedia_other">%1$d ⭐️ mídias</string>
     <string name="NotificationMessagePaidMedia_one">%2$s te enviou um post pago por %1$d estrela</string>
     <string name="NotificationMessagePaidMedia_other">%2$s te enviou um post pago por %1$d estrelas</string>
     <string name="NotificationChannelMessagePaidMedia_one">%2$s postou um post pago por %1$d estrela</string>
@@ -374,9 +374,9 @@
     <string name="BackgroundPreviewLine1">Dica! Alguns papéis de parede ficam melhores com o efeito de \'Desfoque\'.</string>
     <string name="BackgroundPreviewLine2">Valeu!</string>
     <string name="FontSizePreviewName">Lúcio</string>
-    <string name="FontSizePreviewReply">Bom dia! &#128075;</string>
+    <string name="FontSizePreviewReply">Bom dia! 👋</string>
     <string name="FontSizePreviewLine1">Você sabe que horas são?</string>
-    <string name="FontSizePreviewLine2">É manhã em Tóquio &#128526;</string>
+    <string name="FontSizePreviewLine2">É manhã em Tóquio 😎</string>
     <string name="BackgroundColorSinglePreviewLine1">Toque em \'Definir\' para aplicar a imagem.</string>
     <string name="BackgroundColorSinglePreviewLine2">Está ótimo</string>
     <string name="SearchByColor">Buscar por cor</string>
@@ -432,7 +432,7 @@
     <string name="TelegramFaq">Perguntas Frequentes</string>
     <string name="TelegramFeatures">Recursos do Tongram</string>
     <string name="TelegramFeaturesUrl">https://t.me/Tongram MessengerTipsBR</string>
-    <string name="AddAccount">Adicionar&#160;Conta</string>
+    <string name="AddAccount">Adicionar Conta</string>
     <string name="SelectAccount">Selecionar Conta</string>
     <string name="TelegramFaqUrl">https://Tongram.org/faq/pt-br</string>
     <string name="PrivacyPolicy">Política de Privacidade</string>
