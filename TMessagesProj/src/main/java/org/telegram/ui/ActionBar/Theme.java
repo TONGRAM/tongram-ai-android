@@ -3457,6 +3457,9 @@ public class Theme {
     public static final int key_windowBackgroundWhiteGrayText7 = colorsCount++;
     public static final int key_windowBackgroundWhiteGrayText8 = colorsCount++;
     public static final int key_windowBackgroundWhiteBlackText = colorsCount++;
+    public static final int key_input_text = colorsCount++;
+    public static final int key_input_stroke = colorsCount++;
+    public static final int key_text_title_color = colorsCount++;
     public static final int key_windowBackgroundWhiteHintText = colorsCount++;
     public static final int key_windowBackgroundWhiteValueText = colorsCount++;
     public static final int key_windowBackgroundWhiteLinkText = colorsCount++;
@@ -3558,6 +3561,7 @@ public class Theme {
     public static int[] keys_avatar_nameInMessage = {key_avatar_nameInMessageRed, key_avatar_nameInMessageOrange, key_avatar_nameInMessageViolet, key_avatar_nameInMessageGreen, key_avatar_nameInMessageCyan, key_avatar_nameInMessageBlue, key_avatar_nameInMessagePink};
 
     public static final int key_actionBarDefault = colorsCount++;
+    public static final int key_windowBackgroundTransparent = colorsCount++;
     public static final int key_actionBarDefaultSelector = colorsCount++;
     public static final int key_actionBarWhiteSelector = colorsCount++;
     public static final int key_actionBarDefaultIcon = colorsCount++;
@@ -3639,6 +3643,7 @@ public class Theme {
     public static final int key_chats_archivePullDownBackgroundActive = colorsCount++;
     public static final int key_chats_tabUnreadActiveBackground = colorsCount++;
     public static final int key_chats_tabUnreadUnactiveBackground = colorsCount++;
+    public static final int key_folder_background_unselected = colorsCount++;
 
     public static final int key_chat_attachCheckBoxCheck = colorsCount++;
     public static final int key_chat_attachCheckBoxBackground = colorsCount++;

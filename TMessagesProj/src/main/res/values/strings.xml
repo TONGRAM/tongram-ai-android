@@ -4040,11 +4040,11 @@
     <string name="Page4Title">Secure</string>
     <string name="Page5Title">Powerful</string>
     <string name="Page6Title">Cloud-Based</string>
-    <string name="Page1Message">The world\'s **fastest** messaging app.\nIt is **free** and **secure**.</string>
-    <string name="Page2Message">**Tongram** delivers messages faster than\nany other application.</string>
-    <string name="Page3Message">**Tongram** provides free unlimited cloud storage for chats and media.</string>
-    <string name="Page4Message">**Tongram** keeps your messages safe\nfrom hacker attacks.</string>
-    <string name="Page5Message">**Tongram** has no limits on\nthe size of your media and chats.</string>
+    <string name="Page1Message">Tongram is +++independently developed+++ within the +++Telegram ecosystem+++ and is not affiliated with, sponsored, or endorsed by Telegram Messenger Inc. Trademarks belong to their respective owners.</string>
+    <string name="Page2Message">+++Built on the Telegram API+++ works seamlessly with the +++Telegram ecosystem+++.</string>
+    <string name="Page3Message">+++Independent app — no affiliation, sponsorship, or endorsement+++ by Telegram Messenger Inc.</string>
+    <string name="Page4Message">We +++do not use official Telegram logos+++ or brand assets.</string>
+    <string name="Page5Message">If accessing channel content, +++official sponsored messages remain supported+++.</string>
     <string name="Page6Message">**Tongram** lets you access your messages\nfrom multiple devices.</string>
     <string name="StartMessaging">Start Messaging</string>
     <!-- VoIP -->
@@ -10041,7 +10041,7 @@
     <string name="Translating">Translating...</string>
     <string name="TranslateError">Translate failed!</string>
     <string name="AiEnhance">AI Enhance</string>
-    <string name="TongramAI">Tongram AI</string>
+    <string name="TongramAI">AI Tony</string>
     <string name="Apply">Apply</string>
     <string name="WritingAssistant">Writing Assistant</string>
     <string name="Translation">Writing Assistant</string>
@@ -10049,4 +10049,9 @@
     <string name="ChooseLanguage">Choose language</string>
     <string name="UnableDetectLanguage">Unable to detect the language of the content you entered. Please try again.</string>
     <string name="UnablePerformTranslation">Unable to perform the translation at the moment. Please try again later.</string>
+    <string name="AiTranslationSettings">AI Translation Settings</string>
+    <string name="EnableAITranslation">Enable AI Translation</string>
+    <string name="AiTranslationContent">Automatically translates out going messages to the selected target language.</string>
+    <string name="Preferences">Preferences</string>
+    <string name="TargetLanguage">Target Language</string>
 </resources>

@@ -7374,7 +7374,7 @@ un2에게 채널을 공유함</string>
     <string name="ChannelUnmute">알림 켜기</string>
     <string name="FilterInviteUserToast">공유 폴더에 사용자를 넣을 수 없습니다.</string>
     <string name="LimitReached">한도 도달</string>
-    <string name="Page1Message">세계에서 **가장 빠른** 메신저 앱.\n**무료**이고 **안전**합니다.</string>
+    <string name="Page1Message">세계에서 +++가장 빠른+++ 메신저 앱.\n+++무료+++이고 +++안전+++합니다.</string>
     <string name="Revoked">취소됨</string>
     <string name="FolderLinkUpdatedSubtitle_other">새 채팅 %d개를 추가했습니다.</string>
     <string name="ForceSetPasswordCancel">네, 확실합니다</string>
