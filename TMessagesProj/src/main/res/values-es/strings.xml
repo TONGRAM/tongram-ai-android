@@ -103,8 +103,8 @@
     <string name="MessageLifetimeRemoved">%1$s desactivó la autodestrucción</string>
     <string name="MessageLifetimeYouRemoved">Desactivaste la autodestrucción</string>
     <string name="YouHaveNewMessage">Tienes un mensaje nuevo</string>
-    <string name="NotificationMessageScheduled">&#128197; Tú: %1$s</string>
-    <string name="NotificationMessageScheduledName">&#128197; Tú</string>
+    <string name="NotificationMessageScheduled">📅 Tú: %1$s</string>
+    <string name="NotificationMessageScheduledName">📅 Tú</string>
     <string name="NotificationMessageText">%1$s: %2$s</string>
     <string name="NotificationMessageFew">%1$s te envió %2$s</string>
     <string name="NotificationMessageAlbum">%1$s te envió un álbum</string>
@@ -149,8 +149,8 @@
     <string name="NotificationMessageGroupSticker">%1$s envió un sticker al grupo %2$s</string>
     <string name="NotificationMessageGroupStickerEmoji">%1$s envió un %3$s sticker al grupo %2$s</string>
     <string name="NotificationMessageRecurringPay">%1$s pagaste %2$s</string>
-    <string name="NotificationPaidMedia_one">%1$d &#11088;&#65039; multimedia</string>
-    <string name="NotificationPaidMedia_other">%1$d &#11088;&#65039; multimedia</string>
+    <string name="NotificationPaidMedia_one">%1$d ⭐️ multimedia</string>
+    <string name="NotificationPaidMedia_other">%1$d ⭐️ multimedia</string>
     <string name="NotificationMessagePaidMedia_one">%2$s te envió un post de pago por %1$d estrella</string>
     <string name="NotificationMessagePaidMedia_other">%2$s te envió un post de pago por %1$d estrellas</string>
     <string name="NotificationChannelMessagePaidMedia_one">%2$s publicó un post de pago por %1$d estrella</string>
@@ -350,9 +350,9 @@
     <string name="BackgroundPreviewLine1">Pista: algunos fondos de pantalla se ven mejor con el efecto difuminado.</string>
     <string name="BackgroundPreviewLine2">¡Woo-hoo! ¡Gracias!</string>
     <string name="FontSizePreviewName">Roberto</string>
-    <string name="FontSizePreviewReply">¡Buenos días! &#128075;</string>
+    <string name="FontSizePreviewReply">¡Buenos días! 👋</string>
     <string name="FontSizePreviewLine1">¿Sabes qué hora es?</string>
-    <string name="FontSizePreviewLine2">Es de mañana en Tokio &#128526;</string>
+    <string name="FontSizePreviewLine2">Es de mañana en Tokio 😎</string>
     <string name="BackgroundColorSinglePreviewLine1">Toca Establecer para aplicar el fondo.</string>
     <string name="BackgroundColorSinglePreviewLine2">Se ve bien</string>
     <string name="SearchByColor">Buscar por color</string>
