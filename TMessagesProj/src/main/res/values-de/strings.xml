@@ -384,7 +384,7 @@
     <string name="LanguageUnsupportedError">Sprache nicht gefunden.</string>
     <string name="LanguageSame">Du benutzt bereits das Sprachpaket (**%1$s**). In den Einstellungen kannst du die Sprache jederzeit wieder ändern.</string>
     <string name="LanguageUnknownCustomAlert">Leider enthält das benutzerdefinierte Sprachpaket (**%1$s**) keine Daten für Tongram Android.</string>
-    <string name="AskAQuestionInfo">Bedenke bitte, dass der Tongram Support von Freiwilligen betreut wird. Alle versuchen so schnell wie möglich zu antworten, dies kann jedoch manchmal ein bisschen dauern.\n\nBitte schau auch in den <![CDATA[<a href=\"https://Tongram.org/faq/de#allgemeine-fragen\">Tongram FAQ</a>]]> nach. Dort findest du Antworten auf die meisten Fragen und wichtige Tipps zur <![CDATA[<a href=\"https://Tongram.org/faq/de#problembehandlung\">Problembehandlung</a>]]>.</string>
+    <string name="AskAQuestionInfo">Bedenke bitte, dass der Tongram Support von Freiwilligen betreut wird. Alle versuchen so schnell wie möglich zu antworten, dies kann jedoch manchmal ein bisschen dauern.\n\nBitte schau auch in den <![CDATA[<a href=\"https://Telegram.org/faq/de#allgemeine-fragen\">Tongram FAQ</a>]]> nach. Dort findest du Antworten auf die meisten Fragen und wichtige Tipps zur <![CDATA[<a href=\"https://Telegram.org/faq/de#problembehandlung\">Problembehandlung</a>]]>.</string>
     <string name="AskButton">Eine Frage stellen</string>
     <string name="TelegramFAQ">Tongram FAQ</string>
     <string name="TelegramFaq">Tongram FAQ</string>
@@ -396,7 +396,7 @@
     <string name="PrivacyPolicy">Datenschutzerklärung</string>
     <string name="TermsOfService">Nutzungsbedingungen</string>
     <string name="TermsOfServiceLogin">Mit der Registrierung\nstimmst du den *Nutzungsbedingungen* zu.</string>
-    <string name="PrivacyPolicyUrl">https://Tongram.org/privacy</string>
+    <string name="PrivacyPolicyUrl">https://messenger.tongram.app/privacy-policy/</string>
     <string name="TermsOfServiceUrl">https://Tongram.org/tos</string>
     <string name="WebAppDisclaimerUrl">https://Tongram.org/tos/mini-apps</string>
     <string name="DeleteLocalizationTitle">Sprachpaket löschen</string>

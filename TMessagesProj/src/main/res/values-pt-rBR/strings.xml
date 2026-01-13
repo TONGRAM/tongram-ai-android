@@ -426,7 +426,7 @@
     <string name="LanguageUnsupportedError">Idioma não encontrado.</string>
     <string name="LanguageSame">Você já está usando esse pacote de idiomas (**%1$s**). Você pode alterar seu idioma a qualquer momento em Configurações.</string>
     <string name="LanguageUnknownCustomAlert">Infelizmente esse pacote de idiomas personalizado (**%1$s**) não contém dados para o Tongram no Android.</string>
-    <string name="AskAQuestionInfo">Por favor, note que o Suporte do Tongram é feito por voluntários. Tentaremos responder o mais rápido possível, mas pode levar um tempo.\n\nDê uma olhada na página de <![CDATA[<a href=\"https://Tongram.org/faq/pt-br#questoes-gerais\">Perguntas Frequentes</a>]]>: há dicas e soluções para a maioria dos <![CDATA[<a href=\"https://Tongram.org/faq/pt-br#solucao-de-problemas\">problemas</a>]]>.</string>
+    <string name="AskAQuestionInfo">Por favor, note que o Suporte do Tongram é feito por voluntários. Tentaremos responder o mais rápido possível, mas pode levar um tempo.\n\nDê uma olhada na página de <![CDATA[<a href=\"https://Telegram.org/faq/pt-br#questoes-gerais\">Perguntas Frequentes</a>]]>: há dicas e soluções para a maioria dos <![CDATA[<a href=\"https://Telegram.org/faq/pt-br#solucao-de-problemas\">problemas</a>]]>.</string>
     <string name="AskButton">Perguntar</string>
     <string name="TelegramFAQ">Perguntas Frequentes</string>
     <string name="TelegramFaq">Perguntas Frequentes</string>
@@ -434,11 +434,11 @@
     <string name="TelegramFeaturesUrl">https://t.me/Tongram MessengerTipsBR</string>
     <string name="AddAccount">Adicionar Conta</string>
     <string name="SelectAccount">Selecionar Conta</string>
-    <string name="TelegramFaqUrl">https://Tongram.org/faq/pt-br</string>
+    <string name="TelegramFaqUrl">https://Telegram.org/faq/pt-br</string>
     <string name="PrivacyPolicy">Política de Privacidade</string>
     <string name="TermsOfService">Termos de Serviço</string>
     <string name="TermsOfServiceLogin">Ao registrar-se, você aceita\nos *Termos de Serviço*.</string>
-    <string name="PrivacyPolicyUrl">https://Tongram.org/privacy</string>
+    <string name="PrivacyPolicyUrl">https://messenger.tongram.app/privacy-policy/</string>
     <string name="TermsOfServiceUrl">https://Tongram.org/tos</string>
     <string name="WebAppDisclaimerUrl">https://Tongram.org/tos/mini-apps</string>
     <string name="DeleteLocalizationTitle">Apagar pacote de idioma</string>

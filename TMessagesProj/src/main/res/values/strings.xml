@@ -2353,7 +2353,7 @@
     <string name="LanguageUnsupportedError">There is no such language.</string>
     <string name="LanguageSame">You are already using this language pack (**%1$s**). You can change your language at any time in Settings.</string>
     <string name="LanguageUnknownCustomAlert">Unfortunately, this custom language pack (**%1$s**) doesn\'t contain data for Tongram Android.</string>
-    <string name="AskAQuestionInfo">Please note that Tongram Support is done by volunteers. We try to respond as quickly as possible, but it may take a while.\n\nPlease take a look at the <![CDATA[<a href=\"https://Tongram.org/faq#general-questions\">Tongram FAQ</a>]]>: it has answers to most questions and important tips for <![CDATA[<a href=\"https://Tongram.org/faq#troubleshooting\">troubleshooting</a>]]>.</string>
+    <string name="AskAQuestionInfo">Please note that Tongram Support is done by volunteers. We try to respond as quickly as possible, but it may take a while.\n\nPlease take a look at the <![CDATA[<a href=\"https://Telegram.org/faq#general-questions\">Tongram FAQ</a>]]>: it has answers to most questions and important tips for <![CDATA[<a href=\"https://Telegram.org/faq#troubleshooting\">troubleshooting</a>]]>.</string>
     <string name="AskButton">Ask a volunteer</string>
     <string name="TelegramFAQ">Tongram FAQ</string>
     <string name="TelegramFaq">Tongram FAQ</string>
@@ -2361,11 +2361,11 @@
     <string name="TelegramFeaturesUrl">https://t.me/Tongram MessengerTips</string>
     <string name="AddAccount">Add Account</string>
     <string name="SelectAccount">Select Account</string>
-    <string name="TelegramFaqUrl">https://Tongram.org/faq</string>
+    <string name="TelegramFaqUrl">https://Telegram.org/faq</string>
     <string name="PrivacyPolicy">Privacy Policy</string>
     <string name="TermsOfService">Terms of Service</string>
     <string name="TermsOfServiceLogin">By signing up,\nyou agree to the *Terms of Service*.</string>
-    <string name="PrivacyPolicyUrl">https://Tongram.org/privacy</string>
+    <string name="PrivacyPolicyUrl">https://messenger.tongram.app/privacy-policy/</string>
     <string name="TermsOfServiceUrl">https://Tongram.org/tos</string>
     <string name="WebAppDisclaimerUrl">https://Tongram.org/tos/mini-apps</string>
     <string name="DeleteLocalizationTitle">Delete language pack</string>

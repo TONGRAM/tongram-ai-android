@@ -1090,7 +1090,7 @@ https://telegram.org/blog/coronavirus</string>
     <string name="ChannelProfileHint">프로필의 색상과 아이콘 선택</string>
     <string name="FilterInvitePrivateChannelToast">이 비공개 채널에 초대 링크를 공유할 관리자 권한이 없습니다.</string>
     <string name="DeleteAllProxies">모든 프록시 삭제</string>
-    <string name="PrivacyPolicyUrl">https://telegram.org/privacy</string>
+    <string name="PrivacyPolicyUrl">https://messenger.tongram.app/privacy-policy/</string>
     <string name="ChannelMessagePoll2">%1$s님이 투표 %2$s을(를) 게시했습니다</string>
     <string name="SearchGifsTitle">GIF 검색</string>
     <string name="URL">URL</string>
