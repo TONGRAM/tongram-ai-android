@@ -55,11 +55,49 @@ pipeline {
                 }
             }
         }
-        stage('Upload to S3') {
+        stage('Build Release AAB') {
+            when {
+                anyOf {
+                    branch 'production'
+                }
+            }
+            steps{
+                withCredentials([
+                    file(credentialsId: 'android-keystore-file', variable: 'KEYSTORE_FILE'),
+                    string(credentialsId: 'STORE_PASSWORD', variable: 'STORE_PASS'),
+                    string(credentialsId: 'KEY_ALIAS', variable: 'KEY_ALIAS'),
+                    string(credentialsId: 'KEY_PASSWORD', variable: 'KEY_PASS')
+                ]) {
+                    sh """
+                        echo "Building Release AAB"
+
+                        ./gradlew bundleRelease \
+                        -Pandroid.injected.signing.store.file='$KEYSTORE_FILE' \
+                        -Pandroid.injected.signing.store.password='$STORE_PASS' \
+                        -Pandroid.injected.signing.key.alias='$KEY_ALIAS' \
+                        -Pandroid.injected.signing.key.password='$KEY_PASS'
+                    """
+                }
+            }
+
+        }
+        stage('Upload apk to S3') {
             steps{
                 withAWS(region: 'ap-southeast-1', credentials: "AWS_CREDENTIALS_ID") {
                     s3Upload acl: 'PublicRead', bucket: 'tongram', file: "TMessagesProj_App/build/outputs/apk/afat/release/app.apk", path: "${S3_PATH}/${env.BRANCH_NAME}/${env.BUILD_NUMBER}/"
                     // s3Upload acl: 'PublicRead', bucket: 'tongram', file: "TMessagesProj_App/build/outputs/bundle/afatRelease/TMessagesProj_App-afat-release.aab", path: "${S3_PATH}/${env.BRANCH_NAME}/${env.BUILD_NUMBER}/"
+                }
+            }
+        }
+        stage('Upload aab to S3') {
+            when {
+                anyOf {
+                    branch 'production'
+                }
+            }
+            steps{
+                withAWS(region: 'ap-southeast-1', credentials: "AWS_CREDENTIALS_ID") {
+                    s3Upload acl: 'PublicRead', bucket: 'tongram', file: "TMessagesProj_App/build/outputs/bundle/afatRelease/TMessagesProj_App-afat-release.aab", path: "${S3_PATH}/${env.BRANCH_NAME}/${env.BUILD_NUMBER}/"
                 }
             }
         }
