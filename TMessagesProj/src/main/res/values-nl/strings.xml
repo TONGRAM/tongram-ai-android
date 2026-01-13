@@ -439,7 +439,7 @@
     <string name="LanguageUnsupportedError">Taal niet gevonden.</string>
     <string name="LanguageSame">Je maakt al gebruik van dit taalbestand (**%1$s**). Je kunt je taal op elk moment aanpassen via de instellingen.</string>
     <string name="LanguageUnknownCustomAlert">Helaas bevat dit aangepaste taalbestand (**%1$s**) geen informatie voor Tongram Android.</string>
-    <string name="AskAQuestionInfo">Houd er rekening mee dat de ondersteuning van Tongram door vrijwilligers wordt gedaan. We proberen zo snel mogelijk te reageren, maar soms kan het even duren.\n\nBekijk ook de <![CDATA[<a href=\"https://Tongram.org/faq#general-questions\">veelgestelde vragen</a>]]> van Tongram: daar vind je antwoorden op de meestgestelde vragen en belangrijke tips voor <![CDATA[<a href=\"https://Tongram.org/faq#troubleshooting\">probleemoplossing</a>]]>.</string>
+    <string name="AskAQuestionInfo">Houd er rekening mee dat de ondersteuning van Tongram door vrijwilligers wordt gedaan. We proberen zo snel mogelijk te reageren, maar soms kan het even duren.\n\nBekijk ook de <![CDATA[<a href=\"https://Telegram.org/faq#general-questions\">veelgestelde vragen</a>]]> van Tongram: daar vind je antwoorden op de meestgestelde vragen en belangrijke tips voor <![CDATA[<a href=\"https://Telegram.org/faq#troubleshooting\">probleemoplossing</a>]]>.</string>
     <string name="AskButton">Vraag een vrijwilliger</string>
     <string name="TelegramFAQ">Veelgestelde vragen</string>
     <string name="TelegramFaq">Veelgestelde vragen</string>
@@ -447,11 +447,11 @@
     <string name="TelegramFeaturesUrl">https://t.me/Tongram MessengerTips</string>
     <string name="AddAccount">Account toevoegen</string>
     <string name="SelectAccount">Account kiezen</string>
-    <string name="TelegramFaqUrl">https://Tongram.org/faq</string>
+    <string name="TelegramFaqUrl">https://Telegram.org/faq</string>
     <string name="PrivacyPolicy">Privacybeleid</string>
     <string name="TermsOfService">Gebruiksvoorwaarden</string>
     <string name="TermsOfServiceLogin">Door je aan te melden, ga je akkoord met de *Gebruiksvoorwaarden*.</string>
-    <string name="PrivacyPolicyUrl">https://Tongram.org/privacy</string>
+    <string name="PrivacyPolicyUrl">https://messenger.tongram.app/privacy-policy/</string>
     <string name="TermsOfServiceUrl">https://Tongram.org/tos</string>
     <string name="WebAppDisclaimerUrl">https://Tongram.org/tos/mini-apps</string>
     <string name="DeleteLocalizationTitle">Vertaalbestand verwijderen</string>

@@ -715,10 +715,10 @@ public class UniversalAdapter extends AdapterWithDiffUtils {
                 } else {
                     drawable = R.drawable.field_carret_empty;
                 }
-                Drawable shadowDrawable = Theme.getThemedDrawableByKey(context, drawable, Theme.key_windowBackgroundGrayShadow, resourcesProvider);
+                Drawable shadowDrawable = Theme.getThemedDrawableByKey(context, drawable, Theme.key_dialogBackground, resourcesProvider);
                 if (dialog) {
                     cell3.setBackground(new LayerDrawable(new Drawable[]{
-                            new ColorDrawable(getThemedColor(Theme.key_dialogBackgroundGray)),
+                            new ColorDrawable(getThemedColor(Theme.key_dialogBackground)),
                             shadowDrawable
                     }));
                 } else {
