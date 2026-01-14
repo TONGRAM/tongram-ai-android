@@ -4089,7 +4089,7 @@ public class SharedMediaLayout extends FrameLayout implements NotificationCenter
             initialTab = -1;
         }
         scrollSlidingTextTabStrip.setBackgroundColor(getThemedColor(Theme.key_windowBackgroundWhite));
-        scrollSlidingTextTabStrip.setColors(Theme.key_profile_tabSelectedLine, Theme.key_profile_tabSelectedText, Theme.key_profile_tabText, Theme.key_profile_tabSelector);
+        scrollSlidingTextTabStrip.setColors(Theme.key_profile_tabSelectedLine, Theme.key_actionBarTabActiveText, Theme.key_profile_tabText, Theme.key_profile_tabSelector);
         scrollSlidingTextTabStrip.setDelegate(new ScrollSlidingTextTabStrip.ScrollSlidingTabStripDelegate() {
             @Override
             public void onPageSelected(int id, boolean forward) {
