@@ -73,19 +73,19 @@ public class ThemeColors {
         defaultColors[key_share_linkText] = 0xFF222222;
         defaultColors[key_share_linkBackground] = 0x0F000000;
 
-        defaultColors[key_windowBackgroundWhite] = 0xffffffff;
+        defaultColors[key_windowBackgroundWhite] = 0xffE0E8F4;
         defaultColors[key_windowBackgroundWhiteShadow] = 0xffffffff;
-        defaultColors[key_icon_color] = 0xffffffff;
+        defaultColors[key_icon_color] = 0xff000000;
         defaultColors[key_countMessageBackground] = 0xffffffff;
         defaultColors[key_windowBackgroundUnchecked] = 0xff9da7b1;
         defaultColors[key_windowBackgroundChecked] = 0xff579ed9;
         defaultColors[key_windowBackgroundCheckText] = 0xffffffff;
         defaultColors[key_progressCircle] = 0xff1c93e3;
         defaultColors[key_windowBackgroundWhiteGrayIcon] = 0xff81868b;
-        defaultColors[key_windowBackgroundWhiteBlueText] = 0xff0A84FF;
+        defaultColors[key_windowBackgroundWhiteBlueText] = 0xff7D99D5;
         defaultColors[key_windowBackgroundWhiteBlueText2] = 0xff3a95d5;
         defaultColors[key_windowBackgroundWhiteBlueText3] = 0xff2678b6;
-        defaultColors[key_windowBackgroundWhiteBlueText4] = 0xff1c93e3;
+        defaultColors[key_windowBackgroundWhiteBlueText4] = 0xff7D99D5;
         defaultColors[key_windowBackgroundWhiteBlueText5] = 0xff4c8eca;
         defaultColors[key_windowBackgroundWhiteBlueText6] = 0xff3a8ccf;
         defaultColors[key_windowBackgroundWhiteBlueText7] = 0xff377aae;
@@ -98,7 +98,7 @@ public class ThemeColors {
         defaultColors[key_fill_RedNormal] = 0xffeb5e5e;
         defaultColors[key_windowBackgroundWhiteGrayText] = 0xff838c96;
         defaultColors[key_windowBackgroundWhiteGrayText2] = 0xff82868a;
-        defaultColors[key_windowBackgroundWhiteGrayText3] = 0xff999999;
+        defaultColors[key_windowBackgroundWhiteGrayText3] = 0x99000000;
         defaultColors[key_windowBackgroundWhiteGrayText4] = 0xff808080;
         defaultColors[key_windowBackgroundWhiteGrayText5] = 0xffa3a3a3;
         defaultColors[key_windowBackgroundWhiteGrayText6] = 0xff757575;
@@ -106,12 +106,12 @@ public class ThemeColors {
         defaultColors[key_windowBackgroundWhiteGrayText8] = 0xff6d6d72;
         defaultColors[key_windowBackgroundWhiteBlackText] = 0xff222222;
         defaultColors[key_windowBackgroundWhiteHintText] = 0xffa8a8a8;
-        defaultColors[key_windowBackgroundWhiteValueText] = 0xffAFC8FF;
+        defaultColors[key_windowBackgroundWhiteValueText] = 0xff7D99D5;
         defaultColors[key_windowBackgroundWhiteLinkText] = 0xff2678b6;
         defaultColors[key_windowBackgroundWhiteLinkSelection] = 0x3362a9e3;
         defaultColors[key_windowBackgroundWhiteBlueHeader] = 0xff3a95d5;
         defaultColors[key_windowBackgroundWhiteInputField] = 0xffdbdbdb;
-        defaultColors[key_windowBackgroundWhiteInputFieldActivated] = 0xff0A84FF;
+        defaultColors[key_windowBackgroundWhiteInputFieldActivated] = 0xff7D99D5;
         defaultColors[key_switchTrack] = 0xffb0b5ba;
         defaultColors[key_switchTrackChecked] = 0xff52ade9;
         defaultColors[key_switchTrackBlue] = 0xff828e99;
@@ -194,12 +194,12 @@ public class ThemeColors {
         defaultColors[key_avatar_nameInMessageBlue] = 0xff368AD1;
         defaultColors[key_avatar_nameInMessagePink] = 0xffC7508B;
 
-        defaultColors[key_actionBarDefault] = 0xff527da3;
-        defaultColors[key_actionBarDefaultIcon] = 0xffffffff;
+        defaultColors[key_actionBarDefault] = 0xffE0E8F4;
+        defaultColors[key_actionBarDefaultIcon] = 0xff000000;
         defaultColors[key_actionBarActionModeDefault] = 0xffffffff;
         defaultColors[key_actionBarActionModeDefaultTop] = 0x10000000;
         defaultColors[key_actionBarActionModeDefaultIcon] = 0xff676a6f;
-        defaultColors[key_actionBarDefaultTitle] = 0xffffffff;
+        defaultColors[key_actionBarDefaultTitle] = 0xff000000;
         defaultColors[key_actionBarDefaultSubtitle] = 0xffd5e8f7;
         defaultColors[key_actionBarDefaultSelector] = 0xff406d94;
         defaultColors[key_actionBarWhiteSelector] = 0x1d000000;
@@ -265,18 +265,18 @@ public class ThemeColors {
         defaultColors[key_chats_verifiedCheck] = 0xffffffff;
         defaultColors[key_chats_muteIcon] = 0xffbdc1c4;
         defaultColors[key_chats_mentionIcon] = 0xffffffff;
-        defaultColors[key_chats_menuBackground] = 0xffffffff;
+        defaultColors[key_chats_menuBackground] = 0xFFeff3f9;
         defaultColors[key_chats_menuItemText] = 0xff444444;
         defaultColors[key_chats_menuItemCheck] = 0xff598fba;
         defaultColors[key_chats_menuItemIcon] = 0xff889198;
-        defaultColors[key_chats_menuName] = 0xffffffff;
-        defaultColors[key_chats_menuPhone] = 0xffffffff;
+        defaultColors[key_chats_menuName] = 0xff000000;
+        defaultColors[key_chats_menuPhone] = 0xff5b7f9f;
         defaultColors[key_chats_menuPhoneCats] = 0xffc2e5ff;
         defaultColors[key_chats_actionIcon] = 0xff000000;
         defaultColors[key_chats_actionBackground] = 0xffAFC8FF;
         defaultColors[key_chats_actionPressedBackground] = 0xff569dd6;
         defaultColors[key_chats_menuTopBackgroundCats] = 0xff598fba;
-        defaultColors[key_chats_menuTopBackground] = 0xFF0f1528;
+        defaultColors[key_chats_menuTopBackground] = 0xFFFFFFFF;
         defaultColors[key_chats_archivePullDownBackground] = 0xffc6c9cc;
         defaultColors[key_chats_archivePullDownBackgroundActive] = 0xff0A84FF;
 
@@ -834,6 +834,8 @@ public class ThemeColors {
 
         defaultColors[key_glass_defaultIcon] = 0x991B2227; //0xFF747875;
         defaultColors[key_glass_defaultText] = 0x991B2227; //0xFF737876;
+        defaultColors[key_profile_drawer_background] = 0xFFFFFFFF; //0xFF737876;
+        defaultColors[key_title_black_white] = 0xFF000000; //0xFF737876;
 
         return defaultColors;
     }
@@ -1626,6 +1628,8 @@ public class ThemeColors {
         colorKeysMap.put(key_text_title_color, "text_title_color");
         colorKeysMap.put(key_icon_color, "icon_color");
         colorKeysMap.put(key_countMessageBackground, "countMessageBackground");
+        colorKeysMap.put(key_profile_drawer_background, "profile_drawer_background");
+        colorKeysMap.put(key_title_black_white, "title_black_white");
 
         return colorKeysMap;
     }
