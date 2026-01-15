@@ -21,6 +21,7 @@ import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ChatObject;
 import org.telegram.messenger.LocaleController;
 import org.telegram.messenger.MessageObject;
+import org.telegram.messenger.NotificationCenter;
 import org.telegram.messenger.R;
 import org.telegram.messenger.UserObject;
 import org.telegram.messenger.Utilities;
@@ -154,7 +155,22 @@ public class UniversalAdapter extends AdapterWithDiffUtils {
         this.dialog = dialog;
         this.fillItems = fillItems;
         this.resourcesProvider = resourcesProvider;
+
+        NotificationCenter.getGlobalInstance().addObserver(this::onThemeChanged, NotificationCenter.needSetDayNightTheme);
         update(false);
+    }
+
+    private void onThemeChanged(int id, int account, Object... args) {
+        if (id == NotificationCenter.needSetDayNightTheme) {
+            for (int i = 0; i < listView.getChildCount(); i++) {
+                View child = listView.getChildAt(i);
+                RecyclerView.ViewHolder holder = listView.getChildViewHolder(child);
+                if (holder != null) {
+                    updateColors(holder);
+                }
+            }
+            notifyDataSetChanged();
+        }
     }
 
     public void setApplyBackground(boolean applyBackground) {

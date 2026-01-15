@@ -114,7 +114,7 @@ public class DrawerProfileCell extends FrameLayout implements NotificationCenter
         addView(shadowView, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, 70, Gravity.LEFT | Gravity.BOTTOM));
 
         avatarImageView = new BackupImageView(context);
-        avatarImageView.getImageReceiver().setRoundRadius(AndroidUtilities.dp(32));
+        avatarImageView.getImageReceiver().setRoundRadius(AndroidUtilities.dp(15));
         addView(avatarImageView, LayoutHelper.createFrame(64, 64, Gravity.LEFT | Gravity.BOTTOM, 16, 0, 0, 67));
 
         nameTextView = new SimpleTextView(context) {
@@ -184,6 +184,7 @@ public class DrawerProfileCell extends FrameLayout implements NotificationCenter
         arrowView = new ImageView(context);
         arrowView.setScaleType(ImageView.ScaleType.CENTER);
         arrowView.setImageResource(R.drawable.msg_expand);
+        arrowView.setColorFilter(new PorterDuffColorFilter(Theme.getColor(Theme.key_actionBarDefaultIcon), PorterDuff.Mode.SRC_IN));
         addView(arrowView, LayoutHelper.createFrame(59, 59, Gravity.RIGHT | Gravity.BOTTOM));
         setArrowState(false);
 
@@ -214,10 +215,7 @@ public class DrawerProfileCell extends FrameLayout implements NotificationCenter
         darkThemeView.setBackground(Theme.createCircleSelectorDrawable(Theme.getColor(Theme.key_dialogButtonSelector), 0, 0));
         sunDrawable.beginApplyLayerColors();
         int color = Theme.getColor(Theme.key_chats_menuName);
-        sunDrawable.setLayerColor("Sunny.**", color);
-        sunDrawable.setLayerColor("Path 6.**", color);
-        sunDrawable.setLayerColor("Path.**", color);
-        sunDrawable.setLayerColor("Path 5.**", color);
+        sunDrawable.setLayerColor("**", color);
         sunDrawable.commitApplyLayerColors();
         darkThemeView.setScaleType(ImageView.ScaleType.CENTER);
         darkThemeView.setAnimation(sunDrawable);
@@ -561,10 +559,7 @@ public class DrawerProfileCell extends FrameLayout implements NotificationCenter
         if (currentMoonColor == null || currentMoonColor != color) {
             currentMoonColor = color;
             sunDrawable.beginApplyLayerColors();
-            sunDrawable.setLayerColor("Sunny.**", currentMoonColor);
-            sunDrawable.setLayerColor("Path 6.**", currentMoonColor);
-            sunDrawable.setLayerColor("Path.**", currentMoonColor);
-            sunDrawable.setLayerColor("Path 5.**", currentMoonColor);
+            sunDrawable.setLayerColor("**", color);
             sunDrawable.commitApplyLayerColors();
         }
         nameTextView.setTextColor(Theme.getColor(Theme.key_chats_menuName));
@@ -747,6 +742,9 @@ public class DrawerProfileCell extends FrameLayout implements NotificationCenter
         }
         if (status != null) {
             status.setColor(Theme.getColor(Theme.isCurrentThemeDark() ? Theme.key_chats_verifiedBackground : Theme.key_chats_menuPhoneCats));
+        }
+        if (arrowView != null) {
+            arrowView.setColorFilter(new PorterDuffColorFilter(Theme.getColor(Theme.key_actionBarDefaultIcon), PorterDuff.Mode.SRC_IN));
         }
     }
 
