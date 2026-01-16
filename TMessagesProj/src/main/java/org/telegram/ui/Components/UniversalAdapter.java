@@ -921,6 +921,7 @@ public class UniversalAdapter extends AdapterWithDiffUtils {
                 profileCell.setRectangularAvatar(item.red);
                 profileCell.setData(object, null, title, s, false, false);
                 profileCell.useSeparator = divider;
+//                profileCell.setBackgroundColor(Theme.getColor(Theme.key_windowBackgroundWhite));
                 break;
             case VIEW_TYPE_SEARCH_MESSAGE:
                 DialogCell dialogCell = (DialogCell) holder.itemView;

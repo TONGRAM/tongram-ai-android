@@ -13655,7 +13655,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                         textCell.setText(LocaleController.getString(R.string.SendMessageLocation), true);
                     } else if (position == addToContactsRow) {
                         textCell.setTextAndIcon(LocaleController.getString(R.string.AddToContacts), R.drawable.msg_contact_add, false);
-                        textCell.setColors(Theme.key_profile_title, Theme.key_windowBackgroundWhiteBlueButton);
+                        textCell.setColors(Theme.key_profile_title, Theme.key_profile_title);
                         textCell.setBackground(setBackgroundForItem(2));
                     } else if (position == reportReactionRow) {
                         TLRPC.Chat chat = getMessagesController().getChat(-reportReactionFromDialogId);

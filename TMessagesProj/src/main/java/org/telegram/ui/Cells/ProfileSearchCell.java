@@ -31,6 +31,8 @@ import android.view.accessibility.AccessibilityNodeInfo;
 
 import androidx.annotation.NonNull;
 
+import com.google.android.exoplayer2.util.Log;
+
 import org.telegram.PhoneFormat.PhoneFormat;
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ChatObject;
@@ -920,6 +922,8 @@ public class ProfileSearchCell extends BaseCell implements NotificationCenter.No
         if (user == null && chat == null && encryptedChat == null && contact == null) {
             return;
         }
+
+        canvas.drawColor(Theme.getColor(Theme.key_windowBackgroundWhite, resourcesProvider));
 
         if (useSeparator) {
             Paint dividerPaint = null;

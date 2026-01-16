@@ -85,7 +85,7 @@ public class AiTranslationSettingsActivity extends BaseFragment implements Langu
         fragmentView = new FrameLayout(context);
         fragmentView.setBackgroundColor(Theme.getColor(Theme.key_windowBackgroundWhite));
         FrameLayout frameLayout = (FrameLayout) fragmentView;
-        frameLayout.setPadding(dp(15), 0, dp(15), 0);
+        frameLayout.setPadding(dp(15), dp(15), dp(15), 0);
 
         LinearLayout listview = new LinearLayout(context);
         listview.setOrientation(LinearLayout.VERTICAL);
@@ -103,7 +103,7 @@ public class AiTranslationSettingsActivity extends BaseFragment implements Langu
         gb.setColor(Theme.getColor(Theme.key_chats_menuTopBackground));
         switchGeneral.setBackground(gb);
         switchGeneral.setTextAndCheck(LocaleController.getString(R.string.EnableAITranslation), isEnableTranslation, false);
-        switchGeneral.setColorfullIcon(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText), R.drawable.settings_translation);
+        switchGeneral.setColorfullIcon(Theme.getColor(Theme.key_icon_color), R.drawable.settings_translation);
         switchGeneral.setOnClickListener(v -> {
             switchGeneral.setChecked(!switchGeneral.isChecked());
             preferences.edit().putBoolean(Constants.IS_ENABLE_AI_TRANSLATION_KEY, switchGeneral.isChecked()).apply();

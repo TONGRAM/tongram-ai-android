@@ -32,7 +32,7 @@ public class ThemeColors {
         defaultColors[key_dialogTextHint] = 0xff979797;
         defaultColors[key_dialogIcon] = 0xff676b70;
         defaultColors[key_dialogGrayLine] = 0xffd2d2d2;
-        defaultColors[key_dialogTopBackground] = 0xff6fb2e5;
+        defaultColors[key_dialogTopBackground] = 0xffAFC8FF;
         defaultColors[key_dialogInputField] = 0xffdbdbdb;
         defaultColors[key_dialogInputFieldActivated] = 0xff37a9f0;
         defaultColors[key_dialogCheckboxSquareBackground] = 0xff43a0df;
@@ -82,7 +82,7 @@ public class ThemeColors {
         defaultColors[key_windowBackgroundChecked] = 0xff579ed9;
         defaultColors[key_windowBackgroundCheckText] = 0xffffffff;
         defaultColors[key_progressCircle] = 0xff1c93e3;
-        defaultColors[key_windowBackgroundWhiteGrayIcon] = 0xffffffff;
+        defaultColors[key_windowBackgroundWhiteGrayIcon] = 0xff828284;
         defaultColors[key_windowBackgroundWhiteBlueText] = 0xff7D99D5;
         defaultColors[key_windowBackgroundWhiteBlueText2] = 0xff3a95d5;
         defaultColors[key_windowBackgroundWhiteBlueText3] = 0xff2678b6;
@@ -91,7 +91,7 @@ public class ThemeColors {
         defaultColors[key_windowBackgroundWhiteBlueText6] = 0xff3a8ccf;
         defaultColors[key_windowBackgroundWhiteBlueText7] = 0xff377aae;
         defaultColors[key_windowBackgroundWhiteBlueButton] = 0xff7D99D5;
-        defaultColors[key_windowBackgroundWhiteBlueIcon] = 0xff0A84FF;
+        defaultColors[key_windowBackgroundWhiteBlueIcon] = 0xff7D99D5;
         defaultColors[key_windowBackgroundWhiteGreenText] = 0xff26972c;
         defaultColors[key_windowBackgroundWhiteGreenText2] = 0xff37a818;
         defaultColors[key_text_RedRegular] = 0xffcc2929;
@@ -114,7 +114,7 @@ public class ThemeColors {
         defaultColors[key_windowBackgroundWhiteInputField] = 0xffdbdbdb;
         defaultColors[key_windowBackgroundWhiteInputFieldActivated] = 0xff7D99D5;
         defaultColors[key_switchTrack] = 0xffb0b5ba;
-        defaultColors[key_switchTrackChecked] = 0xff52ade9;
+        defaultColors[key_switchTrackChecked] = 0xff7D99D5;
         defaultColors[key_switchTrackBlue] = 0xff828e99;
         defaultColors[key_switchTrackBlueChecked] = 0xff3c88c7;
         defaultColors[key_switchTrackBlueThumb] = 0xffffffff;
@@ -122,7 +122,7 @@ public class ThemeColors {
         defaultColors[key_switchTrackBlueSelector] = 0x17404a53;
         defaultColors[key_switchTrackBlueSelectorChecked] = 0x21024781;
         defaultColors[key_switch2Track] = 0xfff57e7e;
-        defaultColors[key_switch2TrackChecked] = 0xff52ade9;
+        defaultColors[key_switch2TrackChecked] = 0xff7D99D5;
         defaultColors[key_checkboxSquareBackground] = 0xff43a0df;
         defaultColors[key_checkboxSquareCheck] = 0xffffffff;
         defaultColors[key_checkboxSquareUnchecked] = 0xff737373;
@@ -181,9 +181,9 @@ public class ThemeColors {
         defaultColors[key_avatar_backgroundGray] = 0xffA1ABB5;
 
 
-        defaultColors[key_avatar_backgroundInProfileBlue] = 0xff5085b1;
-        defaultColors[key_avatar_backgroundActionBarBlue] = 0xff598fba;
-        defaultColors[key_avatar_subtitleInProfileBlue] = 0xffd7eafa;
+        defaultColors[key_avatar_backgroundInProfileBlue] = 0xffE0E8F4;
+        defaultColors[key_avatar_backgroundActionBarBlue] = 0xffE0E8F4;
+        defaultColors[key_avatar_subtitleInProfileBlue] = 0x99000000;
         defaultColors[key_avatar_actionBarSelectorBlue] = 0xff4981ad;
         defaultColors[key_avatar_actionBarIconBlue] = 0xffffffff;
 
@@ -204,8 +204,8 @@ public class ThemeColors {
         defaultColors[key_actionBarDefaultSubtitle] = 0x99000000;
         defaultColors[key_actionBarDefaultSelector] = 0xff406d94;
         defaultColors[key_actionBarWhiteSelector] = 0x1d000000;
-        defaultColors[key_actionBarDefaultSearch] = 0xffffffff;
-        defaultColors[key_actionBarDefaultSearchPlaceholder] = 0x88ffffff;
+        defaultColors[key_actionBarDefaultSearch] = 0xff000000;
+        defaultColors[key_actionBarDefaultSearchPlaceholder] = 0xFF828284;
         defaultColors[key_actionBarDefaultSubmenuItem] = 0xff222222;
         defaultColors[key_actionBarDefaultSubmenuItemIcon] = 0xff676b70;
         defaultColors[key_actionBarDefaultSubmenuBackground] = 0xffffffff;
@@ -552,13 +552,13 @@ public class ThemeColors {
         defaultColors[key_chat_translate] = 0xff7D99D5;
 
         defaultColors[key_profile_creatorIcon] = 0xff3a95d5;
-        defaultColors[key_profile_actionIcon] = 0xff81868a;
-        defaultColors[key_profile_actionBackground] = 0xffffffff;
+        defaultColors[key_profile_actionIcon] = 0xff000000;
+        defaultColors[key_profile_actionBackground] = 0xffAFC8FF;
         defaultColors[key_profile_actionPressedBackground] = 0xfff2f2f2;
         defaultColors[key_profile_verifiedBackground] = 0xffb2d6f8;
         defaultColors[key_profile_verifiedCheck] = 0xff4983b8;
         defaultColors[key_profile_title] = 0xff000000;
-        defaultColors[key_profile_status] = 0xffd7eafa;
+        defaultColors[key_profile_status] = 0x99000000;
 
         defaultColors[key_profile_tabText] = 0xff878c90;
         defaultColors[key_profile_tabSelectedText] = 0xff7D99D5;
@@ -835,8 +835,9 @@ public class ThemeColors {
 
         defaultColors[key_glass_defaultIcon] = 0x991B2227; //0xFF747875;
         defaultColors[key_glass_defaultText] = 0x991B2227; //0xFF737876;
-        defaultColors[key_profile_drawer_background] = 0xFFFFFFFF; //0xFF737876;
-        defaultColors[key_title_black_white] = 0xFF000000; //0xFF737876;
+        defaultColors[key_profile_drawer_background] = 0xFFFFFFFF;
+        defaultColors[key_title_black_white] = 0xFF000000;
+        defaultColors[key_icon_white_gray] = 0xFFffffff;
 
         return defaultColors;
     }
@@ -1632,6 +1633,7 @@ public class ThemeColors {
         colorKeysMap.put(key_profile_drawer_background, "profile_drawer_background");
         colorKeysMap.put(key_title_black_white, "title_black_white");
         colorKeysMap.put(key_folder_background_unselected, "folder_background_unselected");
+        colorKeysMap.put(key_icon_white_gray, "icon_white_gray");
 
         return colorKeysMap;
     }
