@@ -97,6 +97,15 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
             R.drawable.ic_switch
     };
 
+    private final int[] introLightDrawables = {
+            R.drawable.ic_tongram,
+            R.drawable.ic_cloud_light,
+            R.drawable.ic_contact_light,
+            R.drawable.ic_folder_light,
+            R.drawable.ic_switch_light
+    };
+    private int currentPagerPosition = 0;
+
     @Override
     public boolean onFragmentCreate() {
         MessagesController.getGlobalMainSettings().edit().putLong("intro_crashed_time", System.currentTimeMillis()).apply();
@@ -199,8 +208,10 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
             boolean toDark;
             if (toDark = !Theme.isCurrentThemeDark()) {
                 themeInfo = Theme.getTheme(nightThemeName);
+                introImageView.setImageResource(introDrawables[currentPagerPosition]);
             } else {
                 themeInfo = Theme.getTheme(dayThemeName);
+                introImageView.setImageResource(introLightDrawables[currentPagerPosition]);
             }
 
             Theme.selectedAutoNightType = Theme.AUTO_NIGHT_TYPE_NONE;
@@ -239,8 +250,13 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
 
             @Override
             public void onPageSelected(int i) {
+                currentPagerPosition = i;
                 if (introImageView != null) {
-                    introImageView.setImageResource(introDrawables[i]);
+                    if (Theme.isCurrentThemeDark()) {
+                        introImageView.setImageResource(introDrawables[i]);
+                    } else {
+                        introImageView.setImageResource(introLightDrawables[i]);
+                    }
                 }
             }
 
