@@ -2524,8 +2524,10 @@ public class ChatActivityEnterView extends FrameLayout implements
             ((ViewGroup) aiEnhanceButton.getParent()).removeView(aiEnhanceButton);
         }
         if (attachToSendContainer) {
+            if (sendButtonContainer == null) return;
             sendButtonContainer.addView(aiEnhanceButton, LayoutHelper.createFrame(DEFAULT_HEIGHT, DEFAULT_HEIGHT, Gravity.RIGHT | Gravity.BOTTOM, 0, 0, 40, 0));
         } else {
+            if (attachLayout == null) return;
             attachLayout.addView(aiEnhanceButton, 0, LayoutHelper.createLinear(DEFAULT_HEIGHT, DEFAULT_HEIGHT));
         }
     }

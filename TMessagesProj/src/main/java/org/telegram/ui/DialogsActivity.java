@@ -4593,13 +4593,13 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                 @SuppressLint("NewApi")
                 @Override
                 public void getOutline(View view, Outline outline) {
-                    outline.setRoundRect(0, 0, dp(36), dp(36), dp(20));
+                    outline.setRoundRect(0, 0, dp(36), dp(36), dp(15));
                 }
             });
 
             floatingButton2 = new RLottieImageView(context);
             floatingButton2.setScaleType(ImageView.ScaleType.CENTER);
-            floatingButton2.setColorFilter(new PorterDuffColorFilter(Theme.getColor(Theme.key_windowBackgroundWhiteGrayIcon), PorterDuff.Mode.MULTIPLY));
+            floatingButton2.setColorFilter(new PorterDuffColorFilter(Theme.getColor(Theme.key_icon_white_gray), PorterDuff.Mode.MULTIPLY));
             floatingButton2.setImageResource(R.drawable.fab_compose_small);
             floatingButton2Container.setContentDescription(LocaleController.getString(R.string.NewMessageTitle));
             floatingButton2Container.addView(floatingButton2, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, LayoutHelper.MATCH_PARENT));
@@ -12245,6 +12245,8 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
             arrayList.add(new ThemeDescription(filterTabsView.getTabsContainer(), 0, new Class[]{FilterTabsView.TabView.class}, null, null, null, Theme.key_chats_tabUnreadUnactiveBackground));
         }
         arrayList.add(new ThemeDescription(floatingButton, ThemeDescription.FLAG_IMAGECOLOR, null, null, null, null, Theme.key_chats_actionIcon));
+        arrayList.add(new ThemeDescription(floatingButton2, ThemeDescription.FLAG_IMAGECOLOR, null, null, null, null, Theme.key_icon_white_gray));
+        arrayList.add(new ThemeDescription(floatingButton2, ThemeDescription.FLAG_BACKGROUNDFILTER, null, null, null, null, Theme.key_windowBackgroundWhite));
         arrayList.add(new ThemeDescription(floatingButton, ThemeDescription.FLAG_BACKGROUNDFILTER, null, null, null, null, Theme.key_chats_actionBackground));
         arrayList.add(new ThemeDescription(floatingButton, ThemeDescription.FLAG_BACKGROUNDFILTER | ThemeDescription.FLAG_DRAWABLESELECTEDSTATE, null, null, null, null, Theme.key_chats_actionPressedBackground));
 
@@ -12633,7 +12635,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
         if (floatingButton2Container != null) {
             drawable = Theme.createSimpleSelectorRoundRectDrawable(
                     dp(15),
-                    ColorUtils.blendARGB(Theme.getColor(Theme.key_windowBackgroundWhite), Color.WHITE, 0.1f),
+                    Theme.getColor(Theme.key_windowBackgroundGray),
                     Theme.blendOver(Theme.getColor(Theme.key_windowBackgroundWhite), Theme.getColor(Theme.key_listSelector))
             );
             floatingButton2Container.setBackground(drawable);

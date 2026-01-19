@@ -3431,6 +3431,7 @@ public class Theme {
     public static final int key_windowBackgroundWhite = colorsCount++;
     public static final int key_windowBackgroundWhiteShadow = colorsCount++;
     public static final int key_countMessageBackground = colorsCount++;
+    public static final int key_countMessageText = colorsCount++;
     public static final int key_windowBackgroundUnchecked = colorsCount++;
     public static final int key_windowBackgroundChecked = colorsCount++;
     public static final int key_windowBackgroundCheckText = colorsCount++;
@@ -4226,6 +4227,9 @@ public class Theme {
 
     public static final int key_glass_defaultIcon = colorsCount++;
     public static final int key_glass_defaultText = colorsCount++;
+    public static final int key_profile_drawer_background = colorsCount++;
+    public static final int key_title_black_white = colorsCount++;
+    public static final int key_icon_white_gray = colorsCount++;
 
     public static final String key_drawable_botInline = "drawableBotInline";
     public static final String key_drawable_botLink = "drawableBotLink";

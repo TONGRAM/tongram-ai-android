@@ -513,6 +513,7 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
             };
 
             headerTextView.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText));
+            headerTextView.setTypeface(AndroidUtilities.bold());
             headerTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 26);
             headerTextView.setGravity(Gravity.CENTER);
             frameLayout.addView(headerTextView, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, Gravity.TOP | Gravity.LEFT, 18, 244, 18, 0));
@@ -576,7 +577,7 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
         switchLanguageTextView.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlueText4));
         startMessagingButton.setTextColor(Theme.getColor(Theme.key_featuredStickers_buttonText));
         startMessagingButton.setBackground(Theme.createSimpleSelectorRoundRectDrawable(AndroidUtilities.dp(6), Theme.getColor(Theme.key_changephoneinfo_image2), Theme.getColor(Theme.key_chats_actionPressedBackground)));
-        darkThemeDrawable.setColorFilter(new PorterDuffColorFilter(Theme.getColor(Theme.key_changephoneinfo_image2), PorterDuff.Mode.SRC_IN));
+        darkThemeDrawable.setColorFilter(new PorterDuffColorFilter(Theme.getColor(Theme.key_icon_color), PorterDuff.Mode.SRC_IN));
         bottomPages.invalidate();
         if (fromTheme) {
             for (int i = 0; i < viewPager.getChildCount(); i++) {
