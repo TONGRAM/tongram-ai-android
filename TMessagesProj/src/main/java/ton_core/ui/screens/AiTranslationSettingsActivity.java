@@ -85,7 +85,7 @@ public class AiTranslationSettingsActivity extends BaseFragment implements Langu
         fragmentView = new FrameLayout(context);
         fragmentView.setBackgroundColor(Theme.getColor(Theme.key_windowBackgroundWhite));
         FrameLayout frameLayout = (FrameLayout) fragmentView;
-        frameLayout.setPadding(dp(15), 0, dp(15), 0);
+        frameLayout.setPadding(dp(15), dp(15), dp(15), 0);
 
         LinearLayout listview = new LinearLayout(context);
         listview.setOrientation(LinearLayout.VERTICAL);
@@ -103,7 +103,7 @@ public class AiTranslationSettingsActivity extends BaseFragment implements Langu
         gb.setColor(Theme.getColor(Theme.key_chats_menuTopBackground));
         switchGeneral.setBackground(gb);
         switchGeneral.setTextAndCheck(LocaleController.getString(R.string.EnableAITranslation), isEnableTranslation, false);
-        switchGeneral.setColorfullIcon(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText), R.drawable.settings_translation);
+        switchGeneral.setColorfullIcon(Theme.getColor(Theme.key_icon_color), R.drawable.settings_translation);
         switchGeneral.setOnClickListener(v -> {
             switchGeneral.setChecked(!switchGeneral.isChecked());
             preferences.edit().putBoolean(Constants.IS_ENABLE_AI_TRANSLATION_KEY, switchGeneral.isChecked()).apply();
@@ -164,7 +164,7 @@ public class AiTranslationSettingsActivity extends BaseFragment implements Langu
         llPreferences.addView(targetLanguageLayout, LayoutHelper.createLinear(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, 20, 10, 20, 0));
 
         TextCheckCell switchAutoDetectIncoming = new TextCheckCell(context);
-        switchAutoDetectIncoming.setTextAndCheck(LocaleController.getString(R.string.EnableAITranslation), false, false);
+        switchAutoDetectIncoming.setTextAndCheck(LocaleController.getString(R.string.AutoDetectIncoming), true, false);
 //        switchAutoDetectIncoming.setOnClickListener(v -> switchAutoDetectIncoming.setChecked(!switchAutoDetectIncoming.isChecked()));
 
         llPreferences.addView(switchAutoDetectIncoming, LayoutHelper.createLinear(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT));

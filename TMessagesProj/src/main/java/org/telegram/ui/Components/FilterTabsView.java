@@ -841,7 +841,7 @@ public class FilterTabsView extends FrameLayout {
     private int activeTextColorKey = Theme.key_actionBarTabActiveText;
     private int unactiveTextColorKey = Theme.key_actionBarTabUnactiveText;
     private int selectorColorKey = Theme.key_actionBarTabSelector;
-    private int backgroundColorKey = Theme.key_actionBarDefault;
+    private int backgroundColorKey = Theme.key_countMessageText;
     private int aTabLineColorKey = -1;
     private int aActiveTextColorKey = -1;
     private int aUnactiveTextColorKey = -1;

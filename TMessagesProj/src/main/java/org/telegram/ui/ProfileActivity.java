@@ -13315,6 +13315,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                 case VIEW_TYPE_TEXT_DETAIL_MULTILINE_2:
                 case VIEW_TYPE_TEXT_DETAIL:
                     TextDetailCell detailCell = (TextDetailCell) holder.itemView;
+                    detailCell.setBackground(setBackgroundForItem(0));
                     boolean containsQr = false;
                     boolean containsGift = false;
                     if (position == birthdayRow) {
@@ -13360,6 +13361,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                         }
                         isFragmentPhoneNumber = phoneNumber != null && phoneNumber.matches("888\\d{8}");
                         detailCell.setTextAndValue(text, LocaleController.getString(isFragmentPhoneNumber ? R.string.AnonymousNumber : R.string.PhoneMobile), false);
+                        detailCell.setBackground(setBackgroundForItem(-1));
                     } else if (position == noteRow) {
                         final TLRPC.UserFull userInfo = getMessagesController().getUserFull(userId);
                         if (userInfo == null) return;
@@ -13500,6 +13502,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                         drawable.setColorFilter(new PorterDuffColorFilter(dontApplyPeerColor(getThemedColor(Theme.key_switch2TrackChecked), false), PorterDuff.Mode.MULTIPLY));
                         detailCell.setImage(drawable, LocaleController.getString(R.string.GetQRCode));
                         detailCell.setImageClickListener(ProfileActivity.this::onTextDetailCellImageClicked);
+                        detailCell.setBackground(setBackgroundForItem(1));
                     } else {
                         detailCell.setImage(null);
                         detailCell.setImageClickListener(null);
@@ -13507,7 +13510,6 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                     detailCell.setTag(position);
                     detailCell.textView.setLoading(loadingSpan);
                     detailCell.valueTextView.setLoading(loadingSpan);
-                    detailCell.setBackground(setBackgroundForItem(0));
                     break;
                 case VIEW_TYPE_ABOUT_LINK:
                     AboutLinkCell aboutLinkCell = (AboutLinkCell) holder.itemView;
@@ -13653,7 +13655,8 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                         textCell.setText(LocaleController.getString(R.string.SendMessageLocation), true);
                     } else if (position == addToContactsRow) {
                         textCell.setTextAndIcon(LocaleController.getString(R.string.AddToContacts), R.drawable.msg_contact_add, false);
-                        textCell.setColors(Theme.key_windowBackgroundWhiteBlueIcon, Theme.key_windowBackgroundWhiteBlueButton);
+                        textCell.setColors(Theme.key_profile_title, Theme.key_profile_title);
+                        textCell.setBackground(setBackgroundForItem(2));
                     } else if (position == reportReactionRow) {
                         TLRPC.Chat chat = getMessagesController().getChat(-reportReactionFromDialogId);
                         if (chat != null && ChatObject.canBlockUsers(chat)) {
@@ -14223,12 +14226,14 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
         }
 
         private GradientDrawable setBackgroundForItem(int position) {
-            //-1 top, 0 null, 1 bottom
+            //-1 top, 0 null, 1 bottom, 2: all
             GradientDrawable gb = new GradientDrawable();
             if (position == -1) {
                 gb.setCornerRadii(new float[]{dp(10), dp(10), dp(10), dp(10), 0, 0, 0, 0});
             } else if (position == 1) {
                 gb.setCornerRadii(new float[]{ 0, 0, 0, 0, dp(10), dp(10), dp(10), dp(10)});
+            } else if (position == 2) {
+                gb.setCornerRadius(dp(10));
             } else {
                 gb.setCornerRadius(0);
             }

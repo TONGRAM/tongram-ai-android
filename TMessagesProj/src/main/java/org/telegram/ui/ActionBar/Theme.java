@@ -2637,10 +2637,10 @@ public class Theme {
 
                 //override default themes
                 if (isHome(themeAccent) && name.equals("Dark Blue") || name.equals("Night")) {
-                    themeAccent.myMessagesAccentColor = 0xff6573f8;
-                    themeAccent.myMessagesGradientAccentColor1 = 0xff7644cb;
-                    themeAccent.myMessagesGradientAccentColor2 = 0xff8849b4;
-                    themeAccent.myMessagesGradientAccentColor3 = 0xffa751a8;
+                    themeAccent.myMessagesAccentColor = getColor(Theme.key_chat_outBubbleDefault);
+                    themeAccent.myMessagesGradientAccentColor1 = getColor(Theme.key_chat_outBubbleDefault);
+                    themeAccent.myMessagesGradientAccentColor2 = getColor(Theme.key_chat_outBubbleDefault);
+                    themeAccent.myMessagesGradientAccentColor3 = getColor(Theme.key_chat_outBubbleDefault);
                     if (name.equals("Night")) {
                         themeAccent.patternIntensity = -0.57f;
                         themeAccent.backgroundOverrideColor = 0xff6c7fa6;
@@ -3431,6 +3431,7 @@ public class Theme {
     public static final int key_windowBackgroundWhite = colorsCount++;
     public static final int key_windowBackgroundWhiteShadow = colorsCount++;
     public static final int key_countMessageBackground = colorsCount++;
+    public static final int key_countMessageText = colorsCount++;
     public static final int key_windowBackgroundUnchecked = colorsCount++;
     public static final int key_windowBackgroundChecked = colorsCount++;
     public static final int key_windowBackgroundCheckText = colorsCount++;
@@ -3692,6 +3693,7 @@ public class Theme {
     //my messages bubbles
     public static final int myMessagesBubblesStartIndex = colorsCount;
     public static final int key_chat_outBubble = colorsCount++;
+    public static final int key_chat_outBubbleDefault = colorsCount++;
     public static final int key_chat_outBubbleSelected = colorsCount++;
     public static final int key_chat_outBubbleShadow = colorsCount++;
     public static final int key_chat_outBubbleGradient1 = colorsCount++;
@@ -4225,6 +4227,9 @@ public class Theme {
 
     public static final int key_glass_defaultIcon = colorsCount++;
     public static final int key_glass_defaultText = colorsCount++;
+    public static final int key_profile_drawer_background = colorsCount++;
+    public static final int key_title_black_white = colorsCount++;
+    public static final int key_icon_white_gray = colorsCount++;
 
     public static final String key_drawable_botInline = "drawableBotInline";
     public static final String key_drawable_botLink = "drawableBotLink";

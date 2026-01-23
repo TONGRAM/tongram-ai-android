@@ -509,7 +509,7 @@ public class PrivacyUsersActivity extends BaseFragment implements NotificationCe
                     break;
                 case 2:
                     ManageChatTextCell actionCell = (ManageChatTextCell) holder.itemView;
-                    actionCell.setColors(Theme.key_windowBackgroundWhiteBlueIcon, Theme.key_windowBackgroundWhiteBlueButton);
+                    actionCell.setColors(Theme.key_text_title_color, Theme.key_text_title_color);
                     if (currentType == TYPE_BLOCKED) {
                         actionCell.setText(LocaleController.getString(R.string.BlockUser), null, R.drawable.msg_contact_add, false);
                     } else {
