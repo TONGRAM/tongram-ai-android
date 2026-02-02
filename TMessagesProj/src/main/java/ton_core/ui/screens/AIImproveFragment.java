@@ -38,6 +38,7 @@ import ton_core.repositories.translated_message_repository.chat_repository.ChatR
 import ton_core.repositories.translated_message_repository.chat_repository.IChatRepository;
 import ton_core.services.IOnApiCallback;
 import ton_core.shared.Constants;
+import ton_core.shared.LoadingDialog;
 import ton_core.ui.adapters.WritingAssistantResultAdapter;
 import ton_core.ui.models.TongramAiFeatureModel;
 import ton_core.ui.models.WritingAssistantResultModel;
@@ -57,6 +58,8 @@ public class AIImproveFragment extends Fragment implements WritingAssistantResul
     private RecyclerView rvResults;
     private final IChatRepository chatRepository;
     private final TongramAiFeatureModel feature;
+    private final LoadingDialog loadingDialog;
+
     @SuppressLint("NotifyDataSetChanged")
     @Override
     public void onWritingAssistantResultSelected(WritingAssistantResultModel result) {
@@ -80,6 +83,7 @@ public class AIImproveFragment extends Fragment implements WritingAssistantResul
             this.results = results;
         }
         chatRepository = ChatRepository.getInstance();
+        loadingDialog = new LoadingDialog();
     }
 
     @Nullable
@@ -122,13 +126,16 @@ public class AIImproveFragment extends Fragment implements WritingAssistantResul
         ivAction = view.findViewById(R.id.iv_action);
         setStyleForSendButton();
         ivAction.setOnClickListener(v -> {
+            loadingDialog.show(getChildFragmentManager(), LoadingDialog.TAG);
             results.clear();
             if (feature.subId == Constants.AIImproveId.FIX_GRAMMAR.id) {
                 final String messageRequest = edtInput.getText().toString();
                 edtInput.setText("");
                 chatRepository.fixGrammar(new WritingAssistantRequest(messageRequest), new IOnApiCallback<FixGrammarResponse>() {
+                    @SuppressLint("NotifyDataSetChanged")
                     @Override
                     public void onSuccess(FixGrammarResponse data) {
+                        loadingDialog.dismiss();
                         AndroidUtilities.hideKeyboard(view);
                         if (data != null && !data.getCorrectedText().isEmpty()) {
                             final String message = data.getCorrectedText();
@@ -144,6 +151,7 @@ public class AIImproveFragment extends Fragment implements WritingAssistantResul
 
                     @Override
                     public void onError(String errorMessage) {
+                        loadingDialog.dismiss();
                         AndroidUtilities.hideKeyboard(view);
                         setResultsVisibility();
                     }
@@ -155,6 +163,7 @@ public class AIImproveFragment extends Fragment implements WritingAssistantResul
                     @SuppressLint("NotifyDataSetChanged")
                     @Override
                     public void onSuccess(WritingAssistantResponse data) {
+                        loadingDialog.dismiss();
                         AndroidUtilities.hideKeyboard(view);
                         if (data != null && !data.getChoices().isEmpty()) {
                             final List<Choice> choices = data.getChoices();
@@ -175,6 +184,7 @@ public class AIImproveFragment extends Fragment implements WritingAssistantResul
 
                     @Override
                     public void onError(String errorMessage) {
+                        loadingDialog.dismiss();
                         AndroidUtilities.hideKeyboard(view);
                         setResultsVisibility();
                         tvEmpty.setText(errorMessage);
