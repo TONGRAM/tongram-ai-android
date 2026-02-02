@@ -26,32 +26,51 @@ pipeline {
             }
         }
         stage('Build Android') {
-            steps {
-                // 1. Checkout Code
-                checkout scm
+            steps{
+                script {
+                    // 1. Checkout Code
+                    checkout scm
 
-                // 2. Setup Permission
-                sh 'chmod +x gradlew'
+                    // 2. Setup Permission
+                    sh 'chmod +x gradlew'
 
-                // 3. Check Info (Optional)
-                sh 'java -version'
+                    // 3. Check Info (Optional)
+                    sh 'java -version'
 
-                // 4. Build Release APK and AAB
-                withCredentials([
-                    file(credentialsId: 'android-keystore-file', variable: 'KEYSTORE_FILE'),
-                    string(credentialsId: 'STORE_PASSWORD', variable: 'STORE_PASS'),
-                    string(credentialsId: 'KEY_ALIAS', variable: 'KEY_ALIAS'),
-                    string(credentialsId: 'KEY_PASSWORD', variable: 'KEY_PASS')
-                ]) {
-                    sh """
-                        echo "Building Release APK"
+                    // 4. Build Release APK and AAB
+                    withCredentials([
+                        file(credentialsId: 'android-keystore-file', variable: 'KEYSTORE_FILE'),
+                        string(credentialsId: 'STORE_PASSWORD', variable: 'STORE_PASS'),
+                        string(credentialsId: 'KEY_ALIAS', variable: 'KEY_ALIAS'),
+                        string(credentialsId: 'KEY_PASSWORD', variable: 'KEY_PASS')
+                    ]) {
+                        switch(env.BRANCH_NAME) {
+                            case "develop":
+                                sh """
+                                    echo "Building Debug APK"
 
-                        ./gradlew assembleRelease \
-                        -Pandroid.injected.signing.store.file='$KEYSTORE_FILE' \
-                        -Pandroid.injected.signing.store.password='$STORE_PASS' \
-                        -Pandroid.injected.signing.key.alias='$KEY_ALIAS' \
-                        -Pandroid.injected.signing.key.password='$KEY_PASS'
-                    """
+                                    ./gradlew assembleDebug \
+                                    -Pandroid.injected.signing.store.file='$KEYSTORE_FILE' \
+                                    -Pandroid.injected.signing.store.password='$STORE_PASS' \
+                                    -Pandroid.injected.signing.key.alias='$KEY_ALIAS' \
+                                    -Pandroid.injected.signing.key.password='$KEY_PASS'
+                                """
+                                break
+                            case "production":
+                                sh """
+                                    echo "Building Release APK"
+
+                                    ./gradlew assembleRelease \
+                                    -Pandroid.injected.signing.store.file='$KEYSTORE_FILE' \
+                                    -Pandroid.injected.signing.store.password='$STORE_PASS' \
+                                    -Pandroid.injected.signing.key.alias='$KEY_ALIAS' \
+                                    -Pandroid.injected.signing.key.password='$KEY_PASS'
+                                """
+                                break
+                            default:
+                                error "Branch ${env.BRANCH_NAME} is not allowed to build."
+                        }
+                    }
                 }
             }
         }
@@ -82,22 +101,23 @@ pipeline {
 
         }
         stage('Upload apk to S3') {
-            steps{
-                withAWS(region: 'ap-southeast-1', credentials: "AWS_CREDENTIALS_ID") {
-                    s3Upload acl: 'PublicRead', bucket: 'tongram', file: "TMessagesProj_App/build/outputs/apk/afat/release/app.apk", path: "${S3_PATH}/${env.BRANCH_NAME}/${env.BUILD_NUMBER}/"
-                    // s3Upload acl: 'PublicRead', bucket: 'tongram', file: "TMessagesProj_App/build/outputs/bundle/afatRelease/TMessagesProj_App-afat-release.aab", path: "${S3_PATH}/${env.BRANCH_NAME}/${env.BUILD_NUMBER}/"
-                }
-            }
-        }
-        stage('Upload aab to S3') {
-            when {
-                anyOf {
-                    branch 'production'
-                }
-            }
-            steps{
-                withAWS(region: 'ap-southeast-1', credentials: "AWS_CREDENTIALS_ID") {
-                    s3Upload acl: 'PublicRead', bucket: 'tongram', file: "TMessagesProj_App/build/outputs/bundle/afatRelease/TMessagesProj_App-afat-release.aab", path: "${S3_PATH}/${env.BRANCH_NAME}/${env.BUILD_NUMBER}/"
+            steps {
+                script {
+                    switch(env.BRANCH_NAME) {
+                        case "develop":
+                            withAWS(region: 'ap-southeast-1', credentials: "AWS_CREDENTIALS_ID") {
+                                s3Upload acl: 'PublicRead', bucket: 'tongram', file: "TMessagesProj_App/build/outputs/apk/afat/release/app.apk", path: "${S3_PATH}/${env.BRANCH_NAME}/${env.BUILD_NUMBER}/"
+                            }
+                            break
+                        case "production":
+                            withAWS(region: 'ap-southeast-1', credentials: "AWS_CREDENTIALS_ID") {
+                                s3Upload acl: 'PublicRead', bucket: 'tongram', file: "TMessagesProj_App/build/outputs/apk/release/app-release.apk", path: "${S3_PATH}/${env.BRANCH_NAME}/${env.BUILD_NUMBER}/"
+                                s3Upload acl: 'PublicRead', bucket: 'tongram', file: "TMessagesProj_App/build/outputs/bundle/afatRelease/TMessagesProj_App-afat-release.aab", path: "${S3_PATH}/${env.BRANCH_NAME}/${env.BUILD_NUMBER}/"
+                            }
+                            break
+                        default:
+                            error "Branch ${env.BRANCH_NAME} is not allowed to upload."
+                    }
                 }
             }
         }
