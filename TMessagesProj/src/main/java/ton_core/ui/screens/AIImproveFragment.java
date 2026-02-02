@@ -91,6 +91,7 @@ public class AIImproveFragment extends Fragment implements WritingAssistantResul
         llInput.setBackgroundColor(Theme.getColor(Theme.key_input_background));
 
         resultAdapter = new WritingAssistantResultAdapter(results, this);
+        resultAdapter.setType(feature.title);
         rvResults = view.findViewById(R.id.rv_results);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         rvResults.setLayoutManager(linearLayoutManager);
@@ -122,34 +123,35 @@ public class AIImproveFragment extends Fragment implements WritingAssistantResul
         setStyleForSendButton();
         ivAction.setOnClickListener(v -> {
             results.clear();
-
             if (feature.subId == Constants.AIImproveId.FIX_GRAMMAR.id) {
-                chatRepository.fixGrammar(new WritingAssistantRequest(edtInput.getText().toString()), new IOnApiCallback<FixGrammarResponse>() {
+                final String messageRequest = edtInput.getText().toString();
+                edtInput.setText("");
+                chatRepository.fixGrammar(new WritingAssistantRequest(messageRequest), new IOnApiCallback<FixGrammarResponse>() {
                     @Override
                     public void onSuccess(FixGrammarResponse data) {
                         AndroidUtilities.hideKeyboard(view);
                         if (data != null && !data.getCorrectedText().isEmpty()) {
                             final String message = data.getCorrectedText();
-                            if (message != null && !message.isEmpty()) {
-                                final WritingAssistantResultModel result = new WritingAssistantResultModel(1, message, true);
-                                results.add(result);
-                            }
-                            setResultsVisibility();
+                            final WritingAssistantResultModel result = new WritingAssistantResultModel(1, message, true);
+                            results.add(result);
                             resultAdapter.notifyDataSetChanged();
+                            setResultsVisibility();
                             delegate.onImproved(results);
                         } else {
-                            AndroidUtilities.hideKeyboard(view);
                             onError("No results found");
                         }
                     }
 
                     @Override
                     public void onError(String errorMessage) {
+                        AndroidUtilities.hideKeyboard(view);
                         setResultsVisibility();
                     }
                 });
             } else {
-                chatRepository.writeAssistant(new WritingAssistantRequest(edtInput.getText().toString(), "professional"), new IOnApiCallback<WritingAssistantResponse>() {
+                final String messageRequest = edtInput.getText().toString();
+                edtInput.setText("");
+                chatRepository.writeAssistant(new WritingAssistantRequest(messageRequest, "professional"), new IOnApiCallback<WritingAssistantResponse>() {
                     @SuppressLint("NotifyDataSetChanged")
                     @Override
                     public void onSuccess(WritingAssistantResponse data) {
@@ -167,13 +169,13 @@ public class AIImproveFragment extends Fragment implements WritingAssistantResul
                             resultAdapter.notifyDataSetChanged();
                             delegate.onImproved(results);
                         } else {
-                            AndroidUtilities.hideKeyboard(view);
                             onError("No results found");
                         }
                     }
 
                     @Override
                     public void onError(String errorMessage) {
+                        AndroidUtilities.hideKeyboard(view);
                         setResultsVisibility();
                         tvEmpty.setText(errorMessage);
                     }
