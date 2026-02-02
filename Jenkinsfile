@@ -111,7 +111,7 @@ pipeline {
                             break
                         case "production":
                             withAWS(region: 'ap-southeast-1', credentials: "AWS_CREDENTIALS_ID") {
-                                s3Upload acl: 'PublicRead', bucket: 'tongram', file: "TMessagesProj_App/build/outputs/apk/release/app.apk", path: "${S3_PATH}/${env.BRANCH_NAME}/${env.BUILD_NUMBER}/"
+                                s3Upload acl: 'PublicRead', bucket: 'tongram', file: "TMessagesProj_App/build/outputs/apk/afat/release/app.apk", path: "${S3_PATH}/${env.BRANCH_NAME}/${env.BUILD_NUMBER}/"
                                 s3Upload acl: 'PublicRead', bucket: 'tongram', file: "TMessagesProj_App/build/outputs/bundle/afatRelease/TMessagesProj_App-afat-release.aab", path: "${S3_PATH}/${env.BRANCH_NAME}/${env.BUILD_NUMBER}/"
                             }
                             break
