@@ -34,7 +34,7 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import ton_core.models.TranslateMessageResponse;
+import ton_core.models.responses.TranslateMessageResponse;
 import ton_core.models.TranslatedChoice;
 import ton_core.models.TranslatedMessage;
 import ton_core.models.TranslatedMessageResult;

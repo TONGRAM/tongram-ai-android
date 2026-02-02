@@ -4,45 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/rectangle_corner_default"
     android:paddingHorizontal="10dp"
     android:paddingVertical="4dp">
 
     <ImageView
+        android:background="@drawable/rectangle_corner_default"
+        android:contentDescription="@null"
+        android:padding="4dp"
         android:id="@+id/iv_ai_feature"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:src="@drawable/msg_translate"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tv_ai_feature"
+        app:layout_constraintStart_toStartOf="@id/tv_ai_feature"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:layout_marginTop="4dp"
         android:id="@+id/tv_ai_feature"
         style="@style/TextAppearance.AppCompat.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@id/tv_coming_soon"
-        app:layout_constraintStart_toEndOf="@id/iv_ai_feature"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Translation" />
-
-    <TextView
-        android:id="@+id/tv_coming_soon"
-        style="@style/TextAppearance.AppCompat.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text="@string/ComingSoon"
-        android:textColor="@color/biometric_error_color"
-        android:textSize="9sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="@id/tv_ai_feature"
-        app:layout_constraintTop_toBottomOf="@id/tv_ai_feature"
-        tools:ignore="SmallSp" />
-
+        app:layout_constraintTop_toBottomOf="@id/iv_ai_feature"
+        tools:text="Translation" />
 </androidx.constraintlayout.widget.ConstraintLayout>

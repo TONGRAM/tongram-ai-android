@@ -104,9 +104,9 @@ public class AiEnhanceDialog extends BottomSheetDialogFragment implements AITran
         public Fragment getItem(int i) {
             TongramAiFeatureModel feature = aiTabs.get(i);
             if (feature.id == Constants.AITypeId.TEMPLATE.id) {
-                return new AITemplateFragment(transformInput, AiEnhanceDialog.this, transformed);
+                return new AITemplateFragment(transformInput, AiEnhanceDialog.this, transformed, feature);
             } else if (feature.id == Constants.AITypeId.IMPROVE.id) {
-                return new AIImproveFragment(improveInput, improved, AiEnhanceDialog.this);
+                return new AIImproveFragment(improveInput, improved, AiEnhanceDialog.this, feature);
             } else if (feature.id == Constants.AITypeId.SUMMARY.id) {
                 return new AIUnreadSummaryFragment(unreadMessages, AiEnhanceDialog.this, summarized);
             } else {
@@ -136,10 +136,16 @@ public class AiEnhanceDialog extends BottomSheetDialogFragment implements AITran
         this.transformInput = input;
         this.improveInput = input;
         aiTabs = new ArrayList<>();
-        aiTabs.add(new TongramAiFeatureModel(Constants.AITypeId.TRANSLATION.id, R.drawable.ic_ai_translate, LocaleController.getString(R.string.PassportTranslation), false, true));
-        aiTabs.add(new TongramAiFeatureModel(Constants.AITypeId.TEMPLATE.id, R.drawable.ic_template, LocaleController.getString(R.string.Template), false, false));
-        aiTabs.add(new TongramAiFeatureModel(Constants.AITypeId.IMPROVE.id, R.drawable.ic_writing_assistant, LocaleController.getString(R.string.Improve), false, false));
-        aiTabs.add(new TongramAiFeatureModel(Constants.AITypeId.SUMMARY.id, R.drawable.ic_summary, LocaleController.getString(R.string.ChatSummary), false, false));
+        aiTabs.add(new TongramAiFeatureModel(Constants.AITypeId.TRANSLATION.id, Constants.AITypeId.TRANSLATION.id, R.drawable.ic_ai_translate, LocaleController.getString(R.string.PassportTranslation), false, true));
+        aiTabs.add(new TongramAiFeatureModel(Constants.AITypeId.SUMMARY.id, Constants.AITypeId.SUMMARY.id, R.drawable.ic_summary, LocaleController.getString(R.string.Summarize), false, false));
+        aiTabs.add(new TongramAiFeatureModel(Constants.AITypeId.IMPROVE.id, Constants.AIImproveId.FIX_GRAMMAR.id, R.drawable.ic_writing_assistant, LocaleController.getString(R.string.FixGrammar), false, false));
+        aiTabs.add(new TongramAiFeatureModel(Constants.AITypeId.IMPROVE.id, Constants.AIImproveId.MAKE_FORMAL.id, R.drawable.ic_make_formal, LocaleController.getString(R.string.MakeFormal), false, false));
+        aiTabs.add(new TongramAiFeatureModel(Constants.AITypeId.IMPROVE.id, Constants.AIImproveId.MAKE_FRIENDLY.id, R.drawable.ic_make_friendly, LocaleController.getString(R.string.MakeCasual), false, false));
+        aiTabs.add(new TongramAiFeatureModel(Constants.AITypeId.IMPROVE.id, Constants.AIImproveId.MAKE_POLITE.id, R.drawable.ic_make_polite, LocaleController.getString(R.string.MakePolite), false, false));
+        aiTabs.add(new TongramAiFeatureModel(Constants.AITypeId.TEMPLATE.id, Constants.AITemplateId.SET_MEETING.id, R.drawable.ic_set_meeting, LocaleController.getString(R.string.SetMeeting), false, false));
+        aiTabs.add(new TongramAiFeatureModel(Constants.AITypeId.TEMPLATE.id, Constants.AITemplateId.WRITE_EMAIL.id, R.drawable.ic_write_email, LocaleController.getString(R.string.WriteEmail), false, false));
+        aiTabs.add(new TongramAiFeatureModel(Constants.AITypeId.TEMPLATE.id, Constants.AITemplateId.SAY_HI.id, R.drawable.ic_say_hi, LocaleController.getString(R.string.SayHi), false, false));
+        aiTabs.add(new TongramAiFeatureModel(Constants.AITypeId.TEMPLATE.id, Constants.AITemplateId.SAY_THANKS.id, R.drawable.ic_thanks, LocaleController.getString(R.string.ThankForNote), false, false));
 
     }
 
@@ -194,6 +200,17 @@ public class AiEnhanceDialog extends BottomSheetDialogFragment implements AITran
             int themeColor = Theme.getColor(Theme.key_windowBackgroundWhiteShadow);
             background.setColorFilter(new PorterDuffColorFilter(themeColor, PorterDuff.Mode.SRC_IN));
         }
+
+        ConstraintLayout clParentHistory = view.findViewById(R.id.cl_parent_history);
+        clParentHistory.setBackgroundColor(Theme.getColor(Theme.key_windowBackgroundWhite));
+        ConstraintLayout clHistory = view.findViewById(R.id.cl_history);
+        View divider = clHistory.findViewById(R.id.v_divider);
+        divider.setBackgroundColor(Theme.getColor(Theme.key_divider));
+        TextView tvHistory = clHistory.findViewById(R.id.tv_ai_feature);
+        tvHistory.setTextColor(Theme.getColor(Theme.key_profile_title));
+        ImageView ivHistory = clHistory.findViewById(R.id.iv_ai_feature);
+        ivHistory.setColorFilter(new PorterDuffColorFilter(Theme.getColor(Theme.key_icon_color), PorterDuff.Mode.SRC_IN));
+        setItemBackground(ivHistory, false);
 
         TextView tvTitle = view.findViewById(R.id.tv_tongram_ai);
         tvTitle.setTypeface(AndroidUtilities.bold());
@@ -306,41 +323,28 @@ public class AiEnhanceDialog extends BottomSheetDialogFragment implements AITran
 
     private View setTabDrawable(TongramAiFeatureModel feature, View tabView) {
         TextView tabTitle = tabView.findViewById(R.id.tv_ai_feature);
+        tabTitle.setTextColor(Theme.getColor(Theme.key_profile_title));
+        tabTitle.setText(feature.title);
 
         ImageView tabIcon = tabView.findViewById(R.id.iv_ai_feature);
         tabIcon.setImageResource(feature.iconResource);
 
-        TextView tabComingSoon = tabView.findViewById(R.id.tv_coming_soon);
-
-        if (feature.isComingSoon) {
-            tabComingSoon.setVisibility(View.VISIBLE);
-            tabComingSoon.setTextColor(Theme.getColor(Theme.key_coming_soon));
-
-            tabComingSoon.setAlpha(0.5f);
-        } else {
-            tabComingSoon.setVisibility(View.GONE);
-        }
-
         if (feature.isSelected) {
-            tabTitle.setTextColor(Theme.getColor(Theme.key_view_pager_title_color));
-            tabIcon.setColorFilter(new PorterDuffColorFilter(Theme.getColor(Theme.key_view_pager_title_color), PorterDuff.Mode.SRC_IN));
             tabTitle.setTypeface(AndroidUtilities.bold());
+            tabIcon.setColorFilter(new PorterDuffColorFilter(Theme.getColor(Theme.key_view_pager_title_color), PorterDuff.Mode.SRC_IN));
         } else {
-            tabTitle.setTextColor(Theme.getColor(Theme.key_profile_title));
             tabTitle.setTypeface(Typeface.DEFAULT);
             tabIcon.setColorFilter(new PorterDuffColorFilter(Theme.getColor(Theme.key_icon_color), PorterDuff.Mode.SRC_IN));
-
         }
-        tabTitle.setText(feature.title);
 
-        setItemBackground(tabView, feature.isSelected);
+        setItemBackground(tabIcon, feature.isSelected);
         return tabView;
     }
 
     private void setItemBackground(View view, boolean isSelected) {
         GradientDrawable inner = new GradientDrawable();
         inner.setColor(Theme.getColor(isSelected ? Theme.key_icon_color : Theme.key_input_background));
-        inner.setCornerRadius(AndroidUtilities.dp(10));
+        inner.setCornerRadius(AndroidUtilities.dp(5));
 
         view.setBackground(inner);
     }

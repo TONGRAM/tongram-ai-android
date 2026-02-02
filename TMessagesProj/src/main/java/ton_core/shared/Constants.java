@@ -15,30 +15,28 @@ public class Constants {
         SUMMARY(3);
 
         public final int id;
-
         AITypeId(int id) {
             this.id = id;
         }
     }
 
     public enum AITemplateId {
-        MEETING_REQUEST(0),
-        WRITE_GREETING(1),
-        THANK_FOR_NOTE(2),
+        SET_MEETING(0),
+        SAY_HI(1),
+        SAY_THANKS(2),
         WRITE_EMAIL(3);
 
         public final int id;
-
         AITemplateId(int id) {
             this.id = id;
         }
     }
 
     public enum AIImproveId {
-        MAKE_PROFESSIONAL(0),
-        MAKE_CASUAL(1),
-        MAKE_POLITE(2),
-        FIX_GRAMMAR_AND_SPELLING(3);
+        MAKE_FORMAL(0),
+        MAKE_FRIENDLY(1),
+        FIX_GRAMMAR(4),
+        MAKE_POLITE(2);
 
         public final int id;
 

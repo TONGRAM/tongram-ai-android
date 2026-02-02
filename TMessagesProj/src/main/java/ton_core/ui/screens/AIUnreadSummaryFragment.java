@@ -28,8 +28,8 @@ import java.util.List;
 
 import ton_core.models.Choice;
 import ton_core.models.Message;
-import ton_core.models.SummaryRequest;
-import ton_core.models.SummaryResponse;
+import ton_core.models.requests.SummaryRequest;
+import ton_core.models.responses.SummaryResponse;
 import ton_core.repositories.translated_message_repository.assist_repository.AssistRepository;
 import ton_core.repositories.translated_message_repository.assist_repository.IAssistRepository;
 import ton_core.services.IOnApiCallback;

@@ -1,6 +1,8 @@
-package ton_core.models;
+package ton_core.models.responses;
 
 import java.util.List;
+
+import ton_core.models.Choice;
 
 public class WritingAssistantResponse {
     private List<Choice> choices;

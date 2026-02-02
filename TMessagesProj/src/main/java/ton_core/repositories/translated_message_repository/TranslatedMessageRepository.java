@@ -6,7 +6,7 @@ import java.util.List;
 import ton_core.daos.TranslatedMessageDao;
 import ton_core.database.TongramDatabase;
 import ton_core.entities.TranslatedMessageEntity;
-import ton_core.models.TranslateMessageResponse;
+import ton_core.models.responses.TranslateMessageResponse;
 import ton_core.models.TranslatedChoice;
 import ton_core.models.TranslatedMessage;
 import ton_core.models.TranslatedMessageResult;

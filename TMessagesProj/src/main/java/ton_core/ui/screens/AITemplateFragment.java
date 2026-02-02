@@ -21,11 +21,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.flexbox.FlexDirection;
-import com.google.android.flexbox.FlexWrap;
-import com.google.android.flexbox.FlexboxLayoutManager;
-import com.google.android.flexbox.JustifyContent;
-
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.LocaleController;
 import org.telegram.messenger.R;
@@ -33,35 +28,30 @@ import org.telegram.ui.ActionBar.Theme;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import ton_core.models.Choice;
 import ton_core.models.Message;
-import ton_core.models.WritingAssistantRequest;
-import ton_core.models.WritingAssistantResponse;
+import ton_core.models.requests.WritingAssistantRequest;
+import ton_core.models.responses.WritingAssistantResponse;
 import ton_core.repositories.translated_message_repository.chat_repository.ChatRepository;
 import ton_core.repositories.translated_message_repository.chat_repository.IChatRepository;
 import ton_core.services.IOnApiCallback;
-import ton_core.shared.Constants;
 import ton_core.ui.adapters.WritingAssistantResultAdapter;
-import ton_core.ui.adapters.WritingAssistantTypeAdapter;
+import ton_core.ui.models.TongramAiFeatureModel;
 import ton_core.ui.models.WritingAssistantResultModel;
-import ton_core.ui.models.WritingAssistantTypeModel;
 
-public class AITemplateFragment extends Fragment implements WritingAssistantTypeAdapter.IWritingAssistantDelegate, WritingAssistantResultAdapter.IWritingAssistantResultDelegate {
+public class AITemplateFragment extends Fragment implements WritingAssistantResultAdapter.IWritingAssistantResultDelegate {
 
     private EditText edtInput;
     private ImageView ivAction;
     public CharSequence input;
-
-    private final List<WritingAssistantTypeModel> listWritingType;
     private final List<WritingAssistantResultModel> results;
-    private WritingAssistantTypeAdapter adapter;
     private WritingAssistantResultAdapter resultAdapter;
     private final IAITemplateDelegate delegate;
     private LinearLayout llEmpty;
     private RecyclerView rvResults;
     private final IChatRepository chatRepository;
+    private final TongramAiFeatureModel feature;
 
     @SuppressLint("NotifyDataSetChanged")
     @Override
@@ -75,15 +65,10 @@ public class AITemplateFragment extends Fragment implements WritingAssistantType
         void onTransformed(List<WritingAssistantResultModel> results);
     }
 
-    public AITemplateFragment(CharSequence input, IAITemplateDelegate delegate, List<WritingAssistantResultModel> results) {
+    public AITemplateFragment(CharSequence input, IAITemplateDelegate delegate, List<WritingAssistantResultModel> results, TongramAiFeatureModel feature) {
         this.input = input;
         this.delegate = delegate;
-
-        listWritingType = new ArrayList<>();
-        listWritingType.add(new WritingAssistantTypeModel(Constants.AITemplateId.MEETING_REQUEST.id, LocaleController.getString(R.string.MeetingRequest), false));
-        listWritingType.add(new WritingAssistantTypeModel(Constants.AITemplateId.WRITE_GREETING.id, LocaleController.getString(R.string.WriteGreeting), false));
-        listWritingType.add(new WritingAssistantTypeModel(Constants.AITemplateId.THANK_FOR_NOTE.id, LocaleController.getString(R.string.ThankForNote), false));
-        listWritingType.add(new WritingAssistantTypeModel(Constants.AITemplateId.WRITE_EMAIL.id, LocaleController.getString(R.string.WriteEmail), false));
+        this.feature = feature;
 
         if (results == null) {
             this.results = new ArrayList<>();
@@ -93,23 +78,10 @@ public class AITemplateFragment extends Fragment implements WritingAssistantType
         chatRepository = ChatRepository.getInstance();
     }
 
-    private WritingAssistantTypeModel getSelectedWritingType() {
-        return listWritingType.stream().filter(e -> e.isSelected).findFirst().orElse(null);
-    }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tongram_ai_writing_assistant, container, false);
-
-        adapter = new WritingAssistantTypeAdapter(listWritingType, this);
-        RecyclerView recyclerView = view.findViewById(R.id.rv_type);
-        FlexboxLayoutManager layoutManager = new FlexboxLayoutManager(getContext());
-        layoutManager.setFlexDirection(FlexDirection.ROW);
-        layoutManager.setJustifyContent(JustifyContent.FLEX_START);
-        layoutManager.setFlexWrap(FlexWrap.WRAP);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapter);
 
         LinearLayout llInput = view.findViewById(R.id.ll_input);
         llInput.setBackgroundColor(Theme.getColor(Theme.key_input_background));
@@ -146,8 +118,8 @@ public class AITemplateFragment extends Fragment implements WritingAssistantType
         setStyleForSendButton();
         ivAction.setOnClickListener(v -> {
             edtInput.setText("");
-            setSelectedResultType();
             results.clear();
+
             chatRepository.writeAssistant(new WritingAssistantRequest(edtInput.getText().toString(), "professional"), new IOnApiCallback<WritingAssistantResponse>() {
                 @SuppressLint("NotifyDataSetChanged")
                 @Override
@@ -192,13 +164,6 @@ public class AITemplateFragment extends Fragment implements WritingAssistantType
         return view;
     }
 
-    private void setSelectedResultType() {
-        final WritingAssistantTypeModel selectedType = getSelectedWritingType();
-        if (selectedType != null) {
-            resultAdapter.setType(selectedType.title);
-        }
-    }
-
     private void setResultsVisibility() {
         if (results.isEmpty()) {
             rvResults.setVisibility(View.GONE);
@@ -212,7 +177,7 @@ public class AITemplateFragment extends Fragment implements WritingAssistantType
     private void setStyleForSendButton() {
         if (ivAction == null) return;
         int colorKey;
-        if (edtInput == null || edtInput.getText().toString().isEmpty() || getSelectedWritingType() == null) {
+        if (edtInput == null || edtInput.getText().toString().isEmpty()) {
             colorKey = Theme.key_button_disable;
             ivAction.setAlpha(0.5f);
             ivAction.setEnabled(false);
@@ -227,15 +192,5 @@ public class AITemplateFragment extends Fragment implements WritingAssistantType
         if (background != null) {
             background.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.SRC_IN));
         }
-    }
-
-    @SuppressLint("NotifyDataSetChanged")
-    @Override
-    public void onWritingAssistantTypeSelected(WritingAssistantTypeModel type) {
-        for (WritingAssistantTypeModel e : listWritingType) {
-            e.isSelected = Objects.equals(e.id, type.id);
-        }
-        adapter.notifyDataSetChanged();
-        setStyleForSendButton();
     }
 }

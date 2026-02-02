@@ -4,8 +4,8 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
-import ton_core.models.SummaryRequest;
-import ton_core.models.SummaryResponse;
+import ton_core.models.requests.SummaryRequest;
+import ton_core.models.responses.SummaryResponse;
 
 public interface AssistEndpoint {
     @POST("assist/chat-summary")

@@ -4,8 +4,8 @@ import org.telegram.messenger.BuildConfig;
 
 import ton_core.TonApiClient;
 import ton_core.endpoints.AssistEndpoint;
-import ton_core.models.SummaryRequest;
-import ton_core.models.SummaryResponse;
+import ton_core.models.requests.SummaryRequest;
+import ton_core.models.responses.SummaryResponse;
 import ton_core.services.BaseService;
 import ton_core.services.IOnApiCallback;
 

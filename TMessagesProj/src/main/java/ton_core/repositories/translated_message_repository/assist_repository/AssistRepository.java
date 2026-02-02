@@ -1,7 +1,7 @@
 package ton_core.repositories.translated_message_repository.assist_repository;
 
-import ton_core.models.SummaryRequest;
-import ton_core.models.SummaryResponse;
+import ton_core.models.requests.SummaryRequest;
+import ton_core.models.responses.SummaryResponse;
 import ton_core.services.IOnApiCallback;
 import ton_core.services.assist_service.AssistService;
 import ton_core.services.assist_service.IAssistService;
