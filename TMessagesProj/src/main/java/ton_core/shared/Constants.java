@@ -7,4 +7,53 @@ public class Constants {
     public static String OUT_MESSAGE_LANG_CODE_KEY = "OUT_MESSAGE_LANG_CODE_KEY";
     public static String OUT_MESSAGE_LANG_NAME_KEY = "OUT_MESSAGE_LANG_NAME_KEY";
     public static String IS_ENABLE_AI_TRANSLATION_KEY = "IS_ENABLE_AI_TRANSLATION_KEY";
+
+    public enum AITypeId {
+        TRANSLATION(0),
+        TEMPLATE(1),
+        IMPROVE(2),
+        SUMMARY(3);
+
+        public final int id;
+        AITypeId(int id) {
+            this.id = id;
+        }
+    }
+
+    public enum AITemplateId {
+        SET_MEETING(0),
+        SAY_HI(1),
+        SAY_THANKS(2),
+        WRITE_EMAIL(3);
+
+        public final int id;
+        AITemplateId(int id) {
+            this.id = id;
+        }
+    }
+
+    public enum AIImproveId {
+        MAKE_FORMAL(0),
+        MAKE_FRIENDLY(1),
+        FIX_GRAMMAR(4),
+        MAKE_POLITE(2);
+
+        public final int id;
+
+        AIImproveId(int id) {
+            this.id = id;
+        }
+    }
+
+    public enum WriteAssistantType {
+        MAKE_PROFESSIONAL("professional"),
+        MAKE_CASUAL("casual"),
+        MAKE_POLITE("polite");
+
+        public final String key;
+
+        WriteAssistantType(String key) {
+            this.key = key;
+        }
+    }
 }

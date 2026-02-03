@@ -838,6 +838,8 @@ public class ThemeColors {
         defaultColors[key_profile_drawer_background] = 0xFFFFFFFF;
         defaultColors[key_title_black_white] = 0xFF000000;
         defaultColors[key_icon_white_gray] = 0xFFffffff;
+        defaultColors[key_view_pager_title_color] = 0xFF000000;
+        defaultColors[key_background_selected] = 0xFFAFC8FF;
 
         return defaultColors;
     }
@@ -1634,6 +1636,7 @@ public class ThemeColors {
         colorKeysMap.put(key_title_black_white, "title_black_white");
         colorKeysMap.put(key_folder_background_unselected, "folder_background_unselected");
         colorKeysMap.put(key_icon_white_gray, "icon_white_gray");
+        colorKeysMap.put(key_background_selected, "background_selected");
 
         return colorKeysMap;
     }
