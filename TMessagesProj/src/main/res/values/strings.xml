@@ -10029,7 +10029,7 @@
     <string name="Gift2AuctionsChangeRecipient">Change Recipient</string>
     <string name="Gift2AuctionsChangeRecipient2">You’ve already placed a bid on this gift for **%s.** Do you want to raise your bid and change the recipient to **%s?**</string>
     <string name="TonTV">TONtv</string>
-    <string name="MiniAppStore">Mini App</string>
+    <string name="MiniAppStore">Mini Apps</string>
     <string name="TonWallet">Ton Wallet</string>
     <string name="AITony">AI Tony</string>
     <string name="CEXExchange">CEX Exchange</string>
@@ -10044,7 +10044,7 @@
     <string name="TongramAI">AI Tony</string>
     <string name="Apply">Apply</string>
     <string name="WritingAssistant">Writing Assistant</string>
-    <string name="Translation">Writing Assistant</string>
+    <string name="Translation">Translation</string>
     <string name="ThreeDot">...</string>
     <string name="ChooseLanguage">Choose language</string>
     <string name="UnableDetectLanguage">Unable to detect the language of the content you entered. Please try again.</string>
@@ -10078,4 +10078,11 @@
     <string name="ResultNumberWithType">Result %1$d - %2$s</string>
     <string name="AnalyzingSummarizeChat">Analyzing %1$s unread messages....</string>
     <string name="History">History</string>
+    <string name="IndividualSettings">Individual Settings</string>
+    <string name="DisableAllAIFeature">Disable all features will turn off real-time suggestions and translation history across the app.</string>
+    <string name="EnableAITony">Enable AI Tony?</string>
+    <string name="EnableAI">Enable AI</string>
+    <string name="EnableAITonyContent">AI features enhance your messaging:</string>
+    <string name="AITonyContent">Your messages are processed by our AI servers. We don’t store or train on your data.</string>
+    <string name="MaybeLater">Maybe Later</string>
 </resources>
