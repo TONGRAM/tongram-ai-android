@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.telegram.messenger.AndroidUtilities;
@@ -28,9 +29,15 @@ import ton_core.ui.models.AIHistoryModel;
 public class AIHistoryAdapter extends RecyclerView.Adapter<AIHistoryAdapter.ViewHolder> {
 
     private final List<AIHistoryModel> historyModels;
+    private final IAIHistoryDelegate delegate;
 
-    public AIHistoryAdapter(List<AIHistoryModel> historyModels) {
+    public interface IAIHistoryDelegate {
+        void showDetail(AIHistoryModel model);
+    }
+
+    public AIHistoryAdapter(List<AIHistoryModel> historyModels, IAIHistoryDelegate delegate) {
         this.historyModels = historyModels;
+        this.delegate = delegate;
     }
 
     @NonNull
@@ -68,6 +75,8 @@ public class AIHistoryAdapter extends RecyclerView.Adapter<AIHistoryAdapter.View
                         .start();
             });
         });
+
+        holder.root.setOnClickListener(v -> delegate.showDetail(model));
     }
 
     private void animateExpand(TextView tv, boolean expand) {
@@ -185,6 +194,7 @@ public class AIHistoryAdapter extends RecyclerView.Adapter<AIHistoryAdapter.View
         TextView tvTime;
         TextView tvResult;
         ImageView ivExpand;
+        ConstraintLayout root;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -196,6 +206,7 @@ public class AIHistoryAdapter extends RecyclerView.Adapter<AIHistoryAdapter.View
             tvResult = itemView.findViewById(R.id.tv_result);
             llResult = itemView.findViewById(R.id.ll_result);
             ivExpand = itemView.findViewById(R.id.iv_expand);
+            root = itemView.findViewById(R.id.cl_root);
         }
     }
 }

@@ -841,6 +841,7 @@ public class ThemeColors {
         defaultColors[key_view_pager_title_color] = 0xFF000000;
         defaultColors[key_background_selected] = 0xFFAFC8FF;
         defaultColors[key_text_like_theme] = 0xFFFFFFFF;
+        defaultColors[key_background_delete_button] = 0xFF1A1F29;
 
         return defaultColors;
     }

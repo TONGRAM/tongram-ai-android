@@ -31,7 +31,7 @@ import java.util.List;
 import ton_core.ui.adapters.AIHistoryAdapter;
 import ton_core.ui.models.AIHistoryModel;
 
-public class HistoryDialog extends DialogFragment {
+public class HistoryDialog extends DialogFragment implements AIHistoryAdapter.IAIHistoryDelegate {
 
     public static String TAG = "HistoryFragment";
     private AIHistoryAdapter aiHistoryAdapter;
@@ -115,7 +115,7 @@ public class HistoryDialog extends DialogFragment {
         ivClose.setColorFilter(Theme.getColor(Theme.key_icon_color));
         ivClose.setOnClickListener(v -> dismissWithAnimation());
 
-        aiHistoryAdapter = new AIHistoryAdapter(historyModels);
+        aiHistoryAdapter = new AIHistoryAdapter(historyModels, this);
 
         RecyclerView rvHistory = view.findViewById(R.id.rv_history);
         rvHistory.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
@@ -134,7 +134,7 @@ public class HistoryDialog extends DialogFragment {
         btnClearHistory.setTextColor(Theme.getColor(Theme.key_color_red));
         GradientDrawable db = new GradientDrawable();
         db.setCornerRadius(AndroidUtilities.dp(7));
-        db.setColor(Theme.getColor(Theme.key_icon_color));
+        db.setColor(Theme.getColor(Theme.key_background_delete_button));
         btnClearHistory.setBackground(db);
         btnClearHistory.setOnClickListener(v -> {
             //TODO: Call api to clear history
@@ -175,5 +175,15 @@ public class HistoryDialog extends DialogFragment {
                 .setDuration(220)
                 .withEndAction(this::dismiss)
                 .start();
+    }
+
+    @Override
+    public void showDetail(AIHistoryModel model) {
+//        final Activity activity = Objects.requireNonNull(LaunchActivity.getLastFragment()).getParentActivity();
+//        if (activity instanceof androidx.fragment.app.FragmentActivity) {
+//            androidx.fragment.app.FragmentManager fragmentManager = ((androidx.fragment.app.FragmentActivity) activity).getSupportFragmentManager();
+//            new AIHistoryDetailFragment(model).show(fragmentManager, AIHistoryDetailFragment.TAG);
+//        }
+//        dismissWithAnimation();
     }
 }

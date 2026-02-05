@@ -10087,4 +10087,5 @@
     <string name="MaybeLater">Maybe Later</string>
     <string name="AITonyHistory">AI Tony History</string>
     <string name="ClearAIHistory">Clear History</string>
+    <string name="HistoryDetailWithFeature">%s Details</string>
 </resources>
