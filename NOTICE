@@ -1,0 +1,16 @@
+Tongram Messenger for Android
+Copyright (C) 2025-2026 TON CORPORATION CO., LTD
+
+This application is based on Telegram for Android (open-source, GPL-2.0).
+Original source code: https://github.com/DrKLO/Telegram
+Copyright (C) 2013-2026 Telegram FZ-LLC
+Licensed under GNU General Public License v2.0 (GPL-2.0)
+
+Modifications by TON CORPORATION CO., LTD include:
+- AI Translation integration (30+ languages, one-tap in any chat)
+- TonTV curated video content Mini App
+- Mini Apps directory with in-app shortcut
+- Custom UI/UX design, branding, and color system
+
+For the full license text, see the LICENSE file in this repository.
+For build instructions, see BUILD.md.
