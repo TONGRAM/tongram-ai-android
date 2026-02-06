@@ -656,7 +656,7 @@
 
 <!--        <service android:name=".FeedWidgetService"-->
 <!--            android:permission="android.permission.BIND_REMOTEVIEWS"-->
-<!--            android:exported="false" />-->
+<!--            android:exported="false" /> -->
         <service
             android:name=".FilesMigrationService"
             android:exported="false"
